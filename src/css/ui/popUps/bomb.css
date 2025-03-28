@@ -1,0 +1,16 @@
+.middlebomb{
+    position: fixed;
+    z-index: 1200;
+    top: 20%;
+    bottom: 26%;
+    left: 30%;
+    right: 24%;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.middlebomb img{
+    width: 100%;
+}

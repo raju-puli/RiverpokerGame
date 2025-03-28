@@ -1,0 +1,72 @@
+.waitRebuyAlert{
+    width:300px;
+    height:150px;
+    background-color: #0a363c;
+    border: 2px solid rgba(255, 229, 85, 0.5);
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.waitRebuyAlert .header{
+    width: 100%;
+    height: 25px;
+    background-image: url("../../../assets/images/popUp/popUp_label.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: -10px;
+    padding-left: 20px;
+}
+.waitRebuyAlert .dataContainer{
+    width:96%;
+    height:80px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 2%;
+    background-color: #091d29;
+    text-align: center;
+    color: #ffe555;
+
+}
+.waitRebuyAlert .footer{
+    width: 100%;
+    height: 35px;
+    background-color: #091d29;
+    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    /* position: relative; */
+    /* display: flex; */
+}
+.waitRebuyAlert .rebuyCountDown{
+    width: 300px;
+    height: 30px;
+    /* border: 1px solid red; */
+    position: relative;
+    float: left;
+    padding-top: 5px;
+    padding-left: 10px;
+    color: #ffe555;
+
+}
+
+.waitRebuyAlert .footer button{
+    width:70px;
+    height: 28px;
+    background-color: #ffe555;
+    border: none;
+    outline: none;
+    border-radius: 5px 0px 5px 0px;
+    position: relative;
+    float: right;
+    left: auto;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.waitRebuyAlert .footer button:hover{
+    background-color: #ffe111;
+}

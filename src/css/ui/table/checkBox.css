@@ -1,0 +1,98 @@
+.gameCheckBoxContainer {
+    width: 90vw;
+    height: fit-content;
+    /* / border: 2px solid rgba(255, 229, 85, 0.5); / */
+    background: #181818;
+    box-shadow: 0px 2px 15px #CECECE5D;
+    border-radius: 10px;
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* / transform: translate(-50%, -50%); / */
+    z-index: 1100;
+    /* / padding: 10px; / */
+    /* / border: solid 5px #343030; / */
+}
+
+/* .gameCheckBoxContainer .gameCheckBox {
+    padding-top: 15px;
+} */
+
+/* .gameCheckBoxContainer .gameCheckBox .field {
+    margin: 4px 20px 4px 20px;
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Roboto;
+}
+
+.gameCheckBoxContainer .gameCheckBox .field input {
+    float: right;
+    width: 16px;
+    height: 16px;
+}
+
+.gameCheckBoxContainer .gameCheckBox .field input.checkBox {
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background: #323232;
+    border: 3px solid #323232;
+    box-shadow: 0 0 0 1px #707070;
+}
+
+.gameCheckBoxContainer .gameCheckBox .field input.checkBox:checked {
+    background-color: #FFFFFF;
+} */
+
+.settingsSpan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settingsSpan img {
+    margin: 0px 5px 0px 0px;
+}
+
+/* .settingsSpan span {
+    font-family: Roboto Condensed;
+} */
+
+.field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="checkbox"].checkBox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #2d2d2d !important;
+    box-shadow: inset 0 0 4px #484848 !important;
+    position: relative;
+    border-radius: 4px;
+}
+
+input[type="checkbox"].checkBox:checked {
+    background: #2d2d2d !important;
+    box-shadow: inset 0 0 4px #484848 !important;
+}
+
+input[type="checkbox"].checkBox:checked::after {
+    content: '✔';
+    position: absolute;
+    top: -2px;
+    left: 3px;
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}

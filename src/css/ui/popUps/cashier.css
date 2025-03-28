@@ -1,0 +1,346 @@
+ .newCashier .headerdiv {
+    height: 5%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    color: blanchedalmond;
+    font-size: 22px;
+    justify-content: flex-end;
+    border-bottom: 2px solid rgb(255, 229, 85, .5);
+    border-bottom-width: thin;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+ }
+
+ .newCashier .headerdiv .header {
+    margin-right: auto;
+    /* font-family: Arial; */
+ }
+
+ .newCashier .headerdiv .tabButtons .tabbtn {
+    outline: none;
+    border: none;
+    background-color: #0a363c;
+    font-size: 15px;
+    color: white;
+    border-right: 1px solid rgb(255, 229, 85, .5);
+ }
+
+ .newCashier .headerdiv .tabButtons .tabbtnActive {
+    outline: none;
+    border: none;
+    background-color: #0a363c;
+    font-size: 15px;
+    color: #fbe111;
+    border-right: 1px solid rgb(255, 229, 85, .5);
+ }
+
+ .newCashier .headerdiv .tabButtons button:hover {
+    border: 1px solid rgb(255, 229, 85, .5);
+    border-radius: 2px;
+    cursor: pointer;
+
+ }
+
+ .newCashier .contentDiv .Content {
+    display: none;
+ }
+
+ .newCashier .contentDiv .activeContent .depositMaindiv .paymentMethods {
+    display: flex;
+    flex-direction: row;
+    margin-right: 5px;
+ }
+
+ .newCashier .contentDiv .activeContent .depositMaindiv .paymentMethods>img {
+    margin-right: 5px;
+    width: 4%;
+    /* height: 100%; */
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    flex-grow: 1;
+    padding-top: 5px;
+ }
+
+ .newCashier .contentDiv .activeContent .depositMaindiv .paymentMethods>img:hover {
+    border-bottom: 3px solid rgb(255, 229, 85, .5);
+ }
+
+ .newCashier .contentDiv .fixedContent .header {
+    /* font-family: Arial; */
+    text-align: left;
+    margin-left: 5px;
+    color: blanchedalmond;
+ }
+
+ .newCashier .contentDiv .fixedContent .fixedContentDiv .realMoney .header {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--clr_5);
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 5px;
+    float: left;
+ }
+
+ .newCashier .contentDiv .fixedContent .fixedContentDiv .playMoney .playDiv {
+    margin: 15px;
+    font-size: small;
+    color: #fbe111;
+    /* font-family: Arial; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+ }
+
+ .newCashier .contentDiv .fixedContent .fixedContentDiv .playMoney .playDiv .leftDiv {
+    margin-right: auto;
+ }
+
+ .newCashier .contentDiv .fixedContent .fixedContentDiv .playMoney {
+    font-size: medium;
+    height: 50%;
+ }
+
+ .newCashier .contentDiv .fixedContent .fixedContentDiv .playMoney .header {
+    border-bottom: 2px solid rgba(228, 226, 215, 0.5);
+    border-bottom-width: thin;
+    padding-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+ }
+
+ .fixedContent {
+    border-left: solid 1px var(--clr_3);
+ }
+
+
+ .cashier-box {
+    width: 60%;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+    background: #55555514;
+ }
+
+
+ .cashier-box table thead tr th {
+    /* text-align: start !important; */
+    border: 1px solid gray;
+    color: #fff;
+ }
+
+ .cashier-box table tr {
+    background-image: none !important;
+    box-shadow: none !important;
+    padding: 4px 0px;
+ }
+
+ .cashier-link-box {
+    width: 40%;
+    float: left;
+    position: relative;
+    background: #55555514;
+    padding: 5px;
+    overflow: visible;
+ }
+
+ .cashier-link-box button:hover {
+    background: linear-gradient(black, gray);
+    color: var(--clr_4);
+    cursor: pointer;
+ }
+
+ .cashier-link-box button {
+    width: 100%;
+    margin: 3px;
+    height: 100%;
+    background: linear-gradient(gray, black);
+    color: #fff;
+    transition: all .15s;
+    max-height: -webkit-fill-available;
+    min-width: 40px;
+    min-height: 50px;
+ }
+
+ .playerLevel-btn {
+    background: #8080802b;
+    color: #ffff;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+ }
+
+ .sec-div {
+    display: flex;
+    border: 1px solid #80808052;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    padding: 3px;
+ }
+
+ .sec-div span button {
+    color: #000;
+    /* font-weight: 500; */
+    background: linear-gradient(rgb(226, 196, 87) 35%, rgb(255, 184, 0) 100%);
+    transition: all .15s;
+    cursor: pointer;
+    min-width: 100px;
+    min-height: 30px;
+    font-weight: bold;
+ }
+
+ .background_color {
+    background: linear-gradient(rgb(226, 196, 87) 35%, rgb(255, 184, 0) 100%);
+ }
+
+ #cashier-pagedown-indicater {
+    position: sticky;
+    bottom: 10px;
+    left: 10px;
+    top: unset;
+    animation: updown 0.5s infinite;
+
+    >img {
+       border-radius: 50%;
+       background: linear-gradient(rgb(226, 196, 87) 35%, rgb(255, 184, 0) 100%);
+       box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+ }
+
+ @keyframes updown {
+    0% {
+       transform: translateY(0px);
+    }
+
+    50% {
+       transform: translateY(20px);
+    }
+
+    100% {
+       transform: translateY(0px);
+    }
+ }
+
+ .ticket-popup {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .sub-tickt-div {
+    border: 2px solid rgb(0, 0, 0);
+    width: 80%;
+    min-height: 200px;
+    background: rgb(189, 189, 189);
+    transform: scale(1);
+    animation: pop 0.15s;
+    transition: all .15s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+
+ @keyframes pop {
+    0% {
+       transform: scale(0.95);
+    }
+
+    100% {
+       transform: scale(1);
+    }
+ }
+
+ .sub-tickt-div header {
+    height: 30px;
+    background: linear-gradient(#454545, #101010);
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 0px 5px;
+    color: #ffff;
+    text-indent: 3px;
+    justify-content: space-between;
+ }
+
+ .sub-tickt-div table tr td:first-child {
+    width: 65%;
+ }
+
+ .sub-tickt-div table {
+    width: 100%;
+ }
+
+ .sub-tickt-div table tr td {
+    padding: 5px;
+ }
+
+ .sub-tickt-div table tbody tr {
+    cursor: pointer;
+ }
+
+ .sub-tickt-div table tbody {
+    background: #fff;
+    color: #000;
+    font-weight: 500;
+ }
+
+ .sub-tickt-div table thead {
+    width: 100%;
+    border: 1px solid;
+    color: #fff;
+    font-weight: 500;
+    background: var(--clr_3);
+    padding: 5px;
+ }
+
+ .sub-tickt-div header span {
+    width: 25px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+ }
+
+ table.tournamentshowTable {
+    min-height: 90px;
+    table-layout: fixed;
+ }
+
+ table.tournamentshowTable tr {
+    background-image: none !important;
+
+ }
+
+ table.tournamentshowTable tr td {
+    text-align: center;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+
+ table.tournamentshowTable tr td:first-child {
+    width: auto;
+ }
+
+ .headerIconSpan {
+    border: 1px solid #4d4d4d;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(79, 79, 79, 0.79), rgba(0, 0, 0, 0.747));
+    margin-right: 10px;
+    border-radius: 5px;
+ }

@@ -1,0 +1,151 @@
+.openTables {
+  width: 54%;
+  height: 30vh;
+  border-left: 2px solid rgba(255, 229, 85, 0.3);
+  border-right: 2px solid rgba(255, 229, 85, 0.3);
+  border-bottom: 2px solid rgba(255, 229, 85, 0.3);
+  border-radius: 10px;
+  position: absolute;
+  left: 1vw;
+  bottom: 30vh;
+  font-size: 9px;
+}
+
+.openTables .containerOne {
+  width: 100%;
+  height: 4vh;
+  background-color: #091d29;
+  color: #ffe555;
+  border: 2px solid rgba(255, 229, 85, 0.8);
+  position: relative;
+  left: -2px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.openTables .containerTwo {
+  width: 50%;
+  height: 51vh;
+}
+
+.openTables .containerThree {
+  width: 100%;
+  height: 4vh;
+  background-color: #091d29;
+  border-radius: 0px 0px 10px 10px;
+
+  position: absolute;
+  top: 30vh;
+  left: 0;
+}
+
+.openTables .containerThree button {
+  width: 80px;
+  height: 4vh;
+  background-color: #ffe555;
+  border: none;
+  border-radius: 6px 0px 6px 0px;
+  outline: none;
+  margin-left: 10px;
+}
+
+.openTables .containerThree button :hover {
+  background-color: #ffe111;
+}
+
+.openTables .containerThree button :disabled {
+  opacity: 0.5;
+}
+
+
+
+
+
+.glow-on-hover {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.glow-on-hover:before {
+  content: '';
+  /* background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000); */
+  background: linear-gradient(45deg, #3a73c9, #00246B, #3a73c9, #00246B, #001ba4, #3a73c9);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  /* filter: blur(1px); */
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 2em;
+  opacity: 1;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 100% 0;
+    transform: scale(1);
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+
+
+
+.registerTextAnimation {
+  animation: glowing 0.5s infinite;
+}
+
+@keyframes loadImgs {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.openTable tr td:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.445);
+}
+
+/* .openTable tr td:last-child {
+  border: none;
+} */
+
+.openTable tr {
+  width: 100%;
+  height: 45px;
+  margin: 5px 0px;
+}
+
+
+.active-table {
+  background-image: linear-gradient(rgb(99 81 0), rgb(27 22 0)) !important;
+}

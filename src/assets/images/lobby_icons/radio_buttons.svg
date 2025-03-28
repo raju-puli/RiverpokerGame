@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="164" viewBox="0 0 45 164">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: aqua;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: none;
+        filter: url(#filter-2);
+      }
+
+      .cls-3 {
+        fill: #0b0b0b;
+        stroke-width: 2px;
+        stroke: url(#linear-gradient);
+      }
+
+      .cls-3, .cls-5 {
+        stroke-linejoin: round;
+      }
+
+      .cls-4 {
+        filter: url(#filter-3);
+      }
+
+      .cls-5 {
+        fill: #bda742;
+        stroke: #f0f0f0;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" x="-178" y="-133" width="1" height="371" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#00ffc6"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="8" y="9" width="30" height="30" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#161616"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+      <feGaussianBlur result="blur" stdDeviation="2" in="SourceAlpha"/>
+      <feFlood result="flood-2" flood-opacity="0.6"/>
+      <feComposite result="composite-2" operator="out" in2="blur"/>
+      <feOffset result="offset"/>
+      <feComposite result="composite-3" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend-2" mode="multiply" in2="blend"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="23" y1="33" x2="23" y2="15" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cda639"/>
+      <stop offset="0.457" stop-color="#fcf679"/>
+      <stop offset="1" stop-color="#aa7502"/>
+    </linearGradient>
+    <filter id="filter-3" x="14" y="76" width="18" height="18" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="14" y="76" width="18" height="18" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQpOwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSI5IiB5MT0iMTgiIHgyPSI5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzcyNTkxMyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuOTk3IiBzdG9wLWNvbG9yPSIjZjhlNTY3Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Y4ZTU2NyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiLz4KPC9zdmc+Cg=="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect id="Shape_1_copy_6" data-name="Shape 1 copy 6" class="cls-1" x="-178" y="-133" width="1" height="371"/>
+  <circle class="cls-2" cx="23" cy="24" r="15"/>
+  <image id="Ellipse_2" data-name="Ellipse 2" x="8" y="70" width="30" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAACeklEQVRIicWXv2pUURDGZ+bcFbIWiYSsjZVgREgVSEo7195CBQtBbRQMeQ2DRVCjjQ8ggnYKxkfwT6VgCFiJYFTctLp3Phk5E4eb3U3i7l0HhmX37D2/+809d853eGJiggYFM9tog5nPMvMZIlpg5uNENJUv6wD4SESvALwE8IKIfgEYPO8gMDNPicgyM99g5hm7Cc8YBgn5DcCaqq4C6BwInCe/KCKrInJURKgf1CPCVdXyi6ouA3jUS/0uMDMnEbkrItcN6OnAQWD/zGDPB6p6E0DZF5yhj1NK51JKFJUeJKLysiwtn6rq+QhPjUZjR4mI3EkpXR4GGqsSrj9FRNNE9HwXWEQupJRWiqIYCtoPDmARwAcA78lLbas3pbSRUmoZeFhoDC97t9u1km+VZXnSVrvkEi+LSGsUSqvh8+VF2sqvJ3Gz2TyUUvpUFMWMP9s6whdat9v9WpblMVPcjs2hrgh9wFhtB9cK9fCSW/u1us7v1ZVGBQ3zz5vi2XGordzACVM8OTbq35isZwnvIwy8/R+42wJgc69Ne5SRO9mmKX5DobXVDPSvb03xunWVcaj2rdKY3jI/F0UxPdaWSUQ/Adxzx1CH8uhKANw35ri3RVM7+2dbzIMdVV2KqkehvGL+LJfcee44ECIyZzBDRItR8b8qr/ouVV0DsOLjEWxhZnzOPNIw8D5m7ypCGatgG3hiygEs9PTD+7S3Gej29krV3lbBDn8GYIOIThPR4Tgx7T459HqWlluqeg3Arah0ENgnfwfgYX7d5gA07fe4+CLQPrPC76p6W1UvAXjd+2HscXYKpfVDWzsc2o7kv/wIh7Z1y3yz/Sclot+3wQvBHToJOwAAAABJRU5ErkJggg=="/>
+  <circle id="Ellipse_1_copy_5" data-name="Ellipse 1 copy 5" class="cls-3" cx="23" cy="24" r="9"/>
+  <circle id="Ellipse_1_copy_8" data-name="Ellipse 1 copy 8" class="cls-4" cx="23" cy="85" r="9"/>
+  <path id="Ellipse_1_copy_2" data-name="Ellipse 1 copy 2" class="cls-5" d="M23.423,133C29.732,133,34,138.114,34,144.423S29.732,155,23.423,155,12,150.732,12,144.423A11.423,11.423,0,0,1,23.423,133Z"/>
+</svg>

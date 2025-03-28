@@ -1,0 +1,113 @@
+.cardthemes {
+    width:100%;
+    height:100%;
+    background-color: #062326;
+    display: flex;
+    flex-direction: row;
+    
+}
+.cardthemes .frontthemes {
+    width:50%;
+    height:97.2%;
+    border: solid 5px rgba(7, 23, 32, 0.5);
+    border-radius:3px;
+    display: flex;
+    flex-direction: column;
+}
+.cardthemes .backthemes {
+    width:50%;
+    height:97.2%;
+    border: solid 5px rgba(7, 23, 32, 0.5);
+    border-radius:3px;
+    display: flex;
+    flex-direction: column;
+}
+.cardthemes .frontthemes .imgforeground {
+    background:var(--clr_2);
+    width:100%;
+    height:18%;
+    margin-top:3px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+}
+.cardthemes .frontthemes .imgforegroundActive {
+    background-color: rgba(12, 41, 58);
+    color: #fbe111;
+    width:100%;
+    height:18%;
+    margin-top:3px;
+    border:solid 1px rgb(255, 229, 85,.5);
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.cardthemes .backthemes .imgbackground {
+    background:var(--clr_2);
+    width:100%;
+    height:18%;
+    margin-top:3px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+}
+.cardthemes .backthemes .imgbackgroundActive {
+    background-color: rgba(12, 41, 58);
+    color: #fbe111;
+    width:100%;
+    height:18%;
+    margin-top:3px;
+    border:solid 1px rgb(255, 229, 85,.5);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+}
+.cardthemes .frontthemes .imgforeground>img{
+    height:100%; 
+    float:left;
+    padding: 3px;
+}
+.cardthemes .frontthemes .imgforegroundActive>img{
+    height:100%;
+    float:left;
+    padding: 3px;
+}
+.cardthemes .backthemes .imgbackground>img {
+    height:100%;
+    float:left;  
+    padding: 3px;
+}
+.cardthemes .backthemes .imgbackgroundActive>img {
+    height:100%;
+    float:left;  
+    padding: 3px;
+} 
+ 
+    .cardthemes .frontthemes .imgforeground:hover{
+        background-color: rgba(12, 41, 58);
+        color: #fbe111;
+        }
+        
+        .cardthemes .backthemes .imgbackground:hover{
+            background-color:   rgba(12, 41, 58);
+            color: #fbe111;
+            }
+            
+            /* .childone .aj{
+                position: relative;
+                top:60px;
+                animation: imganim .5s infinite;
+                animation-timing-function: linear both;
+                animation-iteration-count:2;
+               } 
+      @keyframes imganim {
+      0% {width: 71px; height: 56px;}
+      50% {width: 75px; height: 60px;}
+      100% {width: 71px; height: 56px;}
+      } */

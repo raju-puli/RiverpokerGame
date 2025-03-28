@@ -1,0 +1,32 @@
+.loader {
+    display: flex;
+    border: 1px solid #ffffff36;
+    background-color: #000;
+    border-radius: 2px;
+}
+
+.loader-box {
+    width: 16px;
+    height: 8px;
+    margin: 1px;
+    background-color: transparent;
+    border: 1px solid #000;
+    background-color: #ffffff36;
+    transition: background-color 0.3s;
+}
+
+.loader-box.red {
+    background-color: #ff6600;
+}
+
+.loader-box.transparent-red {
+    background-color: #b34700;
+}
+
+/* .loader-box.red {
+    background-color:  linear-gradient(180deg, rgba(254,214,38,1) 41%, rgba(179,71,0,1) 51%);;
+}
+
+.loader-box.transparent-red {
+    background-color:  linear-gradient(180deg, rgba(254,214,38,0.7595413165266106) 41%, rgba(179,71,0,0.7567401960784313) 51%);
+} */

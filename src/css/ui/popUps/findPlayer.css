@@ -1,0 +1,104 @@
+.findPlayer .findbtn:hover {
+  background-color: #fbe111;
+}
+
+.findPlayer .FPinputField {
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 4px;
+  height: 25px;
+  float: left;
+  position: relative;
+  top: 10px;
+}
+
+.findPlayer .footer {
+  width: 100%;
+  height: 35px;
+  position: relative;
+  background-color: #091d29;
+  border-radius: 3px;
+  display: flex;
+}
+
+.findPlayer .Join {
+  float: left;
+  margin-left: 2%;
+  margin-top: 4px;
+  width: 95px;
+  height: 28px;
+  background-color: #fbe555;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border: none;
+
+}
+
+.findPlayer .Close {
+  float: right;
+  margin-right: 2%;
+  margin-left: 255px;
+  margin-top: 4px;
+  width: 80px;
+  height: 28px;
+  background-color: #fbe555;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border: none;
+
+}
+
+.findPlayer .Join:hover {
+  background-color: #fbe111;
+}
+
+.findPlayer .Close:hover {
+  background-color: #fbe111;
+}
+
+.findPlayer #table {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #091d29;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  font-size: 13px;
+}
+
+.findPlayer #table td,
+#table th {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.findPlayer #table td {
+  width: 48.98%;
+  color: #fbe555;
+}
+
+.findPlayer #table tr:nth-child(even) {
+  background-color: #142f33;
+}
+
+.findPlayer #table tr:nth-child(odd) {
+  background-color: #0a363c;
+}
+
+.findPlayer #table tr:hover {
+  -ms-transform: scale(1.015);
+  -webkit-transform: scale(1.015);
+  transform: scale(1.015);
+}
+
+.findPlayer #table tr {
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  border: solid 1px rgb(255, 229, 85, .2);
+  border-radius: 2px;
+
+}

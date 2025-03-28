@@ -1,0 +1,42 @@
+.bb {
+    border-bottom: 1px solid var(--clr_ff);
+}
+
+.jce {
+    justify-content: end;
+}
+
+.jcs {
+    justify-content: start;
+}
+
+.jcc {
+    justify-content: center;
+}
+.Register_button_bottom{
+    padding: 10px 0px 5px 20px;
+}
+.Register_button_bottom button{
+    width: 100%;
+    /* border: 1px solid #dbdbdb; */
+    /* outline: none; */
+    background: #141415;
+    padding: 8px;
+    /* border: none; */
+    color: rgb(209, 180, 98);
+    font-weight: bold;
+    margin-top: 0px;
+}
+.Register_button_bottom button:hover{
+    width: 100%;
+    /* border: 1px solid #dbdbdb; */
+    /* outline: none; */
+    background: #3C5DC2;
+    padding: 8px;
+    /* border: none; */
+    color: #fff;
+    font-weight: bold;
+    margin-top: 0px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.45) inset;
+}

@@ -1,0 +1,496 @@
+.login_Main {
+    max-width: 350px !important;
+    position: fixed !important;
+    margin: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    border-radius: 9px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.versionDiv {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.versionDiv span.versionTxt {
+    color: #999696;
+    margin-bottom: 20px;
+}
+
+.errMessageTxt {
+    text-align: center;
+    color: #D1B462;
+    margin-top: 48px;
+    position: relative;
+}
+
+.rememberMeDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerTxt {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerTxt span {
+    color: #999696;
+}
+
+button.btn_2:disabled {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+button.btn_2 {
+    width: 35%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+
+.loader_3 {
+    border: 3px solid #0e1e33;
+    border-radius: 50%;
+    border-top: 3px solid #f3f3f3;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+    display: inline-block;
+}
+
+/* Safari */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.eyeToggleHide {
+    width: 80px;
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    transition: all .2s;
+}
+
+.eyeToggleHide.active {
+    width: 80px;
+    position: absolute;
+    top: -8px;
+    left: -45px;
+    right: -35px;
+    bottom: 0;
+}
+
+.eyeToggleShow {
+    width: 80px;
+    position: absolute;
+    top: -8px;
+    left: -40px;
+    right: -15px;
+    bottom: 0;
+    transition: all .2s;
+}
+
+.eyeToggleDiv {
+    width: 40px;
+    /* height: 40px; */
+    position: absolute;
+    top: 0px;
+    left: -45px;
+    /* margin: 3px; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    cursor: pointer;
+    /* border: 1px solid; */
+    padding: 4px;
+    /* background: #585858; */
+    z-index: 9;
+}
+
+.eyeToggleDiv img.reFresh {
+    width: 25px;
+    /* margin: 5px 0px 0px 0px; */
+}
+
+
+
+.login_Main input:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* .login_Main input[type="text"],
+.login_Main input[type="email"],
+.login_Main input[type="number"],
+.login_Main input[type="password"] {
+    width: 100%;
+    float: left;
+    padding: 3.5vw;
+    background: #0E1E33;
+    border: 1px solid #515050;
+    color: #999696;
+    border-radius: 50px;
+    font-size: 3.2vw;
+} */
+
+.login_Main input[type="text"],
+.login_Main input[type="email"],
+.login_Main input[type="number"],
+.login_Main input[type="password"] {
+    width: 100%;
+    float: left;
+    padding: 13px;
+    background: #161A1D;
+    border: 1px solid #515050;
+    color: #999696;
+    border-radius: 50px;
+    /* font-size: 3.2vw; */
+}
+
+
+/* input[type=checkbox] {
+    accent-color: #3C3A3A;
+    accent-color: #fff;
+    border-radius: 50px;
+} */
+
+.versionDiv span.forgetPassword {
+    color: #E1DCDC;
+    font-weight: 500;
+}
+
+.login_Main label {
+    width: 100%;
+    float: left;
+    color: #fdffff;
+}
+
+img.logoSvg {
+    /* max-width: 200px; */
+    max-width: 50vw;
+}
+
+.errMessage {
+    color: #f00;
+    display: none;
+    font-size: 14px;
+}
+
+
+.closeBtn {
+    width: 30%;
+    padding: 12px;
+    border-radius: 12px;
+    background: #B92432;
+    color: white;
+    border: 1px solid #6C6B6B;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.forgetBtns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.forgotPopupMain {
+    position: absolute;
+    /* border: 1px solid; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0000009c;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgotPopupSub {
+    width: 90%;
+    border: 1px solid rgba(128, 128, 128, 0.453);
+    border-radius: 8px;
+    background: #131D50;
+    box-shadow: 2px 3px 9px 4px rgba(0, 0, 0, 0.838);
+    padding: 10px;
+}
+
+.forgotPopupSub p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.forgotPopupSub .buttonDiv {
+    width: 100%;
+    float: left;
+    display: flex;
+}
+
+/* ============================================================^^^^^^Old^^^^^^^================================================================= */
+
+
+
+main.login-container {
+    position: relative;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    display: flex;
+    background-image: url(../../assets/images/login/background/river_login_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: contain;
+    overflow: auto;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+    max-height: 100vh;
+}
+
+
+/* main.login-container {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    background-image: url(../../assets/images/login/background/river_login_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: contain;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+} */
+
+main.login-container section img {
+    /* width: 300px; */
+    /* width: 20rem; */
+    width: 100%;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+main.login-container section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div.login-btn {
+    /* width: 50%; */
+    /* width: 32vw; */
+    width: 80%;
+    height: 40px;
+}
+
+main.login-container section div.login-btn button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-image: linear-gradient(rgb(254, 214, 38), rgb(142, 117, 8));
+    color: #fff;
+    font-size: 18px;
+    transition: all .15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+main.login-container section div.login-btn button:disabled {
+    background-image: linear-gradient(rgb(142, 117, 8), rgb(254, 214, 38));
+    opacity: .5;
+}
+
+main.login-container section div.login-btn button:active {
+    background-image: linear-gradient(rgb(142, 117, 8), rgb(254, 214, 38));
+}
+
+/* main.login-container section form {
+    width: 100%;
+} */
+
+/* main.login-container section form li { */
+main.login-container section div {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+/* main.login-container section form li input { */
+main.login-container section div input:focus {
+    outline: none;
+}
+
+main.login-container section div input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: #eaeaea;
+    letter-spacing: 2px;
+    text-indent: 5px;
+    /* background: #3d516d;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 5vh;
+    min-height: 45px;
+    text-indent: 5px;
+    margin-top: 5px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    box-shadow: rgb(21 29 40) 3px 3px 6px 0px inset, rgb(64 85 114) -3px -3px 6px 1px inset;
+    border-radius: 4px;
+    overflow: hidden;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); */
+}
+
+/* main.login-container section form span { */
+main.login-container section span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* font-size: 18px; */
+    min-width: 70px;
+}
+
+main.login-container header {
+    position: fixed;
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.274);
+    display: flex !important;
+    flex-direction: column;
+}
+
+
+.login-container {
+    position: relative;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+.keyboard-open .login-container {
+    margin-bottom: 300px;
+    border: 1px solid yellow;
+}
+
+.captcha-span {
+    width: 15%;
+    /* border: 1px solid; */
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #585858;
+    color: #fff;
+    text-align: center;
+}
+
+
+.login-input-fields {
+    display: flex;
+    align-items: center;
+    background: #3d516d;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 5vh;
+    min-height: 45px;
+    text-indent: 5px;
+    margin-top: 5px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    box-shadow: rgb(21 29 40) 3px 3px 6px 0px inset, rgb(64 85 114) -3px -3px 6px 1px inset;
+    border-radius: 4px;
+    overflow: hidden;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    position: relative;
+}
+
+.login-input-fields .captch-text {
+    background: gray;
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+}

@@ -1,0 +1,19 @@
+.lobby_logo {
+    text-align: center;
+}
+.lobby_logo img{
+    width: 15%;
+    object-fit: contain;
+    left: 50vw;
+}
+.tLobby_logo img{
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+    /* top: 0px; */
+    /* margin: auto; */
+    /* left: 50vw; */
+    margin-left:0%; 
+    /* margin-left: -15%; */
+    margin-top: 0px;
+}

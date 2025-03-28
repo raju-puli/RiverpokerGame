@@ -1,0 +1,38 @@
+.rightMenu .resizeButton .toggle .toggleToolTip{
+	background-color: #dbdbdb;
+	padding: 2px;
+	color: #000000;
+	visibility: hidden;
+	position: relative;
+	right: 100%;
+	top:50%;
+}
+.rightMenu .resizeButton .toggle:hover .toggleToolTip{
+	visibility: visible;
+}
+
+.rightMenu .resizeButton .tiling .tileToolTip{
+	background-color: #dbdbdb;
+	padding: 2px;
+	color: #000000;
+	visibility: hidden;
+	position: relative;
+	right: 100%;
+	top:50%;
+}
+.rightMenu .resizeButton .tiling:hover .tileToolTip{
+	visibility: visible;
+}
+
+.rightMenu .resizeButton .cascade .cascadeToolTip{
+	background-color: #dbdbdb;
+	padding: 2px;
+	color: #000000;
+	visibility: hidden;
+	position: relative;
+	right: 100%;
+	top:50%;
+}
+.rightMenu .resizeButton .cascade:hover .cascadeToolTip{
+	visibility: visible;
+}

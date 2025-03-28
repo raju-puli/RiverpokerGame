@@ -1,0 +1,274 @@
+{
+	"tableDetails": {
+		"tableId": "123-2a",
+		"sessionId": "a9556e142072402b-b309596875d9773e",
+		"startDate": "Mon Jan 22 15:39:08 IST 2024",
+		"manualPrizePool": "false",
+		"referenceId": 986560,
+		"seats": 6,
+		"type": {
+			"tableType": "SINGLE_TABLE",
+			"game": "TEXAS_HOLDEM",
+			"limit": "NO_LIMIT",
+			"mode": "ARS",
+			"isTimeForced": "false",
+			"runTwice": "true",
+			"noOfHandsToHidePlayerData": "0",
+			"noOfHandsToHidePlayerStack": "0",
+			"jackpot": "true",
+			"hideName": "true",
+			"hideStack": "false",
+			"enableTwoX": "false",
+			"bombpot": "true",
+			"knockOutFee": "0",
+			"knockOutAmount": "100"
+		},
+		"playersInfo": [
+			{
+				"name": "Raju001",
+				"seatId": 1,
+				"isDealer": "true",
+				"me": "true",
+				"totalBalanceOnSeat": "200",
+				"jackpotFee": 0.0,
+				"jackpotPayout": 0.0,
+				"isTimeForcedPaused": "false"
+			},
+			{
+				"name": "Raju002",
+				"seatId": 2,
+				"isDealer": "false",
+				"me": "false",
+				"totalBalanceOnSeat": "200",
+				"jackpotFee": 0.0,
+				"jackpotPayout": 0.0,
+				"isTimeForcedPaused": "false"
+			},
+			{
+				"name": "Maxy",
+				"seatId": 4,
+				"isDealer": "false",
+				"me": "false",
+				"totalBalanceOnSeat": "200",
+				"jackpotFee": 0.0,
+				"jackpotPayout": 0.0,
+				"isTimeForcedPaused": "false"
+			},
+			{
+				"name": "Mirza84",
+				"seatId": 5,
+				"isDealer": false,
+				"me": "false",
+				"totalBalanceOnSeat": "200",
+				"jackpotFee": 0.0,
+				"jackpotPayout": 0.0,
+				"isTimeForcedPaused": "false"
+			}
+		]
+	},
+	"Events": [
+		{
+			"round": 1,
+			"actions": {
+				"1": {
+					"seatId": 2,
+					"action": "SB",
+					"amount": 10.00
+				},
+				"2": {
+					"seatId": 4,
+					"action": "BB",
+					"amount": 20.00
+				},
+				"3": {
+					"seatId": 5,
+					"action": "BB",
+					"amount": 20.00
+				},
+				"4": {
+					"seatId": 1,
+					"action": "BB",
+					"amount": 20.00
+				}
+			}
+		},
+		{
+			"round": 2,
+			"actions": [
+				{
+					"seatId": 1,
+					"cards": "Qc Th"
+				},
+				{
+					"seatId": 2,
+					"cards": "xx xx"
+				},
+				{
+					"seatId": 4,
+					"cards": "xx xx"
+				},
+				{
+					"seatId": 1,
+					"cards": "xx xx"
+				}
+			]
+		},
+		{
+			"round": 3,
+			"actions": {
+				"5": {
+					"seatId": 5,
+					"action": "Check"
+				},
+				"6": {
+					"seatId": 1,
+					"action": "Raise",
+					"amount": 20.00
+				},
+				"7": {
+					"seatId": 2,
+					"action": "Call",
+					"amount": 30.00
+				},
+				"8": {
+					"seatId": 4,
+					"action": "Call",
+					"amount": 20.00
+				},
+				"9": {
+					"seatId": 5,
+					"action": "Call",
+					"amount": 20.00
+				}
+			}
+		},
+		{
+			"round": 4,
+			"flopCards": "8c 7c 6s"
+		},
+		{
+			"round": 5,
+			"PotsChange": {
+				"Pot": [
+					{
+						"attr": {
+							"pot": "0",
+							"change": "20",
+							"seat": "1"
+						}
+					},
+					{
+						"attr": {
+							"pot": "0",
+							"change": "20",
+							"seat": "2"
+						}
+					},
+					{
+						"attr": {
+							"pot": "0",
+							"change": "20",
+							"seat": "4"
+						}
+					},
+					{
+						"attr": {
+							"pot": "0",
+							"change": "20",
+							"seat": "5"
+						}
+					}
+				]
+			},
+			"RakeChange": {
+				"Rake": {
+					"attr": {
+						"pot": "0",
+						"change": "2"
+					}
+				}
+			}
+		},
+		{
+			"round": 6,
+			"actions": {
+				"10": {
+					"seatId": 2,
+					"action": "Check"
+				},
+				"11": {
+					"seatId": 4,
+					"action": "Check"
+				},
+				"12": {
+					"seatId": 5,
+					"action": "Check"
+				},
+				"13": {
+					"seatId": 1,
+					"action": "Check"
+				}
+			}
+		},
+		{
+			"round": 7,
+			"turnCard": "6c"
+		},
+		{
+			"round": 8,
+			"actions": {
+				"14": {
+					"seatId": 2,
+					"action": "Check"
+				},
+				"15": {
+					"seatId": 4,
+					"action": "Check"
+				},
+				"16": {
+					"seatId": 5,
+					"action": "Check"
+				},
+				"17": {
+					"seatId": 1,
+					"action": "Check"
+				}
+			}
+		},
+		{
+			"round": 9,
+			"riverCard": "5c"
+		},
+		{
+			"round": 10,
+			"actions": {
+				"18": {
+					"seatId": 2,
+					"action": "Check"
+				},
+				"19": {
+					"seatId": 4,
+					"action": "Check"
+				},
+				"20": {
+					"seatId": 5,
+					"action": "Check"
+				},
+				"21": {
+					"seatId": 1,
+					"action": "Check"
+				}
+			}
+		},
+		{
+			"round": 11,
+			"Winner": {
+				"attr": {
+					"seat": "2",
+					"amount": "40",
+					"pot": "0"
+				}
+			}
+		}
+	]
+}

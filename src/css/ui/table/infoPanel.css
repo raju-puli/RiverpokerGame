@@ -1,0 +1,383 @@
+.TIPinfoPanel {
+  /* width: 100vw; */
+  width: 100%;
+  min-width: 240px;
+  z-index: 15;
+  box-shadow: 1px -6px 52px rgb(18 46 52);
+}
+
+.TIPinfoPanel .TIPtabButtonContainer {
+  width: 100%;
+  height: 20px;
+  display: flex;
+}
+
+.TIPinfoPanel .TIPtabButtonContainer .TIPbloc-tabs {
+  width: 100%;
+  float: left;
+  display: flex;
+  padding: 5px;
+  background: #fff;
+}
+
+.TIPinfoPanel .TIPtabButtonContainer .resizeButton {
+  width: 23px;
+  float: right;
+  /* width: 20px; */
+  color: #fbe555;
+  height: 23px;
+  background-color: #091d29;
+  text-align: center;
+  border-radius: 2px 2px 0px 0px;
+  border: solid 1px #464545;
+
+}
+
+.TIPbloc-tabs button.TIPactive-tabs {
+  color: var(--clr_4);
+  border-bottom: solid 2px var(--clr_4);
+}
+
+.TIPbloc-tabs button {
+  flex-grow: 1;
+  padding: 9px 0px;
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.TIPbloc-tabs {
+  background: var(--clr_3);
+  margin-bottom: -5px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.TIPinfoPanel .TIPtabButtonContainer .TIPbloc-tabs .TIPactive-tabs {
+  color: black;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+
+.TIPinfoPanel .TIPcontent {
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  display: none;
+  /* border-radius: 0px 8px 0px 0px; */
+}
+
+.TIPinfoPanel .TIPactive-content {
+  display: block;
+}
+
+
+.TIPinfoPanel .chatPanel {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+.chatContainer {
+  width: 100%;
+  float: left;
+  /* height: 411px; */
+  padding: 0px 10px 10px 10px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.TIPinfoPanel .chatPanel .TIPinputContainer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid green; */
+  background-color: #00000094;
+  position: relative;
+  bottom: 0px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.TIPinfoPanel .chatPanel .TIPinputContainer .TIPchatInput:focus {
+  outline: none;
+}
+
+.TIPinfoPanel .chatPanel .TIPinputContainer .TIPchatInput {
+  width: 100%;
+  float: left;
+  border-radius: 50px;
+  border: none;
+
+}
+
+.TIPchatInput {
+  background: linear-gradient(rgb(96 94 97), rgb(55 55 55));
+  box-shadow: inset 2px 2px 14px -3px #000;
+  color: #fff;
+}
+
+.TIPinfoPanel .chatPanel .TIPinputContainer .TIPbtnSend {
+  position: absolute;
+  right: 10px;
+  background: #d6ba6d;
+  border-radius: 50px;
+  height: 35px;
+  top: 7px;
+}
+
+.TIPinfoPanel .chatPanel .TIPinputContainer .TIPbtnSend:hover {
+  background-color: #ffe111;
+}
+
+
+/* .TIPinfoPanel .infoBg table {
+  width: 100%;
+  float: left;
+}
+.TIPinfoPanel .infoBg tr td {
+  width: 33.3333%;
+  float: left;
+  color: var(--clr_4);
+  text-align: center;
+  padding: 8px;
+}
+*/
+.TIPinfoPanel .infoBg {
+  width: 100%;
+  /* height: 456px; */
+  background-color: var(--chat_bg);
+}
+
+.TIPinfoPanel .statsBg {
+  width: 100%;
+  /* height: 456px; */
+  background-color: var(--chat_bg);
+  padding: 10px !important;
+}
+
+.TIPinfoPanel .TIPwaitListBg {
+  width: 100%;
+  height: 456px;
+  background-color: var(--chat_bg);
+  color: #fff;
+}
+
+.TIPinfoPanel .TIPwaitListBg .TIPwaitListHeader {
+  width: 100%;
+  float: left;
+}
+
+.TIPinfoPanel .TIPwaitListBg .TIPwaitListHeader .waitListLabel {
+  width: calc(100% - 130px);
+  float: left;
+  margin-left: 5px;
+}
+
+.TIPinfoPanel .TIPwaitListBg .TIPwaitListHeader .waitListButton {
+  width: 120px;
+  height: 25px;
+  float: right;
+  margin-right: 5px;
+  background-color: #fbe555;
+  border: 1px solid black;
+  border-radius: 5px 0px 5px 0px;
+}
+
+.TIPinfoPanel .TIPwaitListBg .TIPwaitListHeader .waitListButton:hover {
+  background-color: #ffe111;
+}
+
+.TIPinfoPanel .TIPwaitListBg .waitListTableContainer {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.TIPinfoPanel .infoBg .iBgLine {
+  width: 100%;
+  height: 25px;
+  margin-top: 3px;
+  display: flex;
+}
+
+.TIPinfoPanel .infoBg .iBgLine .iBgHeader {
+  width: 40%;
+  float: left;
+}
+
+.TIPinfoPanel .infoBg .iBgLine span {
+  width: 60%;
+  float: right;
+  margin-right: 5px;
+  color: #ff0000;
+  margin-left: 3px;
+
+}
+
+.TIPinfoPanel .statsBg .statsText {
+  width: 75%;
+  float: left;
+}
+
+.TIPinfoPanel .statsBg .btnStats {
+  width: 25%;
+  float: right;
+}
+
+.TIPinfoPanel .statsBg .statsText .sBgLine {
+  width: 100%;
+  height: 25px;
+  margin-top: 3px;
+  display: flex;
+}
+
+.TIPinfoPanel .statsBg .statsText .sBgHeader {
+  width: 55%;
+  float: left;
+}
+
+.TIPinfoPanel .statsBg .statsText span {
+  width: 45%;
+  float: right;
+  margin-right: 5px;
+  color: #ff0000;
+  margin-left: 3px;
+}
+
+.TIPinfoPanel .statsBg .btnStats button {
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+  background-color: #ffe555;
+  color: black;
+  border-radius: 6px 0px 6px 0px;
+}
+
+.TIPinfoPanel .statsBg .btnStats button:hover {
+  background-color: #ffe111;
+}
+
+.chatPanelContainer {
+  /* position: fixed;
+  background: #000;
+  background: transparent;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3000;
+  width: 100%;
+  height: 500px; */
+}
+
+/* .TIPinfoPanel .chatPanel .chatContainer div {
+  background: #3236458c;
+  border-radius: 5px;
+  padding: 7px;
+  color: #fff;
+  margin-bottom: 15px;
+} */
+
+.fd.df.infoBtns button:disabled {
+  color: #7c7c7c;
+  display: none;
+}
+
+.fd.df.infoBtns button {
+  float: left;
+  flex-grow: 1;
+  background: var(--clr_4);
+  border: solid 1px #000;
+  border-radius: 50px;
+  padding: 6px;
+  color: #000;
+  cursor: pointer;
+}
+
+.chatHide {
+  position: absolute;
+  bottom: 0;
+  border: 1px solid var(--border_river);
+  left: 0;
+  /* height: 50px; */
+  height: 150px;
+  width: 25%;
+  /* width: 50%; */
+  background: #000;
+  z-index: 1;
+}
+
+.chatShow {
+  position: absolute;
+  bottom: 0;
+  border: 1px solid #FFFFFF;
+  left: 0;
+  height: 70%;
+  width: 50%;
+  background: #000;
+  z-index: 1;
+}
+
+
+.chatBox-container {
+  border: 1px solid var(--border_river);
+  z-index: 9;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: var(--chat_bg);
+
+  .content-section {
+    height: 50vh;
+    overflow: auto;
+    position: relative;
+  }
+}
+
+.chatBox-container .top-nav-btns-container {
+  border: 1px solid var(--border_river);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 2px 0px;
+
+  >button {
+    width: 100%;
+    height: 100%;
+    margin: 0px 2px;
+    font-weight: 500;
+  }
+}
+
+.content-section .chat-btns-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  border-top: 1px solid var(--border_river);
+  display: flex;
+  padding: 2px 0px 10px 0px;
+
+  >input {
+    text-indent: 10px;
+    height: 100%;
+    width: 100%;
+    margin: 0px 5px 0px 0px;
+    font-weight: 500;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+}
+
+.chat-messages-section {
+  max-height: calc(100% - 52px);
+  overflow: auto;
+  padding: 5px;
+}

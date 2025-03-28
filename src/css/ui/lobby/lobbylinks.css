@@ -1,0 +1,28 @@
+.lobbylinkmain {
+    justify-content: center;
+    background: #000;
+}
+
+.spanimage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    background: none;
+}
+
+.spanimage span {
+    /* font-family: Roboto Condensed; */
+    font-weight: bold;
+    color: var(--clr_ff);
+
+}
+
+/* .spanimage span:active{
+    box-shadow: inset 0px -25px 13px -15px var(--clr_blue)
+} */
+.spanimage img:hover {
+    box-shadow: inset 0px -25px 13px -15px var(--clr_blue)
+}

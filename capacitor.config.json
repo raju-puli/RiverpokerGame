@@ -1,0 +1,6 @@
+{
+  "appId": "com.rp1.app",
+  "appName": "PokerFun",
+  "webDir": "build",
+  "bundledWebRuntime": false
+}

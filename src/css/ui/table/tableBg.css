@@ -1,0 +1,64 @@
+.tableBg {
+
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  resize: none;
+  /* background-color: #000000; */
+}
+
+.DivTableWaterMark {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 500px;
+  margin-top: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.carpetBg {
+  /* background:transparent linear-gradient(180deg, #000000 0%, #232F13 100%) 0% 0% no-repeat padding-box; */
+  /* background: url(./../../../assets/images/themes/euro/table/img/bg_carpet.png); */
+  /* background-image: linear-gradient(#1f1f1f, #2d2d2d); */
+  /* background-image: url(../../../assets/images/lobby/tableIcons/tableBg/Newbg_texture.jpg); */
+  background-image: url(../../../assets/images/lobby/tableIcons/tableBg/riverTable_bg.png);
+  /* background-image: url(../../../assets/images/lobby/tableIcons/tableBg/bg_texture.jpg); */
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+.TableWaterMark {
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.tableBg {
+  width: 100%;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.tableOverLay {
+  width: 100%;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  opacity: 0.2;
+}

@@ -1,0 +1,60 @@
+.addonAlert{
+    width:350px;
+    height:180px;
+    background-color: #0a363c;
+    border: 2px solid rgba(255, 229, 85, 0.5);
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1100;
+
+}
+.addonAlert .header{
+    width: 100%;
+    height: 25px;
+    background-image: url("../../../assets/images/popUp/popUp_label.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: -10px;
+    padding-left: 20px;
+}
+.addonAlert .dataAlert{
+    width: 96%;
+    height:110px;
+    margin-left: 2%;
+    background-color: #091d29;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    text-align: center;
+    color: #ffe555;
+}
+.addonAlert .footer{
+    width: 100%;
+    height:35px;
+    background-color: #091d29;
+    border-radius: 0px 0px 5px 5px;
+}
+.addonAlert .footer .btnContainer{
+    position: relative;
+    left:50%;
+    transform: translate(-25%);
+}
+.addonAlert .footer button{
+    width:80px;
+    height:28px;
+    background-color: #ffe555;
+    border-radius: 5px 0px 5px 0px;
+    border: none;
+    outline: none;
+    margin-top:3px;
+    margin-left: 10px;
+}
+.addonAlert .footer button:hover{
+    background-color: #ffe111;
+}

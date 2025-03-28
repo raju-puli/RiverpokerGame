@@ -1,0 +1,12 @@
+.redirectionLinks {
+    width: 100%;
+    margin: 5px;
+    height: 35px;
+}
+
+.redirectionLinks:hover {
+    border-radius: 4px;
+    background-image: linear-gradient(rgb(254, 214, 38), rgb(142, 117, 8)) !important;
+    color: #000;
+    cursor: pointer;
+}

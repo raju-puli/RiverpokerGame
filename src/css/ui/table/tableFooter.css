@@ -1,0 +1,40 @@
+.gameTableFooter{
+    width: 100vw;
+    height: 30px;
+    background-color: #091d29;
+    border-top: 2px solid rgba(255, 229, 85, 0.5);
+    border-radius: 4px 4px 0px 0px;
+    position: absolute;
+    left: -10px;
+    bottom: 0px;
+    display: flex;
+}
+
+.gameTableFooter .leftButtons{
+    width: calc(100vw - 54px);
+    height: 100%;
+    float: left;
+}
+.gameTableFooter .rightButtons{
+    width: 50px;
+    height: 100%;
+    float: right;
+}
+.gameTableFooter button{
+    width: 120px;
+    height: 20px;
+    margin-left:4px;
+    margin-top: 4px;
+    border-radius: 8px 0px 8px 0px;
+}
+
+.gameTableFooter .ganeTableMenu{
+    width: 28px;
+    height: 26px;
+    margin-top: 2px;
+    background-color: royalblue;
+    /* background-image: url("../../../assets/images/lobby/List_Button.png"); */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+}

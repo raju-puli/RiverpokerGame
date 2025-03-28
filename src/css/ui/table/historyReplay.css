@@ -1,0 +1,124 @@
+.historyReplay-container {
+    position: fixed;
+    inset: 0;
+    background: black;
+}
+
+.cover {
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+}
+
+.playOptionsMain {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 80vh;
+    padding: 0px 10px;
+    z-index: 99999;
+}
+
+.buttonsContainer {
+    position: relative;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonsContainer button {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    outline: none;
+}
+
+.buttonsContainer button:active {
+    transform: scale(.92);
+}
+
+.exitBtn button {
+    background: none;
+    border-radius: 50px;
+    background: red;
+    color: wheat;
+    font-size: 1.5em;
+    /* font-family: 'Roboto'; */
+    font-weight: 600;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    margin: auto;
+}
+
+.exitBtn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999999999999;
+    padding: 2em;
+}
+
+.buttonsContainer button.playforword_playBackword img {
+    width: 15vw;
+}
+
+.buttonsContainer button.info {
+    bottom: -10px;
+    position: relative;
+}
+
+.buttonsContainer button.info img {
+    width: 10vw;
+}
+
+
+.playOptionsMainDesktop {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0px 10px;
+    z-index: 99999;
+}
+
+.buttonsContainerDesktop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    height: 14vh;
+}
+
+.buttonsContainerDesktop button {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    outline: none;
+    margin: 0px 5px;
+}
+
+.buttonsContainerDesktop button.playforword_playBackword img {
+    width: 5vw;
+}
+
+.buttonsContainerDesktop button.info img {
+    width: 4vw;
+    margin-top: 20px;
+}
+
+.buttonsContainerDesktop button:active {
+    transform: scale(.92);
+}
+
+.top-container {
+    position: fixed;
+    top: 0;
+    left: 10px;
+}

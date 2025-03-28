@@ -1,0 +1,207 @@
+.backcover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00000082;
+}
+
+.pokerhandPhaseHistory {
+  width: -webkit-fill-available;
+  height: 50vh;
+  border: 1px solid gray;
+  border-radius: 5px;
+  /* position: absolute; */
+  background: repeating-radial-gradient(circle at 0 0,
+      #101d30,
+      #090e28 50px);
+  box-shadow: 2px 2px 9px 2px #03050cda;
+  margin: 10px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 21%;
+}
+
+.pokerhandPhaseHistory .close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: #0f1b2f;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-left: 1px solid #808080b3;
+  border-right: 1px solid #808080b3;
+  border-top: 1px solid #808080b3;
+}
+
+.pokerhandPhaseHistory .innerputTables {
+  overflow: auto;
+  position: fixed;
+  background: green;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 38%;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  max-height: 30vh;
+  margin: 20px;
+  box-shadow: rgb(89 89 89 / 35%) 0px 5px 15px;
+}
+
+.pokerhandPhaseHistory .outputTables {
+  /* border: 2px solid #041214; */
+  /* margin-top: 2%; */
+  /* margin-left: .6%; */
+  /* width: 86%; */
+  /* height: 92%; */
+  overflow: auto;
+  position: fixed;
+  background: rgb(0 0 0 / 65%);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.pokerhandPhaseHistory .handData {
+  width: -webkit-fill-available;
+  overflow: hidden;
+  border-bottom: 1px solid gray;
+}
+
+.pokerhandPhaseHistory .handData .subHanddata {
+  display: flex;
+  flex-direction: row;
+  margin: 3px 0px 0px 2px;
+  width: -webkit-fill-available;
+  overflow: auto;
+}
+
+.pokerhandPhaseHistory .handData .subHanddata .nickName {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2%;
+  background-color: #041214;
+  padding: 3px 6px 2px 6px;
+  border: solid .5px rgb(255, 229, 85, .4);
+  border-radius: 3px;
+}
+
+.pokerhandPhaseHistory .handData .subHanddata .nickName .nicknameLabel {
+  border-bottom: solid .5px #dddddd5d;
+}
+
+.pokerhandPhaseHistory .handData .subHanddata .nickName .timeLabel {
+  border-bottom: solid .5px #dddddd5d;
+  width: 100px;
+}
+
+.pokerhandPhaseHistory .handData .subHanddata .nickName .timeField {
+  margin-bottom: 3px;
+  text-align: center;
+  width: 100px;
+}
+
+.pokerhandPhaseHistory .handData .subHanddata .nickName div {
+  margin-bottom: 3px;
+  text-align: center;
+  width: 100px;
+}
+
+/* .pokerhandPhaseHistory .belowHanddata {
+  display: flex;
+  flex-direction: row;
+} */
+
+.pokerhandPhaseHistory .belowHanddata .handNumbers {
+  margin-left: .3%;
+  margin-top: 1.8%;
+  height: 40vh;
+  overflow: auto;
+  position: relative;
+}
+
+.pokerhandPhaseHistory .belowHanddata .handNumbers .handdata {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  height: fit-content;
+  /* border: 1px solid; */
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pokerhandPhaseHistory .belowHanddata .handNumbers .handdata button {
+  display: flex;
+  flex-direction: column;
+  color: #fbe01170;
+  background-color: #061e22;
+  padding: 0px 2px 0px 2px;
+  font-size: 16.8px;
+  border: solid .5px rgba(255, 229, 85, 0.151);
+  background-image: linear-gradient(to bottom right, #061e22, #dddddd28);
+  border-radius: 3px;
+  margin: 2px;
+  text-align: center;
+}
+
+.pokerhandPhaseHistory .belowHanddata .handNumbers .handdata button:hover {
+
+  color: #fbe111;
+
+}
+
+.pokerhandPhaseHistory .belowHanddata .handNumbers .headerHand {
+  background-color: #061e22;
+  padding: 3px 6px 2px 6px;
+  font-size: 16.8px;
+  border: solid .5px rgba(255, 229, 85, 0.151);
+  ;
+  background-image: linear-gradient(to bottom right, #061e22, #dddddd28);
+  border-radius: 3px;
+  text-align: center;
+}
+
+.pokerhandPhaseHistory .outputTables table {
+  /* font-family: arial, sans-serif; */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.pokerhandPhaseHistory .outputTables td,
+th {
+  border: 1px solid var(--bdr);
+  text-align: left;
+  padding: 8px;
+}
+
+.pokerhandPhaseHistory .outputTables tr:nth-child(even) {
+  background-color: #0a111391;
+}
+
+.pokerhandPhaseHistory .close button {
+  width: 30px;
+  height: 30px;
+  background: var(--clr_2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 1px 1px 9px 3px #ff000073;
+  outline: none;
+  color: white;
+  font-weight: 800;
+  font-size: 15px;
+  margin: 5px;
+}

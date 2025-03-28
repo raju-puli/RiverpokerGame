@@ -1,0 +1,254 @@
+{
+    "tableDetails": {
+        "tableId": "123-2a",
+        "sessionId": "a9556e142072402b-b309596875d9773e",
+        "startDate": "Mon Jan 22 15:39:08 IST 2024",
+        "manualPrizePool": "false",
+        "referenceId": 986560,
+        "seats": 6,
+        "type": {
+            "tableType": "SINGLE_TABLE",
+            "game": "TEXAS_HOLDEM",
+            "limit": "NO_LIMIT",
+            "mode": "ARS",
+            "isTimeForced": "false",
+            "runTwice": "true",
+            "noOfHandsToHidePlayerData": "0",
+            "noOfHandsToHidePlayerStack": "0",
+            "jackpot": "true",
+            "hideName": "true",
+            "hideStack": "false",
+            "enableTwoX": "false",
+            "bombpot": "true",
+            "knockOutFee": "0",
+            "knockOutAmount": "100"
+        },
+        "Parameters": {
+            "stakes-low": "10",
+            "stakes-high": "20",
+            "min-buyin": "200",
+            "max-buyin": "2000"
+        },
+        "Statistics": {
+            "players-per-2nd-round": "0",
+            "hands-per-hour": "0",
+            "average-pot": "0",
+            "roundsCount": 1
+        }
+    },
+    "gameDetails": {
+        "historyId": "000000000000043a0000000000000d54",
+        "hand": "0",
+        "serverTime": "1712555467905",
+        "gameId": 948
+    },
+    "playersInfo": [
+        {
+            "name": "Raj1",
+            "seatId": 2,
+            "isDealer": "true",
+            "me": "false",
+            "bet": "10",
+            "totalBalanceOnSeat": "200",
+            "playerId": 5417,
+            "jackpotFee": 0.0,
+            "jackpotPayout": 0.0,
+            "isTimeForcedPaused": "false",
+            "duration": "50000",
+            "cards": [
+                "Qc Th"
+            ],
+            "actions": {
+                "1": [
+                    {
+                        "Time": "[4:05:37 PM]",
+                        "action": "SB",
+                        "amount": 10.00
+                    }
+                ],
+                "3": [
+                    {
+                        "Time": "[4:40:00 PM]",
+                        "action": "Call",
+                        "amount": 10.00
+                    }
+                ],
+                "6": [
+                    {
+                        "Time": "[5:01:20 PM]",
+                        "action": "Check"
+                    }
+                ],
+                "8": [
+                    {
+                        "Time": "[5:41:01 PM]",
+                        "action": "Check"
+                    }
+                ],
+                "10": [
+                    {
+                        "Time": "[6:02:10 PM]",
+                        "action": "Check",
+                        "amount": 0
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Raj2",
+            "seatId": 4,
+            "isDealer": "false",
+            "me": "true",
+            "bet": "20",
+            "totalBalanceOnSeat": "200",
+            "playerId": 5417,
+            "isTimeForcedPaused": "false",
+            "jackpotFee": 0.0,
+            "jackpotPayout": 0.0,
+            "duration": "50000",
+            "cards": [
+                "4c As"
+            ],
+            "actions": {
+                "2": [
+                    {
+                        "Time": "[4:20:37 PM]",
+                        "action": "BB",
+                        "amount": 20.00
+                    }
+                ],
+                "4": [
+                    {
+                        "Time": "[4: 55: 00PM]",
+                        "action": "Check"
+                    }
+                ],
+                "5": [
+                    {
+                        "Time": "[5: 22: 00PM]",
+                        "action": "Check"
+                    }
+                ],
+                "7": [
+                    {
+                        "Time": "[5: 57: 00PM]",
+                        "action": "Check"
+                    }
+                ],
+                "9": [
+                    {
+                        "Time": "[4: 55: 00PM]",
+                        "action": "Check"
+                    }
+                ]
+            }
+        }
+    ],
+    "DealingBoardCards": {
+        "flop": "8c 7c 6s",
+        "river": [
+            {
+                "Time": "4: 55: 00PM]",
+                "card": "5c"
+            }
+        ],
+        "turn": [
+            {
+                "Time": "4: 55: 00PM]",
+                "card": "6c"
+            }
+        ]
+    },
+    "DealingRiverCards": {
+        "flop": "8c 7c 6s",
+        "river": [
+            {
+                "Time": "4: 55: 00PM]",
+                "card": "5c"
+            }
+        ],
+        "turn": [
+            {
+                "Time": "4: 55: 00PM]",
+                "card": "6c"
+            }
+        ]
+    },
+    "gameRoundInfo": {
+        "Combination": {
+            "roundOne": "pair of ace",
+            "roundTwo": "three of a kind",
+            "roundThree": "full house"
+        },
+        "RakeChange": {
+            "Rake": {
+                "attr": {
+                    "pot": "0",
+                    "change": "2"
+                }
+            }
+        },
+        "PotsChange": {
+            "Pot": [
+                {
+                    "attr": {
+                        "pot": "0",
+                        "change": "20",
+                        "seat": "2"
+                    }
+                },
+                {
+                    "attr": {
+                        "pot": "0",
+                        "change": "20",
+                        "seat": "4"
+                    }
+                }
+            ]
+        },
+        "startCountDown": {
+            "roundOne": 5000,
+            "roundTwo": 5000,
+            "roundThree": 5000
+        },
+        "playerActiveStatus": {
+            "roundOne": [
+                {
+                    "seatId": 2,
+                    "status": "active"
+                },
+                {
+                    "seatId": 4,
+                    "status": "active"
+                }
+            ],
+            "roundTwo": [
+                {
+                    "seatId": 2,
+                    "status": "active"
+                },
+                {
+                    "seatId": 4,
+                    "status": "active"
+                }
+            ],
+            "roundThree": [
+                {
+                    "seatId": 2,
+                    "status": "active"
+                },
+                {
+                    "seatId": 4,
+                    "status": "active"
+                }
+            ]
+        }
+    },
+    "Winner": {
+        "attr": {
+            "seat": "2",
+            "amount": "40",
+            "pot": "0"
+        }
+    }
+}

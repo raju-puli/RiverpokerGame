@@ -1,0 +1,229 @@
+ .responsive {
+   width: 100%;
+   float: left;
+   display: flex;
+   overflow: auto;
+   white-space: nowrap;
+   background: var(--clr_3);
+   /* cursor: pointer; */
+ }
+
+ @media only screen and (min-width: 768px) {
+   .responsive {
+     cursor: pointer;
+   }
+ }
+
+ .avatarPopup .pics {
+   width: 100%;
+   flex-shrink: 0;
+   height: 100%;
+
+ }
+
+
+ .avatarPopup .pics>img:hover {
+   -ms-transform: scale(1.02);
+   -webkit-transform: scale(1.02);
+   transform: scale(1.02);
+ }
+
+ .avatarPopup .pics>img {
+   margin-left: 4px;
+   margin-top: 4px;
+   border: none;
+ }
+
+ ::-webkit-scrollbar {
+   height: 6px;
+
+ }
+
+ ::-webkit-scrollbar-track {
+   background: #040d13;
+ }
+
+ ::-webkit-scrollbar-thumb {
+   background: #000000;
+ }
+
+ .avatarPopup .Mheader {
+   text-align: left;
+   background-image: url('../../../assets/images/popUp/popUp_label.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   top: -18px;
+   left: -5px;
+   padding-left: 10px;
+   background-size: 380px 22.5px;
+   color: rgb(0, 0, 0);
+   font-size: 16px;
+   font-weight: 500;
+ }
+
+ .avatarPopup .Cheader {
+   text-align: left;
+   background: #061b1d;
+   color: #fff;
+   font-size: 16px;
+   height: 22px;
+   width: 365;
+   position: relative;
+   bottom: 30px;
+
+ }
+
+ .avatarPopup .header1 {
+   text-align: left;
+   background: #061b1d;
+   height: 19px;
+   width: 175px;
+   color: rgb(255, 255, 255);
+   font-size: 15px;
+   position: relative;
+   bottom: 42px;
+   border: black 1px;
+ }
+
+ .avatarPopup .Pheader {
+   background: #061b1d;
+   text-align: center;
+   color: #fff;
+   margin: 0;
+   margin-top: 5px;
+   margin-bottom: 5px;
+ }
+
+ .avatarPopup .croppingarea {
+   background-color: #091d29;
+   border: solid 2px rgb(255, 229, 85, .2);
+   border-radius: 3px;
+   width: 66%;
+   height: 269px;
+   position: relative;
+   margin-left: 2%;
+
+ }
+
+ .avatarPopup .cropping {
+   position: relative;
+   width: 100%;
+   height: 200px;
+   overflow: hidden;
+   justify-content: center;
+   align-items: center;
+   background: var(--clr_3);
+   border: solid 1px var(--clr_4);
+   float: left;
+ }
+
+ .avatarPopup .cropping img {
+   width: 100%;
+ }
+
+ .loadFileAvt {
+   width: 150px;
+   float: left;
+   height: 20px;
+   cursor: pointer;
+   position: relative;
+   overflow: hidden;
+   margin-left: 15px;
+ }
+
+ .avatarPopup .preview {
+   background-color: #091d29;
+   border: solid 2px rgb(255, 229, 85, .2);
+   border-radius: 3px;
+   width: 100px;
+   height: 100px;
+   /* display: flex; */
+   position: absolute;
+   left: 0;
+   /* bottom: 271px; */
+   color: blanchedalmond;
+   float: left;
+   right: 0;
+   margin: auto;
+ }
+
+ .avatarPopup .div.preview>img {
+   border-radius: 50%;
+ }
+
+
+
+ .avatarPopup .set {
+   position: absolute;
+   bottom: 40px;
+   left: 280px;
+   width: 80px;
+   height: 28px;
+   background-color: #fbe555;
+   border-top-left-radius: 6px;
+   border-bottom-right-radius: 6px;
+   border: none;
+   outline: none;
+ }
+
+ .avatarPopup .close {
+   position: absolute;
+   bottom: 1px;
+   left: 280px;
+   margin-bottom: 4px;
+   width: 80px;
+   height: 28px;
+   background-color: #fbe555;
+   border-top-left-radius: 6px;
+   border-bottom-right-radius: 6px;
+   border: none;
+   outline: none;
+ }
+
+ .avatarPopup .Lfile {
+   background: var(--clr_5);
+   position: absolute;
+   z-index: 9;
+   width: 100%;
+   text-align: center;
+   cursor: pointer;
+   color: #000;
+ }
+
+ .responsive img {
+   width: 60px;
+   margin-left: 5px;
+ }
+
+ .avatarPopup .prev {
+   text-align: center;
+   height: 23px;
+   width: 250px;
+   color: rgb(0, 0, 0);
+   background-color: #fbe555;
+   font-size: 15px;
+   position: relative;
+   bottom: 36px;
+   border: none;
+   outline: none;
+   border-top-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+ }
+
+ .avatarPopup .prev:hover {
+   background-color: #fbe111;
+
+ }
+
+ .avatarPopup .Lfile:hover {
+   background-color: #fbe111;
+ }
+
+ .avatarPopup .close:hover {
+   background-color: #fbe111;
+ }
+
+ .avatarPopup .set:hover {
+   background-color: #fbe111;
+ }

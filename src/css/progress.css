@@ -1,0 +1,52 @@
+
+#progressBarPer{
+    position: absolute;
+    left:50vw;
+    top:45vh;
+    color:black;
+    font-size: 16px;
+}
+
+
+.progressBar progress[value]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30%;
+    height: 18px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    position: absolute;
+    left:35vw;
+    top:45vh;
+
+}
+.progressBar progress[value]::-webkit-progress-bar {
+    background-color:#dbdbdb;
+    border-radius: 10px;
+
+  }
+.progressBar progress::-moz-progress-bar { 
+    background:#ffe555; 
+    border: 1px solid black;
+
+    border-radius: 10px;
+
+} 
+
+/* For Chrome or Safari */ 
+.progressBar progress::-webkit-progress-value { 
+    background:#ffe555; 
+    border: 1px solid black;
+
+    border-radius: 10px;
+
+} 
+
+/* For IE10 */ 
+.timer progress { 
+    background: #ffe555; 
+    border: 1px solid black;
+
+    border-radius: 10px;
+
+}  

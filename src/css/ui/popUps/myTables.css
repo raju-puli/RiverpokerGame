@@ -1,0 +1,101 @@
+ 
+.myTable .tableBody{
+    width:96%;
+    height:200px;
+    border-radius:3px;
+    margin-left: 2%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color:#091d29;
+    border:solid 2px rgb(255, 229, 85,.5);;
+    overflow-y: auto;
+}
+.myTable .header{
+    width: 100%;
+    height: 25px;
+    background-image: url("../../../assets/images/popUp/popUp_label.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+    left: -10px;
+    padding-left: 20px;
+}
+
+.myTable .footer{
+    width:100%;
+    height: 35px;
+    background-color: #091d29;
+    border-radius: 0px 0px 5px 5px;
+    display: flex;
+}
+  .myTable .footjoin{
+     float: left;
+     margin-left: 2%;
+     margin-top: 5px;
+      width:80px;
+      height:28px;
+      background-color: #fbe555;
+      border-top-left-radius: 6px ;
+      border-bottom-right-radius: 6px ;
+      border: none;
+      outline: none;
+
+  }
+  .myTable .footclose{
+    float: right;  
+    margin-right: 2%;
+    margin-top: 5px;
+    margin-left: 270px;
+    width:80px;
+    height:28px;
+    background-color: #fbe555;
+    border-top-left-radius: 6px ;
+    border-bottom-right-radius: 6px ;
+    border: none;
+    outline: none;
+}
+.myTable .footjoin:hover{
+    background-color: #fbe111;
+}
+.myTable .footclose:hover{
+    background-color: #fbe111;
+}
+.myTable #table {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    border-collapse: collapse;
+    width: 100%;
+    border:1px solid #091d29; 
+     border-collapse:separate;  
+    border-spacing:0 3px; 
+    font-size: 13px;
+  }
+  
+  .myTable  #table td, #table th {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+  }
+  .myTable  #table td{
+    width:48.98%;
+      color: #fbe555;
+  }
+  .myTable  #table tr:nth-child(even){background-color: #142f33;}
+  .mytable  #table tr:nth-child(odd){background-color:  #0a363c;}
+  
+  .myTable  #table tr:hover {
+    -ms-transform: scale(1.015);
+    -webkit-transform: scale(1.015); 
+    transform: scale(1.015); 
+  }
+  .myTable  #table tr {
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style:none;
+    border:solid 1px rgb(255, 229, 85,.2);
+    border-radius: 2px;
+    
+  }
+  

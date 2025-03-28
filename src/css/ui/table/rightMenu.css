@@ -1,0 +1,134 @@
+.rightMenu {
+	width: 15vw;
+	min-width: 90px;
+	max-width: 120px;
+	height: 10vh;
+	min-height: 35px;
+	max-height: 45px;
+	position: absolute;
+	top:0px;
+	right: 0px;
+	background-color: #dbdbdb;
+	border-radius: 2px;
+	z-index: 15;
+}
+
+.rightMenu .resizeButton{
+	width: calc(100% - 4px);
+	height: calc(40% - 4px) ;
+	display: flex;
+	margin-left: 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.rightMenu .closeBtn{
+	width: calc(100% - 6px);
+	height: calc(50% - 2px) ;
+	/* display: flex; */
+	background-color: #091d29;
+	color: #ffe555;
+	outline: none;
+    border: none;
+	border-radius: 2px;
+	border: 1px solid #000000;
+	margin-left: 2px;
+	margin-bottom: 1px;
+	font-size: 13px;
+}
+.rightMenu .closeBtn:hover{
+	background-color: #ffe555;
+	color: #000000;
+}
+.rightMenu .inviteBtn{
+	width: calc(100% - 6px);
+	height: calc(50% - 2px) ;
+	/* display: flex; */
+	background-color: #091d29;
+	color: #ffe555;
+	outline: none;
+    border: none;
+	border-radius: 2px;
+	border: 1px solid #000000;
+	margin-left: 2px;
+	font-size: 13px;
+
+}
+.rightMenu .inviteBtn:hover{
+	background-color: #ffe555;
+	color: #000000;
+}
+
+
+.rightMenu .resizeButton .tiling{
+	width: calc(25% - 2px);
+	height: 100%;
+	background-color: #091d29;
+	background-image: url("../../../assets/images/table/tiles.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-left: 2px;
+}
+.rightMenu .resizeButton .cascade{
+	width: calc(25% - 2px);
+	height: 100%;
+	background-image: url("../../../assets/images/table/cascade.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-left: 2px;
+}
+.rightMenu .resizeButton .themesBtn{
+	width: calc(25% - 2px);
+	height: 100%;
+	background-color: #091d29;
+	background-image: url("../../../assets/images/lobby/Settings_Button.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-left: 2px;
+}
+
+
+
+
+
+
+
+.rightMenu .resizeButton .toggle .toggleToolTip{
+	background-color: #dbdbdb;
+	padding: 2px;
+	color: #000000;
+	visibility: hidden;
+	position: relative;
+	left: -200%;
+	top:50%;
+}
+.rightMenu .resizeButton .toggle:hover .toggleToolTip{
+	visibility: visible;
+}
+
+.rightMenu .resizeButton .tiling .tileToolTip{
+	background-color: #dbdbdb;
+	padding: 2px;
+	color: #000000;
+	visibility: hidden;
+	position: relative;
+	left: -200%;
+	top:50%;
+}
+.rightMenu .resizeButton .tiling:hover .tileToolTip{
+	visibility: visible;
+}
+
+.rightMenu .resizeButton .cascade .cascadeToolTip{
+	background-color: #dbdbdb;
+	padding: 2px;
+	color: #000000;
+	visibility: hidden;
+	position: absolute;
+	right: 100px;
+	top:50%;
+	z-index: 16;
+}
+.rightMenu .resizeButton .cascade:hover .cascadeToolTip{
+	visibility: visible;
+}

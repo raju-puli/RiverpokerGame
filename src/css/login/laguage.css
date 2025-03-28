@@ -1,0 +1,26 @@
+
+.mainlangselection{
+    float: right;
+}
+.selectImage{
+    height: 20px;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+.selectoption{
+    background: #ff000000;
+    border: none;
+    -webkit-appearance: none;
+    width: 72px;
+    color: #fff;
+    border: 1px solid #3CA2C8;
+    border-radius: 3px;
+}
+.selectoption:focus{
+    outline: none;
+}
+
+select option{
+    background: #161A1D !important;
+}
+ 

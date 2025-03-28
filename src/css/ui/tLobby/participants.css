@@ -1,0 +1,96 @@
+.participants {
+    width: 45%;
+    height: 40vh;
+    border-left: 2px solid rgba(255, 229, 85, 0.3);
+    border-right: 2px solid rgba(255, 229, 85, 0.3);
+    border-bottom: 2px solid rgba(255, 229, 85, 0.3);
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 20vh;
+    font-size: 10px;
+}
+
+.participants .containerOne {
+    width: 100%;
+    height: 25px;
+    background-color: #091d29;
+    color: #ffe555;
+    border: 2px solid rgba(255, 229, 85, 0.8);
+    position: relative;
+    left: -2px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.participants .containerTwo {
+    width: 100%;
+    height: 20px;
+    background-color: #091d29;
+    color: #ffe555;
+    text-align: center;
+}
+
+.participants .containerTwo button {
+    width: 100%;
+    height: 20px;
+    background-color: #091d29;
+    color: #ffe555;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+    border: none;
+}
+
+.participants .containerTwo button:hover {
+    color: red;
+}
+
+.participants .containerThree {
+    width: 100%;
+}
+
+#participants_table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#participants_table td {
+    color: #ddd;
+    height: 20px;
+    /* text-indent: 5px; */
+    text-align: center;
+
+}
+
+#participants_table tr:nth-child(odd) {
+    background-color: #062326;
+    /* background-image: linear-gradient(#753a3a, #490c0a); */
+}
+
+/* #participants_table tr:hover {background-color: #0e5c63;} */
+#participants_table th {
+    height: 20px;
+    text-align: center;
+    /* background-color: #0e5c63;
+    color: #ffe555;
+    border-top:2px solid rgba(255, 229, 85, 0.5); */
+    position: sticky;
+    top: 0px;
+
+
+}
+
+.tournamentDetails {
+    border: 1px solid var(--bdr);
+    float: left;
+    max-height: 210px;
+    overflow: auto;
+    width: 100%;
+}
+
+
+
+.add_bg {
+    background: linear-gradient(180deg, rgba(166, 29, 29, 0.768) 5%, rgba(63, 5, 5, 0.763) 100%)
+}

@@ -1,0 +1,81 @@
+.leftMenu {
+    width: 8vw;
+    min-width: 82px;
+    max-width: 100px;
+    height: 9vh;
+    min-height: 45px;
+    max-height: 65px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(255, 229, 85, 0.5);
+    background-color: #dbdbdb;
+    border-radius: 2px;
+    z-index: 10;
+}
+
+.leftMenu button {
+    width: 94%;
+    height: 40%;
+    background-color: #091d29;
+    border: none;
+    margin-left: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    outline: none;
+    color: #ffe555;
+    border-radius: 2px;
+}
+
+.leftMenu button:hover {
+    background-color: #ffe555;
+    color: black;
+    border: 1px solid black;
+}
+
+
+.popupbtn {
+    position: absolute;
+    width: 135px;
+    height: 80px;
+    background-color: #0E1E33;
+    top: 45px;
+    right: 5px;
+    border-radius: 24px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #323232;
+    justify-content: center;
+    box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 82%), 0 6.7px 5.3px rgb(0 0 0 / 64%), 0 12.5px 10px rgb(0 0 0 / 44%), 0 22.3px 17.9px rgb(0 0 0 / 0%), 0 41.8px 33.4px rgb(0 0 0 / 0%), 0 100px 80px rgb(0 0 0 / 0%);
+
+}
+
+.popupbtn button {
+    background-color: #0E1E33;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.popupbtn img {
+    margin-right: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19px;
+}
+
+.bgcover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+}

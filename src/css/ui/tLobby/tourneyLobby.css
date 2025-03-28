@@ -1,0 +1,9 @@
+.tourneyLobby {
+    width: 100%;
+    float: left;
+    position: relative;
+    padding: 10px;
+    padding-top: 45px;
+    height: 100vh;
+    overflow: auto;
+}

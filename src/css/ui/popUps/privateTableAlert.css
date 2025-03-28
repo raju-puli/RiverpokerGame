@@ -1,0 +1,33 @@
+
+.privateTableAlert .dataAlert{
+    
+    background-color: #091d29;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    text-align: center;
+    color: #ffe555;
+}
+.privateTableAlert .dataAlert .passKeyField{
+    width:150px; 
+}
+.privateTableAlert .footer{
+    width: 100%;
+    height:35px;
+    background-color: #091d29;
+    border-radius: 0px 0px 5px 5px;
+}
+.privateTableAlert .footer button{
+    width:80px;
+    height:28px;
+    background-color: #ffe555;
+    border-radius: 5px 0px 5px 0px;
+    border: none;
+    outline: none;
+    position: relative;
+    left: 85px;
+    top:5px;
+}
+.privateTableAlert .footer button:hover{
+    background-color: #ffe111;
+}

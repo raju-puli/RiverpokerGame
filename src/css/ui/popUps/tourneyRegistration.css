@@ -1,0 +1,40 @@
+/* .makeListAlign {
+  width:130px;  
+  position: relative;
+  float: right;
+  margin-left: auto;
+  margin-right: 10px;
+  color:white;
+} */
+.al_se {
+  align-items: self-end;
+}
+
+.tr-item {
+  justify-content: center;
+  align-items: center;
+  margin: 3px 0px;
+}
+
+.tr-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.tr-item .makeListAlign {
+  display: flex;
+  align-items: center;
+  width: 100% !important;
+  justify-content: center;
+}
+
+.tr-item .makeListAlign div.tourneyMoneyCls {
+  width: 100%;
+  padding: 0px 0px 0px 5px;
+}
+
+.tr-item .makeListAlign div.tourneyTypeText {
+  width: 100%;
+  text-align: end;
+  padding: 0px 5px 0px 0px;
+}

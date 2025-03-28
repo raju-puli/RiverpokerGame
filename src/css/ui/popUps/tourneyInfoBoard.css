@@ -1,0 +1,53 @@
+.tourneyInfoBoard{
+    width:200px;
+    /* height:180px; */
+    background-color: #0a363c;
+    border: 2px solid rgba(255, 229, 85, 0.5);
+    border-radius: 5px;
+    position: absolute;
+    left: 105px;
+    top: 0px;
+    /* top: 50%;
+    transform: translate(-50%, -50%); */
+    z-index: 10;
+}
+.tourneyInfoBoard .header{
+    width: 100%;
+    height: 20px;
+    background-image: url("../../../assets/images/popUp/popUp_label.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: -5px;
+    padding-left: 20px;
+}
+.tourneyInfoBoard .currentLevelData{
+    width: 98%;
+    height:30px;
+    margin-left: 1%;
+    background-color: #091d29;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 3px;
+    /* text-align: center; */
+    text-indent: 10px;
+    color: #dbdbdb;
+}
+.tourneyInfoBoard .nextLevelData{
+    width: 98%;
+    height:30px;
+    margin-left: 1%;
+    background-color: #091d29;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 3px;
+    /* text-align: center; */
+    text-indent: 10px;
+    color: #dbdbdb;
+}
+
+
+
+

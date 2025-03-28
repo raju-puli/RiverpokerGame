@@ -1,0 +1,71 @@
+.newsBox{
+    height: 260px;
+    width: 450px;
+    background-color: #0a363c;
+    border: 2px solid rgb(255, 229, 85,.5);
+    
+    border-radius: 5px;   
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.newsBox .header{
+    width: 100%;
+    height: 25px;
+    background-image: url('../../../assets/images/popUp/popUp_label.png');
+    background-repeat: no-repeat;
+    background-size: 450px 22.5px;
+    position: relative;
+    left:-5px;
+    text-align: left;
+    padding-left: 5px;
+}
+.newsBox .newsPanel{
+    width: 100%;
+    height: 195px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 5px;
+   
+}
+.newsBox .newsContent{
+    width:96%;
+    height:100px;
+    margin-left: 2%;
+    background-color: #091d29;
+    color: #ffe555;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+.newsBox .title{
+    color:azure;
+    text-align: center;
+}
+.newsBox .title:hover{
+    color: brown;
+    cursor: pointer;
+}
+.newsBox .footer{
+    width: 100%;
+    height:35px;
+    background-color: #091d29;
+    border-radius: 0px 0px 5px 5px;
+
+}
+.newsBox .footer button {
+    width:80px;
+    height:30px;
+    background-color: #ffe555;
+    border-radius: 7px 0px 7px 0px;
+    border: none;
+    outline: none;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.newsBox .footer button:hover{
+    background-color: #ffe111;
+}

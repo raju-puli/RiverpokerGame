@@ -1,0 +1,194 @@
+.pokerhandHistory {
+    max-width: 800px;
+    height: 500px;
+    border: solid 2px rgb(255, 229, 85, .5);
+    border-radius: 5px;
+    background-color: #0a363c;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    color: azure;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.pokerhandHistory .pokerDates {
+    width: 96%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    margin-left: 2%;
+    border-radius: 5px;
+    background-color: #041214;
+    color: azure;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.pokerhandHistory .outputTables {
+    border: 2px solid #041214;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 96%;
+    height: 72%;
+}
+
+.pokerhandHistory .pokerDates .pokerstartDate {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.pokerhandHistory .pokerDates .pokerendtDate {
+    display: flex;
+    flex-direction: column;
+}
+
+.pokerhandHistory .pokerDates .pokerIndex {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.pokerhandHistory .close {
+    position: absolute;
+    right: 0;
+
+}
+
+.pokerhandHistory button {
+    background-color: #fbe111;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+}
+
+.pokerhandHistory .pokerDates .show button {
+    margin-left: 20px;
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.pokerhandHistory .pokerDates .pokerstartDate input {
+    width: 200px;
+    height: 30px;
+}
+
+.pokerhandHistory .pokerDates .pokerendDate input {
+    width: 200px;
+    height: 30px;
+}
+
+.pokerhandHistory .pokerDates .pokerIndex input {
+    width: 50px;
+    height: 30px;
+}
+
+.pokerhandHistory .outputTables {
+    overflow: scroll;
+}
+
+.pokerhandHistory .outputTables table {
+    /* font-family: arial, sans-serif; */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.pokerhandHistory .outputTables td,
+th {
+    border: 1px solid #dddddd5d;
+    text-align: left;
+    padding: 8px;
+}
+
+.pokerhandHistory .outputTables tr:nth-child(even) {
+    background-color: #0a111391;
+}
+
+.pokerhandHistory .footerPagination {
+    margin-top: 5px;
+    margin-left: 40%;
+    color: #041214;
+}
+
+.pokerhandHistory .footerPagination button {
+    margin-left: 10px;
+
+}
+
+.pokerhandHistory .footerPagination .backBtn {
+    margin-right: 10px;
+
+}
+
+.HistoryDiv {
+    display: block;
+    overflow: auto;
+    border: 1px solid gray;
+    padding: 3px;
+}
+
+.pageNatoin {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.fd .m_t_15 div p {
+    width: 10%;
+    /* border: 1px solid gray; */
+    /* height: 3vh; */
+}
+
+.pageNatoin p button:disabled {
+    opacity: 0.2;
+    border: none;
+}
+
+.pageNatoin p button {
+    text-decoration: none;
+    display: inline-block;
+    /* padding: 20px; */
+    font-size: 18px;
+    /* background: none; */
+    /* width: 40px; */
+    text-align: center;
+    font-weight: 800;
+    /* font-family: ui-serif; */
+}
+
+.back {
+    /* background-color: #acacac; */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.next {
+    /* background-color: #acacac; */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.playHistoryImg:active {
+    transform: scale(0.92);
+    filter: none;
+}
+
+.playHistoryImg {
+    width: 100%;
+    filter: drop-shadow(0 0 0.75rem crimson);
+    cursor: pointer;
+}

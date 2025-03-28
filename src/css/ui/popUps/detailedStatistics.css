@@ -1,0 +1,91 @@
+ .detailedStatistics .datePanel {
+     background-color: #091d29;
+     text-align: center;
+     color: #dbdbdb;
+ }
+
+ .detailedStatistics .statsPanel {
+     /* background-color: #091d29;  */
+     display: flex;
+
+     >div table tbody tr {
+         white-space: nowrap;
+     }
+ }
+
+ table.table_3 tbody tr td:last-child {
+     color: var(--clr_river) !important;
+ }
+
+ .detailedStatistics .statsPanel .leftPan {
+     width: 47%;
+     /* background-color: #0a363c; */
+     border-radius: 3px;
+     margin-left: 2%;
+     margin-top: 4px;
+     /* display: flex; */
+ }
+
+ .detailedStatistics .statsPanel .leftPan div {
+     float: left;
+     width: 95%;
+     margin-left: 5px;
+     margin-top: 3px;
+     /* background-color: #091d29; */
+     color: #dbdbdb;
+     text-indent: 5px;
+ }
+
+ .detailedStatistics .statsPanel .leftPan span {
+     float: right;
+     margin-right: 3px;
+ }
+
+ .detailedStatistics .statsPanel .rightPan div {
+     float: left;
+     width: 95%;
+     margin-left: 5px;
+     margin-top: 3px;
+     /* background-color: #091d29; */
+     color: #dbdbdb;
+     text-indent: 5px;
+ }
+
+ .detailedStatistics .statsPanel .rightPan span {
+     float: right;
+     margin-right: 3px;
+ }
+
+ .detailedStatistics .statsPanel .rightPan {
+     width: 47%;
+     /* background-color: #0a363c; */
+     border-radius: 3px;
+     margin-left: 2%;
+     margin-top: 4px;
+ }
+
+ .detailedStatistics .footer {
+     width: 100%;
+     height: 40px;
+     background-color: #091d29;
+     border-radius: 0px 0px 5px 5px;
+     display: flex;
+ }
+
+ .detailedStatistics .footer button {
+     width: 80px;
+     height: 30px;
+     background-color: #fbe35d;
+     outline: none;
+     border: none;
+     border-radius: 7px 0px 7px 0px;
+     float: right;
+     margin-right: 10px;
+     margin-top: 5px;
+     margin-left: 50%;
+     transform: translate(-50%);
+ }
+
+ .detailedStatistics .footer button:hover {
+     background-color: #ffe111;
+ }

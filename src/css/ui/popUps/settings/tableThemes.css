@@ -1,0 +1,78 @@
+.tableThemes {
+    width:100%;
+    height:100%;
+    background-color: #062326;
+    display: flex;
+    flex-direction: column;
+}
+.tableThemes .selectionPanel {
+    width:97.2%;
+    height:22.5%;
+    border:solid 5px rgba(7, 23, 32, 0.5);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+}
+.tableThemes .previewPanel {
+    width:97.2%;
+    height:72%;
+    border:solid 5px rgba(7, 23, 32, 0.5);
+    border-radius: 3px;
+}
+.tableThemes .selectionPanel .selectionLeft {
+    width:49%;
+    height:100%;
+    background-color: #133d57;
+    
+}
+.options .tableThemes .selectionPanel .selectionRight {
+    width:49%;
+    height:100%;
+    background-color: #133d57;
+    margin-left: 5px;
+}
+.tableThemes .selectionPanel .Theader{
+    background-color: #041416 ;
+    color:#dbdbdb;
+    text-align:left;
+}
+.tableThemes .selectionPanel .leftImages>img{
+   margin-top: 10px;
+   margin-bottom:10px;
+    margin-right: 15px;
+    border: solid 1px rgba(2, 6, 8, 0.5);
+}
+.tableThemes .selectionPanel .leftImages {
+    height:fit-content;
+    display: flex;
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    white-space: nowrap;
+}
+.tableThemes .selectionPanel .rightImages>img{
+    margin-top: 10.5px;
+    margin-bottom:10px;
+     margin-right: 15px;
+     border: solid 1px rgba(2, 6, 8, 0.5);
+ }
+ .tableThemes .selectionPanel .rightImages {
+     height:fit-content;
+     display: flex;
+     overflow-x: auto; 
+     overflow-y: hidden; 
+     white-space: nowrap;
+ }
+.tableThemes .previewPanel .carpetimg>img{
+     margin-top:30px;
+     width:100%;
+ }
+.tableThemes .previewPanel .tableimg>img{
+     width:100%;
+ }
+.tableThemes .previewPanel .tableimg{
+     width:100%;
+     position: absolute;
+     bottom:15px;
+     left:0px;
+ }
+ 

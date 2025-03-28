@@ -1,0 +1,437 @@
+ .userProfile .avtar {
+   max-width: 100px;
+   max-height: 100px;
+   min-width: 68px;
+   min-height: 68px;
+   width: 18vh;
+   height: 18vh;
+   border: 3px solid #ffe555;
+   border-radius: 9vh;
+   background-color: #091d29;
+   position: relative;
+   float: left;
+   z-index: 2;
+ }
+
+ .userProfile .avtar img {
+   position: relative;
+   /* display: block; */
+   margin: auto;
+   width: 100%;
+   left: 0px;
+   bottom: 0vh;
+   border-radius: 9vh;
+
+ }
+
+ .userProfile .avtar img:hover {
+   transform: scale(0.8);
+ }
+
+ .userProfile .userLabelRightPanel {
+   max-width: 160px;
+   max-height: 100px;
+   min-width: 68px;
+   min-height: 68px;
+   width: 13vw;
+   /* position: relative; */
+   /* left: 14vh; */
+   /* top: 3.5vh; */
+   float: right;
+   margin-top: 20px;
+
+ }
+
+ .userProfile .userName {
+   max-width: 160px;
+   min-width: 140px;
+   width: 12vw;
+   max-height: 22px;
+   min-height: 16px;
+   height: 4vh;
+   background-color: #ffe555;
+   text-align: center;
+   font-size: 14px;
+   color: black;
+   /* font-family: sans-serif; */
+   border-radius: 0px 3px 3px 0px;
+   margin-left: -15px;
+
+ }
+
+ .userProfile .gameBalance {
+   max-width: 160px;
+   min-width: 140px;
+   width: 14vw;
+   max-height: 22px;
+   min-height: 16px;
+   height: 4vh;
+   background-color: #ffe555;
+   color: black;
+   /* font-family: sans-serif; */
+   font-size: 14px;
+   text-align: center;
+   border-radius: 0px 3px 3px 0px;
+   margin-left: -20px;
+
+ }
+
+ .userProfile .userBalance {
+   max-width: 160px;
+   min-width: 140px;
+   width: 12.2vw;
+   max-height: 28px;
+   min-height: 18px;
+   height: 5vh;
+   background-color: #ffe555;
+   color: black;
+   /* font-family: sans-serif; */
+   font-size: 14px;
+   margin-top: 2px;
+   margin-bottom: 2px;
+   border-radius: 0px 3px 3px 0px;
+   margin-left: -4px;
+
+ }
+
+ #fielLabel1 {
+   width: 80px;
+   max-height: 13px;
+   height: unset;
+   min-height: 10px;
+   position: relative;
+   top: 2px;
+   bottom: 2px;
+ }
+
+ #fielLabel1 span {
+   background-color: #0e4363;
+   color: #ffe555;
+   padding-left: 30px;
+   padding-right: 5px;
+ }
+
+ #fielLabel2 {
+   width: 80px;
+   max-height: 13px;
+   height: unset;
+   min-height: 10px;
+   position: relative;
+   top: 4px;
+   bottom: 4px;
+ }
+
+ #fielLabel2 span {
+   background-color: #0e4363;
+   padding-left: 13px;
+   padding-right: 5px;
+   color: #ffe555;
+
+ }
+
+ #fielLabel3 {
+   width: 80px;
+   max-height: 13px;
+   height: unset;
+   min-height: 10px;
+   position: relative;
+   top: 2px;
+   left: 5px;
+   bottom: 2px;
+ }
+
+ #fielLabel3 span {
+   background-color: #0e4363;
+   color: #ffe555;
+   padding-left: 17px;
+   padding-right: 5px;
+ }
+
+ .userlevel .levelName {
+   display: flex;
+   flex-direction: row;
+   position: absolute;
+   border: solid 1px #3CA2C8;
+   ;
+   border-radius: 3px;
+   top: 98px;
+   left: 130px;
+   font-size: small;
+ }
+
+ .userlevel .stars {
+   display: flex;
+   flex-direction: row;
+ }
+
+ .userlevel .bgStars {
+   display: flex;
+   flex-direction: row;
+ }
+
+ .userlevel div.stars div img {
+   width: 15px;
+   height: 15px;
+   margin-left: 10px;
+ }
+
+ .avatar_section {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .imageLablediv {
+   border: 1px solid gray;
+   width: 110px;
+   height: 115px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 2px;
+   margin: 2px;
+
+   >img {
+     height: 100%;
+     width: 100%;
+     cursor: pointer;
+   }
+ }
+
+ .setPerviewDiv {
+   width: 70px;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0px 5px;
+   position: relative;
+   border-radius: 3px;
+   overflow: hidden;
+ }
+
+ .previewDiv {
+   margin: 10px;
+   border: 1px solid #4d4d4d;
+   padding: 10px;
+   border-radius: 3px;
+   background-image: linear-gradient(rgba(79, 79, 79, 0.79), rgba(0, 0, 0, 0.747));
+
+ }
+
+
+ .profile_image {
+   height: 55px;
+   border-radius: 5px;
+   cursor: pointer;
+   border: 1px solid gray;
+ }
+
+ .profileName,
+ .profileName_1 {
+   /* background: linear-gradient(#e66465, #9198e5); */
+   /* background-image: linear-gradient(to bottom right, #A43820, #F1D3B2); */
+   background-clip: text;
+   color: transparent;
+   /* color: #000; */
+   background-image: inear-gradient(to bottom right, #C4DFE6, #66A5AD);
+   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+     0px 8px 13px rgba(0, 0, 0, 0.1),
+     0px 18px 23px rgba(0, 0, 0, 0.1);
+ }
+
+ /* .userlevel .bgStars .bgStar0>img {
+   width: 20px;
+   height: 20px;
+   margin-left: 20px;
+ }
+
+ .userlevel .bgStars .bgStar1>img {
+   width: 18px;
+   height: 18px;
+   margin-left: 10px;
+
+ }
+
+ .userlevel .bgStars .bgStar2>img {
+   width: 18px;
+   height: 18px;
+   margin-left: 10px;
+
+ }
+
+ .userlevel .bgStars .bgStar3>img {
+   width: 18px;
+   height: 18px;
+   margin-left: 10px;
+
+ }
+
+ .userlevel .bgStars .bgStar4>img {
+   width: 18px;
+   height: 18px;
+   margin-left: 10px;
+
+ }
+
+ .userlevel .bgStars .bgStar5>img {
+   width: 18px;
+   height: 18px;
+   margin-left: 10px;
+
+ }
+
+ .userlevel .bgStars .bgStar6>img {
+   width: 18px;
+   height: 18px;
+   margin-left: 10px;
+ } */
+
+ /* .userlevel .stars .singleStar0>img {
+   width: 10px;
+   height: 10px; */
+ /* margin-left: 10px; */
+ /* } */
+
+ /* .userlevel .stars .singleStar1>img {
+   width: 10px;
+   height: 10px;
+   margin-left: 3px;
+ }
+
+ .userlevel .stars .singleStar2>img {
+   width: 10px;
+   height: 10px;
+   margin-left: 3px;
+ }
+
+ .userlevel .stars .singleStar3>img {
+   width: 10px;
+   height: 10px;
+   margin-left: 3px;
+ }
+
+ .userlevel .stars .singleStar4>img {
+   width: 10px;
+   height: 10px;
+   margin-left: 3px;
+ }
+
+ .userlevel .stars .singleStar5>img {
+   width: 10px;
+   height: 10px;
+   margin-left: 3px;
+ }
+
+ .userlevel .stars .singleStar6>img {
+   width: 10px;
+   height: 10px;
+   margin-left: 3px;
+ }
+
+ .userlevel .stars .singleStar0>img {
+   opacity: 0;
+   animation-name: bounceIn;
+   animation-duration: 450ms;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+ }
+
+ .userlevel .stars .singleStar1>img {
+   opacity: 0;
+   animation-name: bounceIn;
+   animation-duration: 450ms;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+ }
+
+ .userlevel .stars .singleStar2>img {
+   opacity: 0;
+   animation-name: bounceIn;
+   animation-duration: 450ms;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+ }
+
+ .userlevel .stars .singleStar3>img {
+   opacity: 0;
+   animation-name: bounceIn;
+   animation-duration: 450ms;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+ }
+
+ .userlevel .stars .singleStar4>img {
+   opacity: 0;
+   animation-name: bounceIn;
+   animation-duration: 450ms;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+ }
+
+ .userlevel .stars .singleStar5>img {
+   opacity: 0;
+   animation-name: bounceIn;
+   animation-duration: 450ms;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+ }
+
+ .userlevel .stars .singleStar6>img {
+   opacity: 0;
+   animation-name: bounceIn;
+   animation-duration: 450ms;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+ }
+
+ .userlevel .stars .singleStar0>img {
+   animation-delay: 1s;
+ }
+
+ .userlevel .stars .singleStar1>img {
+   animation-delay: 1.75s;
+ }
+
+ .userlevel .stars .singleStar2>img {
+   animation-delay: 2s;
+ }
+
+ .userlevel .stars .singleStar3>img {
+   animation-delay: 2.15s;
+ }
+
+ .userlevel .stars .singleStar4>img {
+   animation-delay: 2.30s;
+ }
+
+ .userlevel .stars .singleStar5>img {
+   animation-delay: 2.40s;
+ }
+
+ .userlevel .stars .singleStar6>img {
+   animation-delay: 2.50s;
+ } */
+
+ /* @keyframes bounceIn {
+   0% {
+     opacity: 0;
+     transform: scale(0.3) translate3d(0, 0, 0);
+   }
+
+   50% {
+     opacity: 0.9;
+     transform: scale(1.1);
+   }
+
+   80% {
+     opacity: 1;
+     transform: scale(0.89);
+   }
+
+   100% {
+     opacity: 1;
+     transform: scale(1) translate3d(0, 0, 0);
+   }
+ } */

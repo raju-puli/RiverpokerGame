@@ -1,0 +1,951 @@
+.mainGrid {
+  width: 100%;
+  border-radius: 3px;
+  float: left;
+  height: calc(100vh - 250px);
+  overflow: auto;
+}
+
+.mainGrid::-webkit-scrollbar {
+  display: none;
+}
+
+.NOtables {
+  text-align: center;
+  padding: 26px;
+  background: #0E1E33;
+  height: 69px;
+  border-radius: 26px;
+  box-shadow: 0px 0px 8px #65D9F7;
+  margin: 5px;
+  font-size: 14px;
+  /* rotate: 270deg; */
+}
+
+
+#mainGrid_table tr:hover {
+  border: 1px solid #346ab0;
+}
+
+#mainGridTourney_table tr:hover {
+  border: 1px solid #346ab0;
+}
+
+#mainGrid_table_rv tr {
+  height: 60px;
+  /* border-bottom: 1px solid #afafafb0; */
+  align-items: center;
+  background: #00000063;
+  margin-bottom: 4px;
+}
+
+#mainGrid_table_rv tr:last-child {
+  border: none;
+}
+
+
+#mainGrid_table tr {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 5px 0px 5px 0px;
+  border: 1px solid #0E1E33;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border-radius: 20px;
+  background: #0e1e33;
+}
+
+#mainGridTourney_table tr {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 5px 0px;
+  border: 1px solid #0E1E33;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border-radius: 20px;
+  background: #0e1e33;
+  padding: 10px;
+}
+
+#mainGridTourney_table {
+  border-collapse: separate;
+  width: 100%;
+}
+
+#mainGrid_table_rv {
+  border-collapse: separate;
+  width: 100%;
+}
+
+#mainGrid_table_rv thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#mainGrid_table_rv thead div.table_header_row {
+  width: 100%;
+  align-items: center;
+  height: 40px;
+  background: radial-gradient(circle, #1f2a39 0%, #101010 100%);
+  border: 1px solid #80808078;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 1;
+
+  >div span {
+    font-size: 1rem;
+    color: var(--clr_river);
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    z-index: -1;
+  }
+}
+
+#mainGrid_table {
+  border-collapse: separate;
+  width: 100%;
+}
+
+#mainGrid_table td {
+  position: relative;
+  color: #fff;
+}
+
+#mainGrid_table_rv td {
+  text-indent: 5px;
+  position: relative;
+  align-items: end;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+#mainGridTourney_table td {
+  position: relative;
+  background: var(--clr_3);
+  color: #fff;
+}
+
+/* #mainGridTourney_table td:nth-child(1) {
+  font-size: 12px;
+  color: var(--txt_clr_1);
+  width: 100%;
+  text-align: left;
+  padding: 3px 5px 3px 5px;
+  border: 1px solid #707070;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 5px;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+} */
+#mainGrid_table_rv td:nth-child(1) {
+  /* width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 15px;
+  margin-bottom: -5px;
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: left;
+  padding: 8px 0px; */
+  color: var(--txt_clr_1);
+}
+
+#mainGrid_table td:nth-child(1) {
+  width: -moz-fit-content;
+  width: fit-content;
+  /* margin-left: 5px; */
+  margin-left: 15px;
+  margin-bottom: -5px;
+  /* margin-top: 20px; */
+  margin-top: 10px;
+  rotate: 90deg;
+}
+
+#mainGridTourney_table td:nth-child(1) {
+  width: -moz-fit-content;
+  width: 20%;
+  display: flex;
+  height: -moz-fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+#mainGrid_table_rv td:nth-child(2) {
+  /* font-size: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 3px 5px 3px 5px;
+  border: 1px solid #707070;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 5px;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  font-weight: 700;
+  color: var(--clr_4);
+  padding: 8px 5px; */
+  color: #fff;
+}
+
+#mainGrid_table td:nth-child(2) {
+  font-size: 12px;
+  /* font-size: 3vw; */
+  /* color: var(--txt_clr_1); */
+  width: 100%;
+  text-align: left;
+  padding: 3px 5px 3px 5px;
+  border: 1px solid #707070;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 5px;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+#mainGridTourney_table td:nth-child(2) {
+  font-size: 12px;
+  /* font-size: 0.75rem; */
+  /* color: var(--txt_clr_1); */
+  color: #fff;
+  width: 100%;
+  text-align: left;
+  padding: 3px 5px 3px 5px;
+  border: 1px solid #707070;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 5px;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  font-weight: 600;
+}
+
+#mainGrid_table_rv td:nth-child(3) {
+  /* display: flex;
+  align-items: center;
+  margin-right: 5px;
+  width: 16%;
+  margin-top: -25px;
+  padding: 8px 10px; */
+  color: var(--clr_4);
+  /* padding: 8px 30px; */
+}
+
+#mainGrid_table td:nth-child(3) {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  width: 16%;
+  margin-top: -25px;
+}
+
+#mainGridTourney_table td:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  width: 20%;
+}
+
+@media only screen and (max-width: 576px) and (min-width: 330px) {
+
+  /* <-------------------Start_mainGrid-css----------------------> */
+  #mainGrid_table td:nth-child(4) {
+    position: relative;
+    float: left;
+    /* margin-top: 2%; */
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    border-right: 1px solid #707070;
+    margin-left: 22vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 25%;
+    background: none;
+    font-weight: 700;
+    padding-left: 8px;
+    text-wrap: nowrap;
+  }
+
+  #mainGrid_table td:nth-child(5) {
+    position: relative;
+    float: left;
+    /* margin-top: 2%; */
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    width: 22%;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+    border-right: 1px solid #707070;
+    background: none;
+    font-weight: 700;
+    text-wrap: nowrap;
+  }
+
+  #mainGrid_table td:nth-child(6) {
+    position: relative;
+    float: left;
+    /* margin-top: 2%; */
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    width: 29.3%;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+    background: none;
+    padding-left: 9px;
+    font-weight: 700;
+    text-wrap: nowrap;
+  }
+
+  #mainGrid_table td:nth-child(7) {
+    position: relative;
+    float: left;
+    margin-top: -3em;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    border-right: 1px solid #707070;
+    margin-left: 22vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 25%;
+    background: none;
+    font-weight: 100;
+    /* font-size: 10px; */
+    font-size: 0.75em;
+    padding-left: 8px;
+  }
+
+  #mainGrid_table td:nth-child(8) {
+    position: relative;
+    float: left;
+    margin-top: -3em;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    width: 22%;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-right: 1px solid #707070;
+    background: none;
+    text-align: center;
+    font-weight: 100;
+    /* font-size: 10px; */
+    font-size: 0.75em;
+  }
+
+  #mainGrid_table td:nth-child(9) {
+    position: relative;
+    float: left;
+    margin-top: -3em;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    width: 29.5%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-right: 8px;
+    background: none;
+    text-align: center;
+    padding-left: 15px;
+    font-weight: 100;
+    /* font-size: 10px; */
+    font-size: 0.75em;
+  }
+
+  /* <-------------------End_mainGrid-css----------------------> */
+
+  /* <-------------------Start_mainGridTourney-css----------------------> */
+  #mainGridTourney_table td:nth-child(4) {
+    position: relative;
+    float: left;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    border-right: 1px solid #707070;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+    width: 33.3%;
+    background: none;
+    margin-top: 18px;
+  }
+
+  #mainGridTourney_table td:nth-child(5) {
+    position: relative;
+    float: left;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    width: 33.3%;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+    border-right: 1px solid #707070;
+    background: none;
+    margin-top: 18px;
+  }
+
+  #mainGridTourney_table td:nth-child(6) {
+    position: relative;
+    float: left;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    width: 33.3%;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+    padding-right: 8px;
+    background: none;
+    margin-top: 18px;
+  }
+
+  #mainGridTourney_table td:nth-child(7) {
+    position: relative;
+    float: left;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    /* width: 33.3%; */
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+    padding-right: 8px;
+    background: none;
+    margin-top: -38px;
+    text-align: end;
+  }
+
+  /* <-------------------End_mainGridTourney-css----------------------> */
+
+
+}
+
+
+
+
+
+#mainGrid_table_rv tr th {
+  text-align: left;
+  background: #04111e !important;
+  background: transparent;
+  color: #679c12;
+  border-bottom: 1px solid #0d4d54;
+  position: sticky;
+  top: 0px;
+  border: none;
+  flex-grow: 1;
+}
+
+#mainGrid_table tr th {
+  text-align: left;
+  background: #04111e !important;
+  background: transparent;
+  color: #679c12;
+  border-bottom: 1px solid #0d4d54;
+  position: sticky;
+  top: 0px;
+  border: none;
+  flex-grow: 1;
+}
+
+.playBtn {
+  width: 12px;
+}
+
+.playBtnDiv {
+  background: #00ddfb17;
+  padding: 9px;
+  position: absolute;
+  top: -14px;
+  right: 9px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.showSpinner {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+
+.maingridheader {
+  position: sticky;
+  z-index: 1;
+  overflow-y: auto;
+  top: 0px;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  .mainGrid {
+    width: 100%;
+    border-radius: 3px;
+    /* overflow-x: auto; */
+    float: left;
+    height: calc(100vh - 250px);
+    overflow: auto;
+    /* height: calc(100vh - 135px); */
+    /* height: calc(100vh - 150px); */
+  }
+
+  #mainGrid_table_rv tr {
+    width: 100%;
+    display: flex;
+    transition: all .15s;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  }
+
+  #mainGrid_table tr {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 5px 0px;
+  }
+
+  #mainGridTourney_table_lb tr {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 5px 0px;
+  }
+
+  #mainGridTourney_table tr {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 5px 0px;
+  }
+
+  #mainGrid_table_lb {
+    border-collapse: separate;
+    width: 100%;
+  }
+
+  #mainGrid_table_rv {
+    border-collapse: separate;
+    width: 100%;
+  }
+
+  #mainGrid_table {
+    border-collapse: separate;
+    width: 100%;
+  }
+
+  #mainGridTourney_table_lb {
+    border-collapse: separate;
+    width: 100%;
+  }
+
+  #mainGridTourney_table_lb tbody {
+    background: #000;
+  }
+
+  #mainGridTourney_table {
+    border-collapse: separate;
+    width: 100%;
+  }
+
+  /* #mainGridTourney_table tbody {
+    background: #000;
+  } */
+
+  #mainGridTourney_table_lb td {
+    /* color: var(--txt_clr_2);   */
+    text-indent: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+    position: relative;
+    background: var(--clr_3);
+    /* padding-bottom: 10px; */
+    padding: 10px 5px;
+    /* padding: auto; */
+
+  }
+
+  #mainGridTourney_table td {
+    /* color: var(--txt_clr_2);   */
+    text-indent: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+    position: relative;
+    background: var(--clr_3);
+    /* padding-bottom: 10px; */
+    padding: 10px 5px;
+    /* padding: auto; */
+
+  }
+
+  /* #mainGridTourney_table td:nth-child(6){
+    text-indent: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+    position: relative;
+    background: var(--clr_3);
+    padding: 10px 5px;
+    background-image: url(../../../assets/images/lobby/Path.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: center;
+    background-size: 100% 200%;
+
+  } */
+
+  #mainGridTourney_table_lb th {
+    border: none;
+  }
+
+  #mainGridTourney_table_lb th:nth-child(6) {
+    border: none;
+    text-align: center;
+  }
+
+  #mainGridTourney_table th {
+    border: none;
+  }
+
+  #mainGridTourney_table th:nth-child(6) {
+    border: none;
+    text-align: center;
+  }
+
+  #mainGrid_table_lb td {
+    color: var(--txt_clr_2);
+    text-indent: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+    position: relative;
+    background: var(--clr_3);
+    padding-bottom: 10px;
+  }
+
+
+  #mainGrid_table td {
+    color: var(--txt_clr_2);
+    text-indent: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+    position: relative;
+    background: var(--clr_3);
+    padding-bottom: 10px;
+  }
+
+  #mainGrid_table_lb td:nth-child(1) {
+    font-size: 12px;
+    color: var(--txt_clr_1);
+    text-align: left;
+    padding: 8px 0px;
+    /* border: 1px solid blue; */
+  }
+
+  #mainGrid_table td:nth-child(1) {
+    font-size: 12px;
+    color: var(--txt_clr_1);
+    text-align: left;
+    padding: 8px 0px;
+    /* border: 1px solid blue; */
+  }
+
+  #mainGrid_table_lb td:nth-child(2) {
+    color: var(--clr_4);
+    padding: 8px 5px;
+    /* border: 1px solid yellow; */
+
+
+  }
+
+  #mainGrid_table_lb td:nth-child(2) {
+    color: var(--clr_4);
+    padding: 8px 5px;
+    /* border: 1px solid yellow; */
+
+
+  }
+
+  #mainGrid_table td:nth-child(2) {
+    color: var(--clr_4);
+    padding: 8px 5px;
+    /* border: 1px solid yellow; */
+  }
+
+  #mainGrid_table_lb td:nth-child(3) {
+    color: var(--clr_4);
+    padding: 8px 10px;
+    /* border: 1px solid green; */
+
+
+  }
+
+  #mainGrid_table td:nth-child(3) {
+    color: var(--clr_4);
+    padding: 8px 10px;
+    /* border: 1px solid green; */
+
+
+  }
+
+  #mainGrid_table_lb td:nth-child(4) {
+    color: var(--clr_4);
+    padding: 8px 30px;
+    /* border: 1px solid white; */
+
+
+  }
+
+  #mainGrid_table_rv td:nth-child(4) {
+    color: var(--clr_4);
+    /* padding: 8px 30px; */
+  }
+
+  #mainGrid_table td:nth-child(4) {
+    color: var(--clr_4);
+    padding: 8px 30px;
+    /* border: 1px solid white; */
+  }
+
+  #mainGrid_table_lb td:nth-child(5) {
+    color: var(--clr_4);
+    padding: 8px 30px;
+    /* border: 1px solid gray; */
+
+
+  }
+
+  #mainGrid_table_rv td:nth-child(5) {
+    color: var(--clr_4);
+    /* padding: 8px 30px; */
+    /* border: 1px solid gray; */
+  }
+
+  #mainGrid_table td:nth-child(5) {
+    color: var(--clr_4);
+    padding: 8px 30px;
+    /* border: 1px solid gray; */
+  }
+
+  #mainGrid_table_lb td:nth-child(6) {
+    color: var(--clr_4);
+    padding: 8px 20px;
+    /* border: 1px solid pink; */
+    /* background-image: url(../../../assets/images/lobby/Path.svg); */
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: center;
+    background-size: 100% 200%;
+
+
+  }
+
+  #mainGrid_table_rv td:nth-child(6) {
+    color: var(--clr_4);
+  }
+
+  #mainGrid_table td:nth-child(6) {
+    color: var(--clr_4);
+    padding: 8px 20px;
+    /* border: 1px solid pink; */
+    /* background-image: url(../../../assets/images/lobby/Path.svg); */
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: center;
+    background-size: 100% 200%;
+  }
+
+  #mainGrid_table_lb tr th {
+    text-align: left;
+    background: var(--clr_3) !important;
+    background: transparent;
+    color: var(--clr_ff);
+    border-bottom: 1px solid #705d29;
+    position: sticky;
+    top: 0px;
+    border: none;
+    flex-grow: 1;
+    /* border: 1px solid red; */
+  }
+
+
+  #mainGrid_table_rv tr th {
+    text-align: left;
+    background: var(--clr_3) !important;
+    background: transparent;
+    color: var(--clr_ff);
+    border-bottom: 1px solid #705d29;
+    position: sticky;
+    top: 0px;
+    border: none;
+    flex-grow: 1;
+    text-indent: 5px;
+    /* border: 1px solid red; */
+  }
+
+  #mainGrid_table tr th {
+    text-align: left;
+    background: var(--clr_3) !important;
+    background: transparent;
+    color: var(--clr_ff);
+    border-bottom: 1px solid #705d29;
+    position: sticky;
+    top: 0px;
+    border: none;
+    flex-grow: 1;
+    /* border: 1px solid red; */
+  }
+
+  /* #mainGrid_table tr:nth-child(even) {
+    background: #292B33;
+  }
+
+  #mainGrid_table tr:nth-child(odd) {
+    background: #25272D;
+
+  } */
+
+  .playBtn {
+    width: 12px;
+  }
+
+  .playBtnDiv {
+    background: #00ddfb17;
+    padding: 9px;
+    position: absolute;
+    top: -14px;
+    right: 9px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  .maingridheader {
+    position: sticky;
+    z-index: 1;
+    overflow-y: auto;
+    top: 0px;
+  }
+}
+
+
+
+.table_type_dropdown {
+  width: 32%;
+  background: none;
+  color: var(--clr_river);
+  align-items: end;
+  display: flex;
+  font-size: 1.1rem;
+  transition: all .15s;
+  cursor: pointer;
+  padding-left: 0px !important;
+  margin: auto;
+}
+
+.rotate_smooth {
+  transition: all .15s;
+  rotate: -180deg;
+}
+
+
+
+
+
+@media screen and (min-width: 577px) and (max-width: 797px) {
+  #mainGrid_table_rv {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    display: block;
+  }
+
+  #mainGrid_table_rv tbody {
+    width: 100%;
+    display: block;
+  }
+
+  #mainGrid_table_rv tbody tr {
+    display: block;
+    width: 100%;
+  }
+
+  #mainGrid_table_rv tbody tr td {
+    width: 100%;
+    display: block;
+    float: none;
+    position: relative;
+  }
+
+  #mainGrid_table_rv tbody tr td div {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #mainGrid_table_rv {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    display: block;
+  }
+
+  #mainGrid_table_rv tbody {
+    width: 100%;
+    display: block;
+  }
+
+  #mainGrid_table_rv tbody tr {
+    display: block;
+    width: 100%;
+  }
+
+  #mainGrid_table_rv tbody tr td {
+    width: 100%;
+    display: block;
+    float: none;
+    position: relative;
+  }
+
+  #mainGrid_table_rv tbody tr td div {
+    display: flex;
+    /* align-items: center; */
+  }
+}

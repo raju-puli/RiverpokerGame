@@ -1,0 +1,59 @@
+.tourneyLobbyDetails {
+  width: 38vw;
+  height: 20vh;
+  border-left: 2px solid rgba(255, 229, 85, 0.3);
+  border-right: 2px solid rgba(255, 229, 85, 0.3);
+  border-bottom: 2px solid rgba(255, 229, 85, 0.3);
+  border-radius: 10px;
+  position: absolute;
+  /* right:61vw; */
+  left: 1vw;
+  bottom: 54.5vh;
+}
+
+.tourneyLobbyDetails .bloc-tabs {
+  display: flex;
+}
+
+.tourneyLobbyDetails .tab {
+  text-align: center;
+  width: 50%;
+  height: 22px;
+  background: #0a334a;
+  cursor: pointer;
+  color: #ffe555;
+  border: 2px solid rgba(255, 229, 85, 0.8);
+  border-radius: 10px;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+
+.tourneyLobbyDetails .activeTabs {
+  color: black;
+  border-bottom: 1px solid transparent;
+  background-color: #ffe555;
+}
+
+.tournamentDetails {
+  border: 1px solid var(--bdr);
+  float: left;
+  max-height: 210px;
+  overflow: auto;
+}
+
+
+
+
+
+.tourneyLobbyDetails .data {
+  width: 98%;
+  height: 14vh;
+  display: none;
+}
+
+
+.tourneyLobbyDetails .activeContent {
+  display: block;
+  color: #ffe555;
+}

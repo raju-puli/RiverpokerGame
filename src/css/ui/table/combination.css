@@ -1,0 +1,10 @@
+.combination{
+    position: absolute;
+    width: 40vw;
+    top:26vh;
+    color: rgba(255, 255, 255, 0.397);
+    margin-left: 50vw;
+    /* border: 2px solid yellow; */
+    text-align: center;
+    transform: translateX(-50%);
+}

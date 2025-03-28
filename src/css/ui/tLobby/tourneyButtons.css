@@ -1,0 +1,21 @@
+.tourneyButtons{
+    width: 20vw;
+    position: absolute;
+    left:5px;
+    bottom: 13vh;
+    z-index: 2;
+    /* margin-top: 15vh; */
+}
+#tourneyBtn{
+    width:100px;
+    height:30px;
+    background-color: #ffe555;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    flex-grow: 1;
+}
+#tourneyBtn:hover{
+    background-color: #ffe111;
+}

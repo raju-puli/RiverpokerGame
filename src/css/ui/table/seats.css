@@ -1,0 +1,254 @@
+body{
+    overflow: hidden;
+}
+.pro_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 150px;
+    margin: auto;
+}
+.pro_1 .pro_img img {
+    width: 70px;
+}
+.pro_1 .pro_cards {
+    margin-top: -50px;
+    position: relative;
+}
+.pro_1 .pro_cards img {
+    width: 50px;
+}
+ 
+/* .pro_1 .pro_name {
+    margin-top: -25px;
+    height: 50px;
+    background-image: url(../../../assets/images/tableAssets/profile_name.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 9;
+    position: relative;
+    color: #fff;
+    line-height: 20px;
+    padding-top: 6px;
+    font-size: 14px;
+} */
+
+.m_t_590 {margin-top: 590px;}
+.m_t_520 {margin-top: 520px;}
+.seat_2 {
+    margin-top: 630px;
+    position: absolute;
+}
+.seat_3 {
+    position: absolute;
+    margin-left: 8px;
+    margin-top: 315px;
+}
+.seat_4 {
+    margin-left: 345px;
+    margin-top: 315px;
+    position: absolute;
+}  
+.seat_4 {
+    margin-left: 345px;
+    margin-top: 315px;
+    position: absolute;
+}  
+span.betStatus {
+    position: absolute;
+    background: #49bd00;
+    border-radius: 50px;
+    color: #000;
+    font-size: 10px;
+    width: 57px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 0px;
+    font-weight: 600;
+}
+
+/* .cardsBox img {
+    width: 50px;
+} */
+.cardsBox .flopOne{
+    width: 50px;
+    position: absolute;
+    left:10px;
+    top: 6px;
+}
+.cardsBox .flopTwo{
+    width: 50px;
+    position: absolute;
+    left:40px;
+    top: 6px;
+}
+.cardsBox .flopThree{
+    width: 50px;
+    position: absolute;
+    left:70px;
+    top: 6px;
+}
+.cardsBox .flopFour{
+    width: 50px;
+    position: absolute;
+    left:100px;
+    top: 6px;
+}
+.cardsBox .flopFive{
+    width: 50px;
+    position: absolute;
+    left:130px;
+    top: 6px;
+}
+
+.cardsBox {
+    position: absolute;
+    width: 172px;
+    top: 330px;
+    height: 80px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.betChip {
+    background: #1a212f;
+    border-radius: 50px; 
+    position: absolute;
+    right: 0;
+    text-align: right; 
+    border: solid 1px #3b465a;
+    display: flex;
+}
+.betChip img {width: 23px;}
+.betChip div {display: flex;}
+.betChip div:nth-child(2) {display: flex;padding-left: 5px;font-weight: bold;color: #fff;font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 8px;
+}
+
+.dealerHere img {
+    width: 100%;
+}
+.dealerHere {
+    width: 25px;
+    position: absolute;
+    left: 20px;
+    top: 15px; 
+} 
+.iconBox img { width: 100%; }
+.iconBox {
+    width: 50px;
+    height: 50px;
+    background: #2f3945;
+    border-radius: 5px;
+    box-shadow: 2px 3px 0px 1px rgb(36 46 58);
+}
+.tableBtm button {
+    height: 50px;
+    background: linear-gradient( #303946, #212731);
+    border-radius: 5px;
+    box-shadow: 2px 3px 8px 1px rgb(0 0 0/50%);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    width: 145px;
+    cursor: pointer;
+    font-size: 17px;
+    display: flex;
+    justify-content: inherit;
+    align-items: center;
+}
+.tableBtm {
+    width: 100%;
+    float: left;
+    height: 75px;
+    background: #1a212f;
+    padding-top: 11px;
+}
+
+.btnStatus.active {
+    background: linear-gradient(#dac071, #3a250e);
+    box-shadow: 1px 1px 5px -1px rgb(220 195 114);
+}
+
+.btnStatus {
+    width: 7px;
+    background: #141a25;
+    height: 35px;
+}
+
+.footerButtons {
+    display: flex;
+    width: 100%;
+    float: left;
+    justify-content: space-around;
+}
+
+.iconBox.chatTbl {
+    position: absolute;
+    bottom: 10px;
+    right: 17px;
+}
+div#menuList {
+    background: #202a3bfa;
+    width: 500px;
+    z-index: 99;
+    right: -600px;
+    position: absolute;
+    height: 880px;
+    top: 0;
+    transition: all 0.5s;
+}
+
+div#menuList ul {
+    all: unset;
+}
+div#menuList ul li {
+    color: #fff;
+    list-style: none;
+    padding: 15px;
+    font-size: 20px;
+    border-bottom: solid 1px #0e0e0e;
+}
+
+.tableBox_1 .tableWoodOne {
+    width: 390px;
+    height: 698px;
+    background: #2a3343;
+    border-radius: 250px;
+    margin-top: 17px !important;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 21px 4px rgb(0 0 0 /50%);
+}
+.tableBox_1 .tableWoodTwo {
+    width: 358px;
+    height: 666px;
+    background: linear-gradient(#93663a, #edd97f, #93663a);
+    margin-top: 16px !important;
+    border-radius: 200px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.tableBox_1 .tableWoodThree {
+    width: 326px;
+    height: 637px;
+    background: linear-gradient(#131722, #232D3F, #131722);
+    margin-top: 15px !important;
+    border-radius: 200px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+

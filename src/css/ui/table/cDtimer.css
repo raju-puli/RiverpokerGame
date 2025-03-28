@@ -1,0 +1,28 @@
+.countDownTimer {
+  position: absolute;
+  right: 30px;
+  /* bottom: 50px;  */
+  /* bottom: 16vh; */
+  bottom: 75px;
+  /* background: url(../../../assets/images/table/HeadIcons/button_timebank.png) no-repeat center center; */
+  padding: 5px 10px;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../../../assets/images/table/HeadIcons/button_timebank.png);
+  background-repeat: repeat-y;
+  width: 90px;
+  background-size: 90px 130px;
+  background-position-y: 43px;
+  padding: 3px;
+  height: 43px;
+}
+
+.countdown img {
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+}
