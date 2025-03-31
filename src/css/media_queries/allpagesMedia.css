@@ -6,6 +6,19 @@
     }
 }
 
+@media screen and (min-width: 957px) and (max-width: 992px) and (orientation: landscape) {
+    .tourney_lobby_continer {
+        height: calc(100vh - 140px) !important;
+        overflow: auto !important;
+    }
+
+    .tourney_lobby_container .tourney_lobby_section_two {
+        height: unset !important;
+        overflow: unset !important;
+        border-bottom: unset !important;
+    }
+}
+
 @media screen and (min-width: 577px) and (max-width: 956px) and (orientation: landscape) {
 
     .main-game .poker-nav {
@@ -210,6 +223,10 @@
     img.tourneyLobby_logo {
         width: 200px;
     }
+
+    #tourney_left_menu_img {
+        display: none !important;
+    }
 }
 
 
@@ -236,6 +253,27 @@
 
     .form-container label {
         display: none !important;
+    }
+
+    .lobby-left-menu-container {
+        display: flex;
+        align-items: flex-start;
+        opacity: 0;
+        transform: translateX(-1000px);
+        transition: .5s all ease;
+        position: relative;
+        z-index: 9;
+    }
+
+    .lobby-left-menu-container.showMenu {
+        opacity: 1;
+        transform: translateX(-0px);
+    }
+
+    #tourney_left_menu_img {
+        position: fixed;
+        left: 0;
+        z-index: 9;
     }
 
     .chatContainer {
@@ -411,6 +449,54 @@
 
     .max_width_992 {
         display: flex !important;
+    }
+
+    #mainGrid_table_rv tbody tr td {
+        width: 100%;
+        height: 100%;
+        display: block;
+        float: none;
+        position: relative;
+        padding: 0px 5px !important;
+    }
+
+    #mainGrid_table_rv tbody tr td .max_width_992 {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px;
+    }
+
+    #mainGrid_table_rv tbody tr td .max_width_992 .mobile-lobby-right-div {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    #mainGrid_table_rv tbody tr td .max_width_992 .mobile-lobby-left-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .lobby-left-menu-container {
+        display: flex;
+        align-items: flex-start;
+        opacity: 0;
+        transform: translateX(-1000px);
+        transition: .5s all ease;
+        position: relative;
+        z-index: 9;
+    }
+
+    .lobby-left-menu-container.showMenu {
+        opacity: 1;
+        transform: translateX(-0px);
+    }
+
+    #tourney_left_menu_img {
+        position: fixed;
+        left: 0;
+        z-index: 9;
     }
 
     .header_menu {
@@ -600,6 +686,27 @@
         height: 40px !important;
     }
 
+    .lobby-left-menu-container {
+        display: flex;
+        align-items: flex-start;
+        opacity: 0;
+        transform: translateX(-1000px);
+        transition: .5s all ease;
+        position: relative;
+        z-index: 9;
+    }
+
+    .lobby-left-menu-container.showMenu {
+        opacity: 1;
+        transform: translateX(-0px);
+    }
+
+    #tourney_left_menu_img {
+        position: fixed;
+        left: 0;
+        z-index: 9;
+    }
+
     .leftmenu,
     .tabletop {
         height: 60px !important;
@@ -633,6 +740,16 @@
         display: none !important;
     }
 
+    .tourney_lobby_container .tourney_lobby_section_two {
+        height: unset !important;
+        overflow: unset !important;
+        border-bottom: unset !important;
+    }
+
+    .tourney_lobby_continer {
+        height: calc(100vh - 100px) !important;
+        overflow: auto !important;
+    }
 
     .menu_header {
         margin-left: 0 !important;
@@ -646,8 +763,34 @@
         font-size: 15px !important;
     }
 
+    #tourney_left_menu_img {
+        position: fixed;
+        left: 0;
+        z-index: 9;
+    }
+
+    .lobby-left-menu-container {
+        display: flex;
+        align-items: flex-start;
+        opacity: 0;
+        transform: translateX(-1000px);
+        transition: .5s all ease;
+        position: relative;
+        z-index: 9;
+    }
+
+    .lobby-left-menu-container.showMenu {
+        opacity: 1;
+        transform: translateX(-0px);
+    }
+
+    .info_container {
+        min-width: unset !important;
+        max-height: unset !important;
+    }
+
     .main-game .tourney_lobby {
-        left: 20px !important;
+        /* left: 20px !important; */
         top: 50px !important;
     }
 
@@ -902,6 +1045,20 @@
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+    }
+
+    main.login-container section form div.form-container {
+        width: 100% !important;
+        /* padding: 0px 35px !important; */
+        padding: 0px 10vw !important;
+    }
+
+    .login-input-fields .captch-text {
+        padding: 2px !important;
+    }
+
+    .login-input-fields {
+        width: 100% !important;
     }
 
     .login-container>section>form {

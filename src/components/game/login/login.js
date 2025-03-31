@@ -388,14 +388,14 @@ class Login extends React.Component {
     render() {
         // const { versionControler } = this.state;
         const formContainerStyle = {
-            marginTop: this.state.isUsernameFocused && this.props.stageProperties.deviceOrientation ? '160px' : '0px',
+            marginTop: this.state.isUsernameFocused && (this.props.stageProperties.deviceOrientation && this.props.stageProperties.deviceOrientation === "landscape") ? '160px' : '0px',
             transition: "all 0.5s ease"
         };
 
         return (
             <>
                 {/* <main className="login-container" style={{ backgroundSize: this.state.isUsernameFocused || this.state.isPasswordFocused ? 'cover' : '' }}> */}
-                <main className="login-container" style={{ backgroundSize: (this.state.isUsernameFocused && this.props.stageProperties.deviceOrientation) ? 'cover' : '' }}>
+                <main className="login-container" style={{ backgroundSize: (this.state.isUsernameFocused && (this.props.stageProperties.deviceOrientation && this.props.stageProperties.deviceOrientation === "landscape")) ? 'cover' : '' }}>
                     {/* <main className="login-container" > */}
                     <header className="fd m_t_40">
                         <span className="font_w_500">{this.state.loginResp1}</span>

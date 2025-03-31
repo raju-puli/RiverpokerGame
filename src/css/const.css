@@ -311,6 +311,10 @@ box-sizing: border-box;} */
   margin-right: 0px;
 }
 
+.m_r_2 {
+  margin-right: 2px;
+}
+
 .m_r_5 {
   margin-right: 5px;
 }
@@ -358,6 +362,7 @@ box-sizing: border-box;} */
 .m_r_60 {
   margin-right: 60px;
 }
+
 .m_r_100 {
   margin-right: 100px;
 }
@@ -1072,7 +1077,8 @@ box-sizing: border-box;} */
 
 .font_16 {
   /* font-size: 16px; */
-  font-size: 1.4rem;
+  /* font-size: 1.4rem; */
+  font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
 .font_17 {

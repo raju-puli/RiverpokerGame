@@ -46,6 +46,7 @@
     border-bottom: 2px dotted #ffffff33;
     /* color: #eac421; */
     color: #111c2c;
+    padding: 0px 5px;
 }
 
 .tablePreviewSeat span:nth-child(2) {

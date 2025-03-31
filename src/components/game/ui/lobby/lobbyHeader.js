@@ -586,21 +586,21 @@ const LobbyHeader = (props) => {
                         <>
                             {window.innerWidth <= 1200 ?
                                 <>
-                                    <b className="m_r_10 font_15 m_b_15"> <span className="clr_river">{props.data.TotalPlayerCount}</span> {lobbyIcons ? <img src={profile_icon} alt="" /> : "- Players Online"} <i className="pulse green"></i></b>
+                                    <b className="m_r_5 font_15 m_b_15"> <span className="clr_river m_r_2">{props.data.TotalPlayerCount}</span> {lobbyIcons ? <img src={profile_icon} width="20px" alt="" /> : "- Players Online"} <i className="pulse green"></i></b>
                                     {mode === "Tournaments" ?
                                         <>
-                                            <b className="m_r_10 font_15 m_b_15"><span className="clr_river"> {props.data.PlayersOnTournaments} </span>{lobbyIcons ? <img src={profile_icon} alt="" /> : "- Players on Tournaments"}</b>
-                                            <b className="m_r_10 font_15 m_b_15"><span className="clr_river"> {props.data.ActiveTournamentCount} </span>{lobbyIcons ? <img src={tournoicon_icon} alt="" /> : "- Active Tournaments"}</b>
+                                            <b className="m_r_5 font_15 m_b_15"><span className="clr_river m_r_2"> {props.data.PlayersOnTournaments} </span>{lobbyIcons ? <img src={profile_icon} width="20px" alt="" /> : "- Players on Tournaments"}</b>
+                                            <b className="m_r_5 font_15 m_b_15"><span className="clr_river m_r_2"> {props.data.ActiveTournamentCount} </span>{lobbyIcons ? <img src={tournoicon_icon} width="20px" alt="" /> : "- Active Tournaments"}</b>
                                         </> :
                                         mode === "Sit_Go" ?
                                             <>
-                                                <b className="m_r_10 font_15 m_b_15"><span className="clr_river"> {props.data.PlayersOnSitandgo} </span>{lobbyIcons ? <img src={profile_icon} alt="" /> : "- Players on Sit&Go's"}</b>
-                                                <b className="m_r_10 font_15 m_b_15"><span className="clr_river"> {props.data.ActiveSitandgoCount} </span>{lobbyIcons ? <img src={sit_goicon_icon} alt="" /> : "- Active Sit&Go's"}</b>
+                                                <b className="m_r_5 font_15 m_b_15"><span className="clr_river m_r_2"> {props.data.PlayersOnSitandgo} </span>{lobbyIcons ? <img src={profile_icon} width="20px" alt="" /> : "- Players on Sit&Go's"}</b>
+                                                <b className="m_r_5 font_15 m_b_15"><span className="clr_river m_r_2"> {props.data.ActiveSitandgoCount} </span>{lobbyIcons ? <img src={sit_goicon_icon} width="20px" alt="" /> : "- Active Sit&Go's"}</b>
                                             </> :
                                             mode === "Cash_Games" &&
                                             <>
-                                                <b className="m_r_10 font_15 m_b_15"> <span className="clr_river"> {props.data.PlayersOnTables} </span>{lobbyIcons ? <img src={profile_icon} alt="" /> : "- Players on Tables"}</b>
-                                                <b className="m_r_10 font_15 m_b_15"><span className="clr_river"> {props.data.ActiveTableCount} </span>{lobbyIcons ? <img src={tableicon_icon} alt="" /> : "- Active Tables"}</b>
+                                                <b className="m_r_5 font_15 m_b_15"> <span className="clr_river m_r_5"> {props.data.PlayersOnTables} </span>{lobbyIcons ? <img src={profile_icon} width="20px" alt="" /> : "- Players on Tables"}</b>
+                                                <b className="m_r_5 font_15 m_b_15"><span className="clr_river m_r_5"> {props.data.ActiveTableCount} </span>{lobbyIcons ? <img src={tableicon_icon} width="20px" alt="" /> : "- Active Tables"}</b>
                                             </>
                                     }
                                 </> :
@@ -632,7 +632,7 @@ const LobbyHeader = (props) => {
                                 </div>
                             }
                         </> :
-                        <span className="clr_river font_16 m_r_15">Buy-In: {props.playerBuyIn}</span>
+                        <span className="clr_river font_16 m_r_10">Buy-In: {props.playerBuyIn}</span>
                     }
                     <div className={`m_l_5 lobby-menu-icon pointer ${options ? "Menu_Avtive" : ""}`} style={{ zIndex: '999' }}>
                         <img style={style.menu_img} src={menu} alt="menu" onClick={() => menuOptions("menu")} title="Menu" />

@@ -9,6 +9,7 @@ function InfoPanelMobilePortrait(props) {
     const [toggleState, setToggleState] = useState(1);
     const [showStatsWindow, setShowStatsWindow] = useState(false);
     const [loader, setLoader] = useState(false);
+    const [chatMessages, setChatMessages] = useState([]);
     // const [lasthand, setLastHand] = useState(Number(props.info.CH) - 1);
     const toggleTab = (index) => {
         setToggleState(index);
@@ -16,6 +17,17 @@ function InfoPanelMobilePortrait(props) {
     // const [chat, setChat] = useState("hi");
 
     const { chat, doc } = props;
+
+    useEffect(() => {
+        if (props.chat === "ClearChat") {
+            setChatMessages([]);
+        } else if (props.chat) {
+            setChatMessages((prevMessages) => [
+                { text: props.chat, id: Date.now() },
+                ...prevMessages,
+            ]);
+        }
+    }, [props.chat]);
 
     useEffect(() => {
         let content = document.getElementById("chatContent" + doc);
@@ -68,7 +80,20 @@ function InfoPanelMobilePortrait(props) {
                         <div className="fd content-section">
                             {toggleState === 1 ?
                                 <div className="fd" style={{ height: "100%" }}>
-                                    <div className="chat-messages-section" id={"chatContent" + props.doc}></div>
+                                    <div className="chat-messages-section" id={"chatContent" + props.doc}>
+
+                                        {chatMessages.map((msg) => (
+                                            <div
+                                                key={msg.id}
+                                                style={{
+                                                    fontSize: "12px",
+                                                    alignItems: "center",
+                                                    margin: "5px",
+                                                }}
+                                                dangerouslySetInnerHTML={{ __html: msg.text }}
+                                            ></div>
+                                        ))}
+                                    </div>
                                     <div className="chat-btns-section">
                                         <input className="" type="text" id={`tipChatMsgInput${props.doc}`} style={{ textIndent: '10px' }}
                                             onKeyDown={(event) => {

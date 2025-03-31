@@ -632,7 +632,7 @@ class LobbyMain extends LobbyBase {
                     object.id = tables[i].attr.id;
                     object.type = this.tableType;
                     object.img =
-                        <div className="df">
+                        <div className="df_ac" style={{ height: "100%" }}>
                             <span className="lobby_table_img" style={{ minWidth: this.state.mobileView ? "50px" : '' }}>
                                 {getTournamentIcon() &&
                                     <>
@@ -667,14 +667,15 @@ class LobbyMain extends LobbyBase {
                                 </div>
                             </div>
 
-                            <div className="df max_width_992" style={{ width: '100%', alignItems: 'center', justifyContent: 'space-between', overflow: "auto" }}>
-                                <div className="df " style={{ flexDirection: 'column', justifyContent: 'center', color: '#ffff', margin: '0px 10px', width: "50vw" }}>
+                            <div className="df max_width_992" >
+                                <div className="df mobile-lobby-right-div" style={{ maxWidth: (Number(splittedAveragePot) > 100 && Number(splittedAveragePot) < 999) ? "48vw" : Number(splittedAveragePot) > 1000 ? "38vw" : "56vw" }}>
                                     <span style={{ fontSize: '15px', overflow: 'hidden', textOverflow: "ellipsis" }}>{object.name = tables[i].attr.name}</span>
                                     <span style={{ fontSize: '12px', color: '#979696', marginTop: '2px', overflow: "hidden", textOverflow: "ellipsis" }}>{object.stakes = (UM.numberWithCommas(tables[i].attr.stakes.split("/")[0]) + "/" + UM.numberWithCommas(tables[i].attr.stakes.split("/")[1]))}{", "}{object.game = UM.GameName(tables[i].attr.game)}</span>
                                 </div>
-                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'end' }}>
-                                    <span>{object.pot = UM.numberWithCommas(splittedAveragePot)}{" / "}{tables[i].attr["players-per-2nd-round"]}%  {" / "} {tables[i].attr["hands-per-hour"]}</span>
-                                    <span style={{ marginTop: '3px', color: '#979696' }}>Players: <span className="tableNameHeading">{tables[i].attr["players-seats"]}</span></span>
+                                <div className="mobile-lobby-left-div">
+                                    <small>{object.pot = UM.numberWithCommas(splittedAveragePot)}{" / "}{tables[i].attr["players-per-2nd-round"]}%  {" / "} {tables[i].attr["hands-per-hour"]}</small>
+                                    {/* <small>{object.pot = UM.numberWithCommas(28099436)}{" / "}{"100"}%  {" / "} {"999"}</small> */}
+                                    <span className="df" style={{ marginTop: '3px', color: '#979696' }}> <span className="d-none d-sm-flex"> Players: </span> <span className="tableNameHeading">{tables[i].attr["players-seats"]}</span></span>
                                 </div>
                             </div>
                         </div>
@@ -853,7 +854,7 @@ class LobbyMain extends LobbyBase {
                         break;
                 }
                 object.name =
-                    <div className="df">
+                    <div className="df_ac">
                         <span className="lobby_table_img" style={{ minWidth: this.state.mobileView ? "50px" : '' }}>
                             {getTournamentIcon() && <img style={{ height: "34px" }} src={imgSource} alt="" />}
                         </span>
@@ -872,7 +873,7 @@ class LobbyMain extends LobbyBase {
                             </div>
                         </div>
                         <div className="df max_width_992" style={{ width: '100%', alignItems: 'center', justifyContent: 'space-between', overflow: "auto" }}>
-                            <div className="df" style={{ flexDirection: 'column', justifyContent: 'center', color: '#ffff', margin: '0px 10px', width: "50vw" }}>
+                            <div className="df" style={{ flexDirection: 'column', justifyContent: 'center', color: '#ffff', width: "50vw" }}>
                                 <span style={{ fontSize: '15px', overflow: "hidden", textOverflow: "ellipsis" }}>{tables[i].attr.name}</span>
                                 <span style={{ fontSize: '12px', color: '#979696', marginTop: '2px', overflow: "hidden", textOverflow: "ellipsis" }}>{formattedDate}{", "}{UM.GameName(tables[i].attr.game)}{", "}
                                     <span style={!getTournamentIcon() ? { fontSize: "16px", color: statuscolor } : {}}>{UM.textFormat(tables[i].attr.status)}</span>
@@ -953,7 +954,7 @@ class LobbyMain extends LobbyBase {
                         break;
                 }
                 object.name =
-                    <div className="df">
+                    <div className="df_ac">
                         <span className="lobby_table_img" style={{ minWidth: this.state.mobileView ? "50px" : '' }}>
                             {getTournamentIcon() && <img style={{ height: "34px" }} src={imgSource} alt="" />}
                         </span>
@@ -969,7 +970,7 @@ class LobbyMain extends LobbyBase {
                             </div>
                         </div>
                         <div className="df max_width_992" style={{ width: '100%', alignItems: 'center', justifyContent: 'space-between', overflow: "auto" }}>
-                            <div className="df" style={{ flexDirection: 'column', justifyContent: 'center', color: '#ffff', margin: '0px 10px', width: "50vw" }}>
+                            <div className="df" style={{ flexDirection: 'column', justifyContent: 'center', color: '#ffff', width: "50vw" }}>
                                 <span style={{ fontSize: '15px', overflow: "hidden", textOverflow: "ellipsis" }}>{tables[i].attr.name}</span>
                                 <span style={{ fontSize: '12px', color: '#979696', marginTop: '2px', overflow: "hidden", textOverflow: "ellipsis" }}>{UM.GameName(tables[i].attr.game)}{", "}
                                     <span style={!getTournamentIcon() ? { fontSize: "16px", color: statuscolor } : {}}>{UM.textFormat(tables[i].attr.status)}</span>
@@ -1583,7 +1584,7 @@ class LobbyMain extends LobbyBase {
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'end' }}>
                                 <span>{UM.numberWithCommas(splittedAveragePot)}{" / "}{tables[i].attr["players-per-2nd-round"]}%  {" / "} {tables[i].attr["hands-per-hour"]}</span>
-                                <span style={{ marginTop: '3px', color: '#979696' }}>Players: <span className="clr_river">{tables[i].attr["players-seats"]}</span></span>
+                                <span style={{ marginTop: '3px', color: '#979696' }}> Players:  <span className="clr_river">{tables[i].attr["players-seats"]}</span></span>
                             </div>
                         </div>
                     </div>,

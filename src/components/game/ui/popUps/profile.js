@@ -458,7 +458,7 @@ export const Profile = (props) => {
                     <div className="left_menu">
                         {/* <p className="df_al"> Logged as: <p className="clr_river m_5 bold font_16 profileName_1">{" "}{props.user}</p> <img className="m_l_10 m_r_10 profile_image" onClick={() => getAvatarList()} src={myAvatar} alt="" /></p> */}
                         <p className="df_al">
-                            Logged as:
+                            <span className="d-none d-sm-flex"> Logged as:</span>
                             <span className="m_5 bold font_16 profileName_1">
                                 {" "}{props.user}
                             </span>

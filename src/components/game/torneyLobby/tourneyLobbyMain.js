@@ -36,6 +36,7 @@ export default class TourneyLobbyMain extends TourneyLobbyBase {
             isTourneyRegistered: false,
             showBtnLoader: false,
             balanceCheckBox: false,
+            showLeftMenuOptions: false,
             optionsOpened: false,
             enableReEntry: false,
             ticketsCheckBox: false,
@@ -1415,44 +1416,47 @@ export default class TourneyLobbyMain extends TourneyLobbyBase {
         this.setState({ gameTableid: this.props.idTables });
     }
 
-    closeLeftMenu = () => {
-        const sideMenu = document.getElementById("tourney_side_menu");
-        const menu = document.getElementById("tourney_left_menu");
-        const menuImg = document.getElementById("tourney_left_menu_img");
-        const cover = document.getElementById("tourney_lobby_filter");
+    // closeLeftMenu = () => {
+    //     const sideMenu = document.getElementById("tourney_side_menu");
+    //     const menu = document.getElementById("tourney_left_menu");
+    //     const menuImg = document.getElementById("tourney_left_menu_img");
+    //     const cover = document.getElementById("tourney_lobby_filter");
 
-        sideMenu.style.cssText = "";
-        menu.style.left = "-438px";
-        menuImg.style.left = "-424px";
-        cover.style.width = "0%";
-    };
+    //     sideMenu.style.cssText = "";
+    //     menu.style.left = "-438px";
+    //     menuImg.style.left = "-424px";
+    //     cover.style.width = "0%";
+    // };
 
     showLeftMenu = () => {
-        const sideMenu = document.getElementById("tourney_side_menu");
-        const menu = document.getElementById("tourney_left_menu");
-        const menuImg = document.getElementById("tourney_left_menu_img");
-        const cover = document.getElementById("tourney_lobby_filter");
-
-        const isMenuHidden = menu.style.left === "" || menu.style.left === "-438px";
-
-        if (isMenuHidden) {
-            menu.style.left = "0px";
-            menuImg.style.left = "-12px";
-            cover.style.width = "100%";
-
-            sideMenu.style.cssText = `
-                float: left;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                z-index: 9;
-            `;
-            console.log("Menu shown");
-        } else {
-            this.closeLeftMenu();
-            console.log("Menu hidden");
-        }
+        this.setState({ showLeftMenuOptions: !this.state.showLeftMenuOptions })
     };
+    // showLeftMenu = () => {
+    //     const sideMenu = document.getElementById("tourney_side_menu");
+    //     const menu = document.getElementById("tourney_left_menu");
+    //     const menuImg = document.getElementById("tourney_left_menu_img");
+    //     const cover = document.getElementById("tourney_lobby_filter");
+
+    //     const isMenuHidden = menu.style.left === "" || menu.style.left === "-438px";
+
+    //     if (isMenuHidden) {
+    //         menu.style.left = "0px";
+    //         menuImg.style.left = "-12px";
+    //         cover.style.width = "100%";
+
+    //         sideMenu.style.cssText = `
+    //             float: left;
+    //             width: 100%;
+    //             height: 100%;
+    //             position: absolute;
+    //             z-index: 9;
+    //         `;
+    //         console.log("Menu shown");
+    //     } else {
+    //         this.closeLeftMenu();
+    //         console.log("Menu hidden");
+    //     }
+    // };
 
 
     onClickButtons = (e) => {
@@ -1661,16 +1665,16 @@ export default class TourneyLobbyMain extends TourneyLobbyBase {
         const { activeDropdown } = this.state;
         return (
             <>
-
                 {this.state.showLoader &&
                     <div className="popCover_1">
                         <Spinner />
                     </div>
                 }
                 <main className="tourney_lobby_container">
-                    <div id="tourney_side_menu" onClick={(e) => this.closeLeftMenu(e)}></div>
+                    {/* <div id="tourney_side_menu" onClick={(e) => this.closeLeftMenu(e)}></div> */}
+                    <div id="tourney_side_menu" onClick={(e) => this.showLeftMenu(e)}></div>
                     <nav className="lobby-filter" id="tourney_lobby_filter" >
-                        <div className="side-menu" style={{ left: '-20px' }} >
+                        <div className={`lobby-left-menu-container ${this.state.showLeftMenuOptions ? "showMenu" : ""}`} >
                             <div id="tourney_left_menu">
                                 <div className="menu_header">
                                     <button type="button" id="game_info" className={this.state.leftMenu === "game_info" ? "active" : ""} onClick={(e) => this.showTourneyMenu(e)}>Info</button>
@@ -1686,9 +1690,13 @@ export default class TourneyLobbyMain extends TourneyLobbyBase {
                                             <Participants data={this.state.participants} playerName={this.state.regData.name} network={this._tourneyNetwork} featear={false}></Participants>}
                                 </div>
                             </div>
-                            <img id="tourney_left_menu_img" style={{ left: '-424px' }} src={left_sidebar} alt="" onClick={(e) => this.showLeftMenu(e)} />
+                            {/* <img id="tourney_left_menu_img" style={{ left: '-424px' }} src={left_sidebar} alt="" onClick={(e) => this.showLeftMenu(e)} /> */}
+                            <img id="tourney_left_menu_img" src={left_sidebar} style={{ position: "relative" }} alt="" onClick={(e) => this.showLeftMenu(e)} />
                         </div>
                     </nav>
+                    {!this.state.showLeftMenuOptions && (
+                        <img id="tourney_left_menu_img" src={left_sidebar} alt="" onClick={(e) => this.showLeftMenu(e)} />
+                    )}
 
                     <nav className="lobby-top-nav_header" style={{ left: '200px', right: '200px', position: 'absolute', top: '0px' }}>
                         <div className="menu_header" style={{ margin: 'auto', background: 'none' }}>

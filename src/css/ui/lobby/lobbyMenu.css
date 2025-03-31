@@ -138,6 +138,11 @@ nav.lobby-top-nav div#lobby_link img {
   height: calc(100vh - 70px);
 }
 
+.lobby-left-menu-container {
+  display: flex;
+  align-items: flex-start;
+}
+
 .side-menu {
   position: absolute;
   left: 0;
@@ -155,6 +160,7 @@ nav.lobby-top-nav div#lobby_link img {
   transition: all .5s;
   z-index: 99999;
   display: none;
+  box-shadow: 10px 10px 20px rgb(0 0 0 / 58%);
 }
 
 #left_menu {
@@ -169,21 +175,22 @@ nav.lobby-top-nav div#lobby_link img {
   overflow: hidden;
 }
 
-#tourney_left_menu {
+/* #tourney_left_menu {
   position: relative;
   background: rgb(0 0 0 / 41%);
-  width: 438px;
-  left: -438px;
   z-index: 9;
-  padding: 0px 16px 16px;
   transition: all .5s;
   height: calc(100vh - 50px);
   overflow: hidden;
-}
+  min-width: 280px;
+  max-width: 80vw;
+} */
 
 #tourney_left_menu .menu_body {
   display: flex;
   justify-content: center;
+  min-width: 280px;
+  max-width: 90vw;
 }
 
 #tourney_left_menu .menu_body .info_container {
@@ -1121,6 +1128,7 @@ svg.addAnimaion {
 
 .tourney-lobby-buttons-container button {
   width: 20vw;
+  min-width: 110px;
   max-width: 260px;
   border: 1px solid #a98903a3;
   margin: 0px 8px;

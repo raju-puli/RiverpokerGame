@@ -224,6 +224,7 @@
   height: 100%;
   border-bottom: 1px solid var(--border_river);
   background: radial-gradient(#131d509e, #0d1218);
+  overflow: auto;
 }
 
 .preview-footer-section {
