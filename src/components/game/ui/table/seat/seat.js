@@ -1063,7 +1063,7 @@ export default class Seat extends React.Component {
                                 y={this.props.seatProperties.padddingsNew.y1 + this.props.seatProperties.padddingsNew.p1 + this.state.ifKOb.p1}
                                 width={this.props.seatProperties.padddingsNew.w1 + this.state.ifKOb.w1} height={this.props.seatProperties.padddingsNew.h1 + this.state.Inactive.h1}
                                 align={"left"}
-                                visible={(this.state.action==="clear"||this.state.action==="")}
+                                visible={(this.state.action === "clear" || this.state.action === "")}
                                 verticalAlign={"middle"} text={this.state.name} fontSize={this.state.Inactive.f1 + this.state.ifKOb.f1} fontFamily={"Roboto"}
                                 fill={"#FFF"} ></Text>
 
@@ -1071,8 +1071,8 @@ export default class Seat extends React.Component {
                                 y={this.props.seatProperties.padddingsNew.y2 + this.props.seatProperties.padddingsNew.p1 + this.state.ifKOb.p1 * 2.5}
                                 width={this.props.seatProperties.padddingsNew.w1 + this.state.ifKOb.w1} height={this.props.seatProperties.padddingsNew.h1} align={"left"}
                                 verticalAlign={"middle"}
-                                visible={(this.state.action==="clear"||this.state.action==="")}
-                                text={isNaN(this.state.chips) ? "####" : this.state.toggleBB ? (Number(this.state.chips)).toLocaleString() !== "0" ? `${this.dividvalue(this.state.chips)} BB` : "" : Number(this.state.chips) < 0 ? 0 : UM.numberWithCommas(this.state.chips)}
+                                visible={(this.state.action === "clear" || this.state.action === "")}
+                                text={isNaN(this.state.chips) ? "####" : this.state.toggleBB ? (Number(this.state.chips)).toLocaleString() !== "0" ? `${this.dividvalue(this.state.chips)} BB` : "" : Number(this.state.chips) < 0 ? 0 : UM.numberWithCommas_length9(this.state.chips)}
                                 fill={"#fff"} fontSize={this.state.Inactive.f1 + this.state.ifKOb.f1}
                                 fontFamily={"Roboto"} fontStyle={'bold'}></Text>
 
@@ -1254,7 +1254,7 @@ export default class Seat extends React.Component {
                                 <Text x={this.state.calltimetable.hide_show ? this.props.seatProperties.padddings.x1 - 15 : this.props.seatProperties.padddings.x1} y={(fileName.name === "Leader_bet" ? -this.props.seatProperties.padddings.y1 + 15 : (this.state.showKnockOutBounty ? -this.props.seatProperties.padddings.y1 + 18 : -this.props.seatProperties.padddings.y1 + 20))}
                                     width={this.props.seatProperties.width + 10} height={this.props.seatProperties.height} align={"center"}
                                     verticalAlign={"middle"}
-                                    text={isNaN(this.state.chips) ? "####" : this.props.valueBB ? (Number(this.state.chips)).toLocaleString() !== "0" ? `${this.dividvalue(this.state.chips)} BB` : "" : Number(this.state.chips) < 0 ? 0 : UM.numberWithCommas(this.state.chips)}
+                                    text={isNaN(this.state.chips) ? "####" : this.props.valueBB ? (Number(this.state.chips)).toLocaleString() !== "0" ? `${this.dividvalue(this.state.chips)} BB` : "" : Number(this.state.chips) < 0 ? 0 : UM.numberWithCommas_length9(this.state.chips)}
                                     fill={"#fff"} fontSize={(fileName.name === "Leader_bet" ? 15 : 12)}
                                     fontFamily={"Roboto"} fontStyle={'bold'}></Text>
 

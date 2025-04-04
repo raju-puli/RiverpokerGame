@@ -53,7 +53,7 @@ const LobbyHeader = (props) => {
     var config = new Config();
     const storeData = JSON.parse(sessionStorage.getItem("DeviceOrientation"));
     // const [lobbyIcons, setLobbyIcons] = useState((storeData.device === "mobile" && storeData.Orientation === "landscape") ? true : false);
-    const [lobbyIcons, setLobbyIcons] = useState(window.innerWidth < 700 ? true : false);
+    const [lobbyIcons, setLobbyIcons] = useState(window.innerWidth < 992 ? true : false);
 
     const { openMenu } = props;
     useEffect(() => {
@@ -65,7 +65,7 @@ const LobbyHeader = (props) => {
         const handleResize = () => {
             if (storeData) {
                 // if (storeData.device === "mobile" && storeData.Orientation === "landscape") {
-                if (window.innerWidth < 880) {
+                if (window.innerWidth < 992) {
                     setLobbyIcons(true);
                 } else {
                     setLobbyIcons(false);
@@ -546,7 +546,7 @@ const LobbyHeader = (props) => {
                         </div>
                     </div> */}
                 </nav>
-                <div style={style.left_menu} >
+                <div className="player-stats" style={style.left_menu} >
 
                     {/* <div className="badbitJackpot_div">
                         <img src={BBJ_Icon} alt="" /> <span>{UM.changeAmtLabel(props.bbj)}</span>
@@ -567,7 +567,7 @@ const LobbyHeader = (props) => {
 
                     {!props.showTourneyLobby && (
                         <div className="news_div">
-                            <b>News :</b>
+                            <strong>News :</strong>
                             <div className="marquee">
                                 <div className="news-marquee">
                                     {props.newsdata.map((data, index) => (

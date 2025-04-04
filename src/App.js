@@ -155,12 +155,12 @@ export default class Appcopy extends Component {
     };
 
     logOutHandler() {
+        this.setState({ showLoader: true });
         sessionStorage.clear();
-        this.clearLocalStorageValues()
-        this.setState({ showLogin: true, showLoading: false, isSessionActive: false, sid: null, BgOpacity: 1, showLoader: false });
-        // setTimeout(() => {
-        //     window.location.reload();
-        // }, 10);
+        setTimeout(() => {
+            this.clearLocalStorageValues()
+            this.setState({ showLogin: true, showLoading: false, isSessionActive: false, sid: null, BgOpacity: 1, showLoader: false });
+        }, 2000);
     };
 
     clearLocalStorageValues() {

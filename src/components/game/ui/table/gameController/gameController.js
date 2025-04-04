@@ -370,11 +370,11 @@ export default function GameController(props) {
 				props.network.send(`<SitOut/>`);
 				props.setGc(props.options.seatId);
 			}
-			if (value.name === "BB") {
+			if (value.name === "BB" || value.name === "PostBigBlind") {
 				props.network.send(`<PostBigBlind amount="${value.amount}"/>`);
 				props.setGc(props.options.seatId);
 			}
-			if (value.name === "SB") {
+			if (value.name === "SB" || value.name === "PostSmallBlind") {
 				props.network.send(`<PostSmallBlind amount="${value.amount}"/>`);
 				props.setGc(props.options.seatId);
 			}

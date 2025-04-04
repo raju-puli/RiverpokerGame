@@ -27,7 +27,7 @@ class Login extends React.Component {
             showErrorMsg: true,
             spinStart: false,
             errorMessage: "",
-            genCaptcha: "",
+            genCaptcha: "****",
             passwordState: true,
             showUpdateAlert: false,
             isUsernameFocused: false,
@@ -158,7 +158,7 @@ class Login extends React.Component {
                 this.setState({ genCaptcha: parsedResponse });
             } catch (error) {
                 console.error("Failed to parse captcha response", error);
-                this.setState({ genCaptcha: null });
+                this.setState({ genCaptcha: "****" });
             }
         }
     };
@@ -267,10 +267,12 @@ class Login extends React.Component {
     };
 
     onClickSignIn(e) {
+        console.log(e)
+        console.log(e.target)
         e.preventDefault();
         if (this.state.username && this.state.password && this.state.captcha && !this.state.showErrorMsg) {
-            this.props.onSubmit();
             this.setState({ loader: true, loginResp1: "Please Wait...  Loggin In" });
+            this.props.onSubmit();
             let value = {
                 login: this.state.username,
                 password: this.state.password,
@@ -298,6 +300,9 @@ class Login extends React.Component {
                             let id = resp.sessionId.split(".");
                             localStorage.setItem('showPop', true)
                             this.setState({ loginResp1: "" });
+                            // setTimeout(() => {
+                            //     this.setState({ passwordState: true });
+                            // }, 10000);
                             // this.setState({ loader: false });
                             sessionStorage.setItem(`${window.location.hostname}'_sid'`, JSON.stringify({ sid: id[1] }));
                             sessionStorage.setItem(`${window.location.hostname}'_wSid'`, JSON.stringify({ wSid: resp.sessionId }));
@@ -409,6 +414,12 @@ class Login extends React.Component {
 
                     <section style={{ alignItems: 'start', marginLeft: '50px' }}>
                         <form className="fd" onSubmit={this.onClickSignIn.bind(this)} style={formContainerStyle}>
+                            {/* <form className="fd" onSubmit={(e) => {
+                            e.preventDefault();
+                            this.setState({ passwordState: false }, () => {
+                                this.onClickSignIn(e);
+                            });
+                        }} */}
                             <div className="form-container">
 
                                 <div className="m_b_15">
@@ -448,9 +459,12 @@ class Login extends React.Component {
                                         )}
                                         <input
                                             type={this.state.passwordState ? "password" : "text"}
+                                            // type="text"
                                             placeholder="Enter password"
                                             id="password"
-                                            name="password"
+                                            name="passcode"
+                                            onFocus={this.handleFocus}
+                                            onBlur={this.handleBlur}
                                             onChange={this.handlePasswordChange}
                                             value={this.state.password}
                                         />
@@ -474,6 +488,8 @@ class Login extends React.Component {
                                             placeholder="Enter Captcha"
                                             id="captcha"
                                             name="captcha"
+                                            onFocus={this.handleFocus}
+                                            onBlur={this.handleBlur}
                                             onChange={this.handleCaptchChange}
                                         />
                                         <div className="eyeToggleDiv" onClick={this.generateCaptcha} style={{ left: "unset", right: "5px", top: "2px", height: "40px" }} title="Reload captcha">
@@ -509,7 +525,8 @@ class Login extends React.Component {
                     </section>
 
                     <footer>
-                        <small style={{ visibility: (!this.state.isUsernameFocused && !this.state.isPasswordFocused) ? 'visible' : 'hidden' }}>Version: {this.state.versionControler.buildTime}b</small>
+                        {/* <small style={{ visibility: (!this.state.isUsernameFocused && !this.state.isPasswordFocused) ? 'visible' : 'hidden' }}>Version: {this.state.versionControler.buildTime}b</small> */}
+                        <small style={{ visibility: !this.state.isUsernameFocused ? 'visible' : 'hidden' }}>Version: {this.state.versionControler.buildTime}b</small>
                     </footer>
 
                     {this.state.showUpdateAlert &&

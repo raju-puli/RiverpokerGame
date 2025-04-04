@@ -58,10 +58,16 @@ export default class Network {
         }
     }
 
-    close(reConnect) {
+    close(reConnect = false) {
         this.reConnect = reConnect;
-        this.cleanupListeners(this._connection);
+
+        if (this._connection) {
+            console.log("Closing WebSocket connection...");
+            this.cleanupListeners(this._connection); // Remove event listeners and close connection
+            this._connection = null; // Ensure the connection is set to null
+        }
     }
+
 
     cleanupListeners(connectionObj) {
         if (connectionObj) {

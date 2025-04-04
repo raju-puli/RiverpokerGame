@@ -314,12 +314,13 @@
 .chatShow {
   position: absolute;
   bottom: 0;
-  border: 1px solid #FFFFFF;
+  border: 1px solid var(--border_river);
   left: 0;
   height: 70%;
   width: 50%;
   background: #000;
-  z-index: 1;
+  z-index: 999;
+  box-shadow: 2px 2px 12px 0px #0000009c;
 }
 
 
@@ -380,4 +381,11 @@
   max-height: calc(100% - 52px);
   overflow: auto;
   padding: 5px;
+}
+
+
+.chat-image-cls {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
 }

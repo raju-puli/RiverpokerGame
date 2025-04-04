@@ -27,25 +27,25 @@ const FallingChips = () => {
     const chips = Array.from({ length: 500 }).map(() => ({
       id: Math.random().toString(36).substr(2, 9),
       left: window.innerWidth / 2 - 100 + Math.random() * 200, // Fall near the center
-    //   rotation: Math.random() * 360,
+      //   rotation: Math.random() * 360,
       size: 30 + Math.random() * 50, // Random size
       image: chipImages[Math.floor(Math.random() * chipImages.length)],
     }));
 
     if (containerRef.current) {
-      containerRef.current.innerHTML = chips.map(chip => 
+      containerRef.current.innerHTML = chips.map(chip =>
         `<img src="${chip.image}" alt="chip" style="
           position: absolute;
           top: 0;
           left: ${chip.left}px;
-          width: ${chip.size}px;
-          height: ${chip.size}px;
+          width: ${window.innerWidth > 1220 ? `${chip.size}px` : "25px"};
+          height: ${window.innerWidth > 1220 ? `${chip.size}px` : "25px"};
           transform: rotate(${chip.rotation}deg);
         ">`
       ).join('');
-      
+
       gsap.to(containerRef.current.children, {
-        y: `random(${(window.innerHeight / 2)+100},${(window.innerHeight / 2)-40})`, // Stop in the middle
+        y: `random(${(window.innerHeight / 2) + 100},${(window.innerHeight / 2) - 40})`, // Stop in the middle
         x: "random(-150, 150)", // Slight horizontal drift
         // rotation: "random(-180, 180)",
         duration: 5, // Animation duration of 5 seconds
@@ -60,13 +60,13 @@ const FallingChips = () => {
       ref={containerRef}
       style={{
         position: "fixed", // Fullscreen
-        top: -100,
+        top: - `${window.innerWidth > 1220 ? 100 : 40}`,
         left: 0,
         width: "100vw",
         height: "100vh",
         overflow: "hidden",
         pointerEvents: "none"
-      
+
       }}
     ></div>
   );

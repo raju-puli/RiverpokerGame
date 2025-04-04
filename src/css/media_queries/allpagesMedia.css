@@ -353,6 +353,22 @@
     .mainGrid {
         height: calc(100vh - 150px) !important;
     }
+
+    .header_menu {
+        >div b {
+            margin-bottom: unset !important;
+            font-size: 15px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border: 1px solid var(--border_river) !important;
+            background: #00000063 !important;
+            padding: 2px 5px !important;
+            border-radius: 5px !important;
+            margin-top: -15px;
+            margin-right: 12px;
+        }
+    }
 }
 
 
@@ -500,7 +516,7 @@
     }
 
     .header_menu {
-        height: 50px !important;
+        /* height: 50px !important; */
         padding: 0px 10px !important;
 
         >div b {
@@ -544,11 +560,22 @@
     .device_media,
     .news_div,
     .limi_filter_media_,
-    .bbj_div,
+    .mobile_time,
     .cashier_div,
     .min_width_992,
     .desktop_dashboard_container {
         display: none !important;
+    }
+
+    .bbj_div {
+        >img {
+            min-width: 95px !important;
+        }
+    }
+
+    .bbj_div span {
+        top: 12px !important;
+        font-size: 13px !important;
     }
 
     .tourneyLobby_logo {
@@ -665,15 +692,21 @@
         display: none !important;
     }
 
-    .main-game .poker-nav {
+    /* .main-game .poker-nav {
         height: 60px !important;
         width: 60vw !important;
-    }
+    } */
 
-    .main-game .poker-nav .right .tt-active,
+    /* .main-game .poker-nav .right .tt-active,
     .main-game .poker-nav .right .table-tab {
         width: 90px !important;
         height: 60% !important;
+    } */
+
+    .main-game .poker-nav .right .tt-active,
+    .main-game .poker-nav .right .table-tab {
+        width: 100px !important;
+        height: 40px !important;
     }
 
     .chatHide {
@@ -709,7 +742,7 @@
 
     .leftmenu,
     .tabletop {
-        height: 60px !important;
+        height: 50px !important;
     }
 
     .avatar_section {

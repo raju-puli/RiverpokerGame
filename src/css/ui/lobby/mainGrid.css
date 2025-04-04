@@ -35,7 +35,8 @@
   height: 60px;
   /* border-bottom: 1px solid #afafafb0; */
   align-items: center;
-  background: #00000063;
+  /* background: #00000063; */
+  background: #00000079;
   margin-bottom: 4px;
 }
 
@@ -979,3 +980,5 @@
     align-items: flex-end;
   }
 }
+
+

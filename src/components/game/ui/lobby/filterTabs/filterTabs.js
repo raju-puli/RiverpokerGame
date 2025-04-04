@@ -785,6 +785,14 @@ const Filters = (props) => {
                                 <span className="spotlight" />
                             }
                         </button>
+
+                        {/* {Array.from({ length: 3 }).map((_, ind) => (
+                            <button className="Btn_3" key={ind}>
+                                {(lobbyFilter === "Cash_Games" && ind === 0) && <span className="spotlight" />}
+                            </button>
+                        ))} */}
+
+
                         {/* <button class="button-13" role="button">
                             <span class="text">GAMES</span>
                             <span class="button-13-background"></span>

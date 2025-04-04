@@ -154,22 +154,25 @@ export const TableDetails = (props) => {
     }
   }
 
-  const AnimationMiniTable = (data, show) => {
-    const element = document.getElementById("miniTablePreview");
-    setShowSub(show);
-    if (showSub === show) return
-    if (element) {
-      if (data === "LEFT") {
-        gsap.from(`#miniTablePreview`, { x: -window.innerWidth / 2, duration: 0.25, ease: "linear" });
-      } else if (data === "RIGHT") {
-        gsap.from(`#miniTablePreview`, { x: window.innerWidth / 2, duration: 0.25, ease: "linear" });
-      } else {
-        console.log("Current Table");
-      }
-    } else {
-      console.log("Element not found");
-    }
-  }
+  // const AnimationMiniTable = (data, show) => {
+  //   const element = document.getElementById("miniTablePreview");
+  //   setShowSub(show);
+  //   if (showSub === show) return
+  //   if (element) {
+  //     gsap.killTweensOf(element);
+  //     gsap.set(element, { x: 0 });
+  //     if (data === "LEFT") {
+  //       gsap.from(`#miniTablePreview`, { x: -window.innerWidth / 2, duration: 0.25, ease: "linear" });
+  //     } else if (data === "RIGHT") {
+  //       gsap.from(`#miniTablePreview`, { x: window.innerWidth / 2, duration: 0.25, ease: "linear" });
+  //     } else {
+  //       console.log("Current Table");
+  //     }
+  //   } else {
+  //     console.log("Element not found");
+  //     return;
+  //   }
+  // }
 
   return (
     <>
@@ -273,8 +276,21 @@ export const TableDetails = (props) => {
             <div className="preview-head-btns-div buttonhover">
               {/* <button type="button" className={showSub === "MiniTable" ? 'bgblueSet m_l_30 clickTransition' : 'bgblueSet m_l_30 clickTransition'} onClick={() => AnimationMiniTable("LEFT", "MiniTable")}>MINI TABLE</button>
               <button type="button " className={showSub === "TableInfo" ? 'bgredSet clickTransition' : 'bgredSet clickTransition'} onClick={() => AnimationMiniTable("RIGHT", "TableInfo")}>TABLE INFO</button> */}
-              <button type="button" className={showSub === "MiniTable" ? 'active button-46 m_l_30 font_w_600 clickTransition p_l_5 p_r_5' : 'font_w_600 p_l_5 p_r_5 button-46 m_l_30 clickTransition'} onClick={() => AnimationMiniTable("LEFT", "MiniTable")}>MINI TABLE</button>
-              <button type="button" className={showSub === "TableInfo" ? 'active button-46 font_w_600 clickTransition p_l_5 p_r_5' : 'font_w_600 p_l_5 p_r_5 button-46 clickTransition'} onClick={() => AnimationMiniTable("RIGHT", "TableInfo")}>TABLE INFO</button>
+              <button type="button" className={showSub === "MiniTable" ? 'active button-46 m_l_30 font_w_600 clickTransition p_l_5 p_r_5' : 'font_w_600 p_l_5 p_r_5 button-46 m_l_30 clickTransition'}
+                // onClick={() => showSub === "MiniTable" ? return: (UM.AnimationMiniTable("LEFT", "miniTablePreview"), setShowSub("MiniTable"))}
+                onClick={() => {
+                  if (showSub === "MiniTable") return;
+                  UM.AnimationMiniTable("LEFT", "miniTablePreview");
+                  setShowSub("MiniTable");
+                }}
+              >MINI TABLE</button>
+              <button type="button" className={showSub === "TableInfo" ? 'active button-46 font_w_600 clickTransition p_l_5 p_r_5' : 'font_w_600 p_l_5 p_r_5 button-46 clickTransition'}
+                onClick={() => {
+                  if (showSub === "TableInfo") return;
+                  UM.AnimationMiniTable("RIGHT", "miniTablePreview");
+                  setShowSub("TableInfo");
+                }}
+              >TABLE INFO</button>
 
               {/* <button class="button-32" role="button">
                 <span class="text">Button 32</span>
@@ -302,7 +318,7 @@ export const TableDetails = (props) => {
                 </div>
               </div>
             </div>
-          </section>
+          </section >
           {showSub === "MiniTable" ?
             <section className="fd preview-table-section" id="miniTablePreview">
               <TablePreview user={user} cashTableData={cashTableData} ></TablePreview>
@@ -365,7 +381,7 @@ export const TableDetails = (props) => {
               </span>
             </button> */}
           </section>
-        </main>
+        </main >
       }
 
 

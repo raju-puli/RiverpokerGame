@@ -165,7 +165,7 @@ export default class Game extends React.Component {
                 }, 1500);
                 break;
             case "activate_loader":
-                // this.setState({ showLoader: data });
+                this.setState({ showLoader: data });
                 break;
             case "player_balance":
                 this.setState({ playerBalance: data });

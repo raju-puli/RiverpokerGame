@@ -475,39 +475,43 @@ export class Seats extends Component {
         let scale;
         let scaledWidth;
         let scaledHeight;
+        if (!this.props.chatIsFocused) {
+            if (!this.props.tableOriantationLandscape) {
+                let scaleWidth = windWd / this.gbw;
+                let availableHeight = windHt - 100;
+                let scaleHeight = availableHeight / this.gbh;
+                scale = Math.min(scaleWidth, scaleHeight);
 
-        if (!this.props.tableOriantationLandscape) {
-            let scaleWidth = windWd / this.gbw;
-            let availableHeight = windHt - 100;
-            let scaleHeight = availableHeight / this.gbh;
-            scale = Math.min(scaleWidth, scaleHeight);
+                scaledWidth = this.gbw * scale;
+                scaledHeight = this.gbh * scale;
 
-            scaledWidth = this.gbw * scale;
-            scaledHeight = this.gbh * scale;
+                calculatedMarginLeft = (windWd - scaledWidth) / 2;
+                calculatedMarginTop = (availableHeight - scaledHeight) / 2 + 50;
 
-            calculatedMarginLeft = (windWd - scaledWidth) / 2;
-            calculatedMarginTop = (availableHeight - scaledHeight) / 2 + 50;
+                if (calculatedMarginLeft < 0) calculatedMarginLeft = 0;
+                if (calculatedMarginTop < 50) calculatedMarginTop = 70;
+            } else {
+                let scaleWidth = windWd / this.gbw;
+                let scaleHeight = windHt / this.gbh;
+                scale = Math.min(scaleWidth, scaleHeight);
 
-            if (calculatedMarginLeft < 0) calculatedMarginLeft = 0;
-            if (calculatedMarginTop < 50) calculatedMarginTop = 70;
-        } else {
-            let scaleWidth = windWd / this.gbw;
-            let scaleHeight = windHt / this.gbh;
-            scale = Math.min(scaleWidth, scaleHeight);
+                scaledWidth = this.gbw * scale;
+                scaledHeight = this.gbh * scale;
 
-            scaledWidth = this.gbw * scale;
-            scaledHeight = this.gbh * scale;
-
-            calculatedMarginLeft = (windWd - scaledWidth) / 2;
-            calculatedMarginTop = (windHt - scaledHeight) / 2;
-        }
-        if (this.gameBox) {
-            this.gameBox.style.transform = `scale(${scale})`;
-            this.gameBox.style.marginLeft = `${calculatedMarginLeft}px`;
-            this.gameBox.style.marginTop = `${calculatedMarginTop}px`;
-            this.gameBox.style.position = "absolute";
-            this.gameBox.style.left = "0";
-            this.gameBox.style.top = "0";
+                calculatedMarginLeft = (windWd - scaledWidth) / 2;
+                calculatedMarginTop = (windHt - scaledHeight) / 2;
+            }
+            if (this.gameBox) {
+                // this.gameBox.style.transform = `scale(${scale >= 0.42 ? scale : 0.4})`;
+                this.gameBox.style.transform = `scale(${scale})`;
+                // if (scale >= 0.42) {
+                this.gameBox.style.marginLeft = `${calculatedMarginLeft}px`;
+                this.gameBox.style.marginTop = `${calculatedMarginTop}px`;
+                // }
+                this.gameBox.style.position = "absolute";
+                this.gameBox.style.left = "0";
+                this.gameBox.style.top = "0";
+            }
         }
     }
 
@@ -1374,7 +1378,7 @@ export class Seats extends Component {
 
             <Layer>
 
-                <Group
+                {/* <Group
                     // x={337} y={42}
                     x={this.props.stageProperties.deviceOrientation === "landscape" ? 680 : 337} y={this.props.stageProperties.deviceOrientation === "landscape" ? 65 : 42}
                     id="bbj"
@@ -1385,7 +1389,7 @@ export class Seats extends Component {
                     <Rect width={110} height={20} fill="black" cornerRadius={5} x={5} y={18} />
                     <Text text="BAD BEAT JACKPOT" fontSize={11} fill="red" x={10} y={5} align={"center"} verticalAlign={"middle"} fontFamily={"Roboto"} />
                     <Text width={100} height={20} text={UM.numberWithCommas(this.props.bbj)} fontSize={14} fill="white" x={10} y={20} align={"right"} verticalAlign={"middle"} fontFamily={"Roboto"} />
-                </Group>
+                </Group> */}
 
 
                 <Group id="seat">

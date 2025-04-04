@@ -1142,12 +1142,14 @@ class LobbyMain extends LobbyBase {
             sitGoData.date = new Date(parseInt(data.TableDetails.SitAndGoTournament.Schedule.attr.registrationStart)).toLocaleString();
             sitGoData.description = data.TableDetails.SitAndGoTournament.Description;
             sitGoData.name = data.TableDetails.attr.name;
+            sitGoData.status1 = this.state.myTournaments.some((item) => item.id === data.TableDetails.attr.id) ? "Unregister" : "Register";
             sitGoData.buyIn = data.TableDetails.SitAndGoTournament.Parameters.attr.buyIn;
-            let buyMoney = (data.TableDetails.SitAndGoTournament.Parameters.attr.buyIn - data.TableDetails.SitAndGoTournament.Parameters.attr.fee)
+            let buyMoney = (data.TableDetails.SitAndGoTournament.Parameters.attr.buyIn - (data.TableDetails.SitAndGoTournament.Parameters.attr.fee ? data.TableDetails.SitAndGoTournament.Parameters.attr.fee : 0))
             if (data.TableDetails.SitAndGoTournament.Parameters.attr.buyIn === "FREEROLL") {
                 tourneyData.buyIn = data.TableDetails.SitAndGoTournament.Parameters.attr.buyIn;
             } else {
-                tourneyData.buyIn = (UM.numberWithCommas(buyMoney)) + "+" + UM.numberWithCommas(data.TableDetails.SitAndGoTournament.Parameters.attr.fee);
+                tourneyData.buyIn = (UM.numberWithCommas(buyMoney)) + "+" + UM.numberWithCommas(data.TableDetails.SitAndGoTournament.Parameters.attr?.fee);
+                console.log(buyMoney)
             }
             sitGoData.status = UM.textFormat(data.TableDetails.SitAndGoTournament.Schedule.attr.status);
             // switch (data.TableDetails.SitAndGoTournament.Schedule.attr.status) {
@@ -1756,23 +1758,35 @@ class LobbyMain extends LobbyBase {
         }
     }
     onTournamentPlayerRegistered(data) {
+        console.log(data);
         let regData = this.state.regData;
         let tourneyData = this.state.tourneyData;
+        let sitGoData = this.state.sitGoData;
 
         regData.status = "Registered";
         regData.statusAction = "Un Register";
-        tourneyData.status1 = "Unregister";
+        if (this.state.showTables === "Tournaments") {
+            tourneyData.status1 = "Unregister";
+        } else if (this.state.showTables === "Sit_Go") {
+            sitGoData.status1 = "Unregister";
+        }
         this.setState({ regAlert: "You Are Succesfully registered👍" });
-        this.setState({ regData: regData, tourneyData: tourneyData });
+        this.setState({ regData: regData, tourneyData: tourneyData, sitGoData: sitGoData });
     }
     onTournamentPlayerUnregistered(data) {
+        console.log(data);
         this.setState({ UnRegisterpopup: true })
         let regData = this.state.regData;
         let tourneyData = this.state.tourneyData;
+        let sitGoData = this.state.sitGoData;
         regData.status = "Un Registered";
         regData.statusAction = "Register";
-        tourneyData.status1 = "Register";
-        this.setState({ regAlert: "You Are Succesfully Unregistered", tourneyData: tourneyData });
+        if (this.state.showTables === "Tournaments") {
+            tourneyData.status1 = "Register";
+        } else if (this.state.showTables === "Sit_Go") {
+            sitGoData.status1 = "Register";
+        }
+        this.setState({ regAlert: "You Are Succesfully Unregistered", tourneyData: tourneyData, sitGoData: sitGoData });
     };
 
     onGetBuddies(data) {
@@ -2002,34 +2016,64 @@ class LobbyMain extends LobbyBase {
         }
     };
 
+    // handleExit = () => {
+    //     const getDeviceInfo = () => {
+    //         return navigator.platform;
+    //     };
+    //     const platform = getDeviceInfo();
+    //     const userAgent = navigator.userAgent;
+
+    //     if (platform === 'Win32') {
+    //         window.close();
+    //     }
+    //     else if (platform === 'MacIntel' || userAgent.includes('Mac OS')) {
+    //         if (window._cdvElectronIpc && window._cdvElectronIpc.exitApp) {
+    //             window._cdvElectronIpc.exitApp();
+    //         } else {
+    //             console.error('Exit functionality not available on macOS.');
+    //         }
+    //     }
+    //     else if (/iPhone|iPad|iPod|Android/i.test(platform)) {
+    //         if (navigator.app && navigator.app.exitApp) {
+    //             navigator.app.exitApp();
+    //         } else {
+    //             console.error('Exit functionality not available on mobile.');
+    //         }
+    //     }
+    //     else {
+    //         console.error('Unsupported platform:', platform);
+    //     }
+    // };
+
     handleExit = () => {
-        const getDeviceInfo = () => {
-            return navigator.platform;
-        };
-        const platform = getDeviceInfo();
-        const userAgent = navigator.userAgent;
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        const platform = navigator.platform;
 
         if (platform === 'Win32') {
+            console.log("Closing Windows application...");
             window.close();
         }
         else if (platform === 'MacIntel' || userAgent.includes('Mac OS')) {
             if (window._cdvElectronIpc && window._cdvElectronIpc.exitApp) {
+                console.log("Closing macOS application...");
                 window._cdvElectronIpc.exitApp();
             } else {
                 console.error('Exit functionality not available on macOS.');
             }
         }
-        else if (/iPhone|iPad|iPod|Android/i.test(platform)) {
-            if (navigator.app && navigator.app.exitApp) {
+        else if (/Android|iPhone|iPad|iPod/i.test(userAgent)) {
+            if (typeof navigator.app !== "undefined" && typeof navigator.app.exitApp === "function") {
+                console.log("Exiting mobile app...");
                 navigator.app.exitApp();
             } else {
-                console.error('Exit functionality not available on mobile.');
+                console.error('Exit functionality not available on this mobile device.');
             }
         }
         else {
-            console.error('Unsupported platform:', platform);
+            console.error('Unsupported platform detected:', platform, 'User Agent:', userAgent);
         }
     };
+
 
 
 
@@ -2181,8 +2225,10 @@ class LobbyMain extends LobbyBase {
             })
                 .then((response) => response.json())
                 .then((data) => {
+                    this._lobbyNetwork.close(false);
                     // console.log("Logout response:", data);
-                    window.location.reload();
+                    // window.location.reload();
+                    sessionStorage.clear();
                     this.props.data.logOutHandler();
                 })
                 .catch((error) => {
@@ -2389,9 +2435,11 @@ class LobbyMain extends LobbyBase {
     }
 
     onOpenTable(data) {
+        this.props.LobbyHandler("activate_loader", false);
         this.props.LobbyHandler("openCashTable", { ...data, isSeatMe: this.isSeatMe });
     }
     onOpenTournamentLobby(data) {
+        this.props.LobbyHandler("activate_loader", false);
         this.props.LobbyHandler("openTournamentLobby", data);
     }
 
@@ -2501,7 +2549,9 @@ class LobbyMain extends LobbyBase {
             console.log(this.state.showTables)
             // this.AnimationMiniTable((table === "Tournaments" && this.state.showTables === "Sit_Go") ? "LEFT" : "RIGHT" || table === "Sit_Go" ? "RIGHT" : "LEFT", table)
             // this.AnimationMiniTable((this.state.showTables === "" || this.state.showTables === "Cash_Games" && table === "Tournaments") ? "RIGHT" : table === "Sit_Go" ? "RIGHT" : table === "Cash_Games" ? "LEFT" : "RIGHT", table)
-            this.AnimationMiniTable(
+            if (this.state.showTables === table) return;
+            this.setState({ showTables: table });
+            UM.AnimationMiniTable(
                 (this.state.showTables === "" || (this.state.showTables === "Cash_Games" && table === "Tournaments"))
                     ? "RIGHT"
                     : table === "Sit_Go"
@@ -2509,27 +2559,9 @@ class LobbyMain extends LobbyBase {
                         : table === "Cash_Games"
                             ? "LEFT"
                             : (this.state.showTables === "Sit_Go" && table === "Tournaments") ? "LEFT" : "RIGHT",
-                table
+                "GridTablesList"
             );
-
         }, delay);
-    }
-
-    AnimationMiniTable = (data, show) => {
-        const element = document.getElementById("GridTablesList");
-        if (this.state.showTables === show) return;
-        this.setState({ showTables: show });
-        if (element) {
-            if (data === "LEFT") {
-                gsap.from(`#GridTablesList`, { x: -window.innerWidth / 2, duration: 0.25, ease: "linear" });
-            } else if (data === "RIGHT") {
-                gsap.from(`#GridTablesList`, { x: window.innerWidth / 2, duration: 0.25, ease: "linear" });
-            } else {
-                console.log("Current Table");
-            }
-        } else {
-            console.log("Element not found");
-        }
     }
 
     openNav = () => {
@@ -2714,7 +2746,7 @@ class LobbyMain extends LobbyBase {
                                 </div>
                             </main>
                             {showPopup && data && <BadBeatJackpotPopup data={data} onClose={this.handleClosePopup} />}
-                            {this.state.showActiveTables && <MyActiveTourCashTables data={this.state.myTables.concat(this.state.myTournaments)} network={this._lobbyNetwork} setAction={this.setPopUpActionsClose.bind(this)} ></MyActiveTourCashTables>}
+                            {this.state.showActiveTables && <MyActiveTourCashTables LobbyHandler={this.props.LobbyHandler} data={this.state.myTables.concat(this.state.myTournaments)} network={this._lobbyNetwork} setAction={this.setPopUpActionsClose.bind(this)} ></MyActiveTourCashTables>}
                             {this.state.showCashierPopUp && <Cashier data={this.state.levelData} myLevel={this.state.myLevel} lobbyMenuHandler={this.lobbyMenuHandler.bind(this)} cashierTourneyTables={this.cashierTourneyTables} stars={this.state.displayStars} playerInfo={this.playerInfo} network={this._lobbyNetwork} ></Cashier>}
                             {this.state.showLevelInfo && <PlayerlevelInfo data={this.state.levelData} showCashier={this.state.showCashier} setAction={this.setPopUpActionsClose.bind(this)}></PlayerlevelInfo>}
                             {this.state.showRegistration && <TourneyRegistration data={this.state.regData} error={this.state.regAlert} close={this.setPopUpActionsClose.bind(this)} network={this._lobbyNetwork}></TourneyRegistration>}

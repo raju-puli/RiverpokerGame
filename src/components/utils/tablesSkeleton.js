@@ -14,13 +14,19 @@ const TableSkeleton = () => {
                         </span>
                         <div className="df min_width_992" style={{ width: '100%', alignItems: 'center' }}>
                             <div className="df col-12" style={{ margin: '0px 10px' }}>
-                                <span className="col-4"><Skeleton width={280}/></span>
-                                <span className="col-2"><Skeleton width={80}/></span>
-                                <span className="col-2"><Skeleton width={60}/></span>
-                                <span className="col-1"><Skeleton width={40}/></span>
-                                <span className="col-1"><Skeleton width={50}/></span>
-                                <span className="col-1"><Skeleton width={40}/></span>
-                                <span className="col-1"><Skeleton width={40}/></span>
+                                <span className="col-4"><Skeleton width={280} /></span>
+                                <span className="col-2"><Skeleton width={80} /></span>
+                                <span className="col-2"><Skeleton width={60} /></span>
+                                <span className="col-1"><Skeleton width={40} /></span>
+                                <span className="col-1"><Skeleton width={50} /></span>
+                                <span className="col-1"><Skeleton width={40} /></span>
+                                <span className="col-1"><Skeleton width={40} /></span>
+                            </div>
+                        </div>
+
+                        <div className="df max_width_992" >
+                            <div className="df mobile-lobby-right-div" >
+                                <span className="m_l_10"><Skeleton width={window.innerWidth - 120} /></span>
                             </div>
                         </div>
                     </div>

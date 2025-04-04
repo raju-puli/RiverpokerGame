@@ -42,6 +42,7 @@ export const MyActiveTourCashTables = (props) => {
             console.log("test-myactiveTables");
             props.network.send(`<GetTableDetails id="${row.original.id}" type="${row.original.type}"/>`);
             props.network.send(`<OpenTable id="${row.original.id}" type="${row.original.type}"/>`);
+            props.LobbyHandler("activate_loader", true);
         }
     };
 

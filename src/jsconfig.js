@@ -1,7 +1,7 @@
 const fileName = {
     name: 'Riverpoker',
     buildForLive: false,
-    optimizeUrl: false
+    optimizeUrl: true
     // name: localStorage.getItem("url"),
     // name:'Riverpoker'
     // name: 'Riverpoker',

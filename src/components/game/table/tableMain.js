@@ -151,6 +151,7 @@ export default class TableMain extends TableBase {
             timeForced: { isTimeForcedPaused: false, force_duration: 0 },
             bombpotanimation: false,
             settingsAddonNrebuy: false,
+            chat_is_focused: false,
             leftmenu: false,
             //knock_Table: false,
             welcomeText: "",
@@ -2076,7 +2077,11 @@ export default class TableMain extends TableBase {
                 this.setState({ seats: seats });
                 this.seatsRef.current.onChipsRebuy({ seat: data.ChipsRebuy.attr.seat, amount: data.ChipsRebuy.attr.amount });
                 this.setPopUpActions("hideReBuyChips");
-                if (Number(index) === Number(this.player.id)) {
+                if (Number(index) === Number(this.player.id) && this.TableType != "SINGLE_TABLE") {
+                    this.setState({ welcomeText: "Your rebuy will add chips for the next hand !" });
+                    setTimeout(() => {
+                        this.setState({ welcomeText: "" });
+                    }, 8000)
 
                 }
                 this._tableNetwork.send(`<GetGameState/>`);
@@ -2109,7 +2114,7 @@ export default class TableMain extends TableBase {
 
             }
             this.setState({ nametextdealerid: data.NewHand.attr.dealer, JackpotPayout: { HAND_WINNER: false, BAD_BEAT: false, amount: 0 }, });
-            this.setState({ welcomeText: "", tipInfo: tipInfo });
+            this.setState({ tipInfo: tipInfo });
             this.setState({ showAddonAlert: false });
 
             // <---------------------------------------------------Manual prize pool start----------------------------------->
@@ -3206,7 +3211,6 @@ export default class TableMain extends TableBase {
     onJackpotPayout(data) {
         console.log("Received Data:", data);
 
-
         const playerSeat = String(this.player.id);
         const jackpotWinners = data.JackpotPayout.JackpotWinner;
         if (Array.isArray(jackpotWinners)) {
@@ -3232,7 +3236,7 @@ export default class TableMain extends TableBase {
                             }
                         }));
 
-                    }, 5000)
+                    }, 10000)
 
                     if (winner.attr.type === "HAND_WINNER") {
                         this.setState(prevState => ({
@@ -3665,10 +3669,10 @@ export default class TableMain extends TableBase {
                 break;
             case "hideTournamentRebuy":
 
-                this.setState({ welcomeText: "Your rebuy will add chips for the next hand !" });
-                setTimeout(() => {
-                    this.setState({ welcomeText: "" });
-                }, 5000)
+                // this.setState({ welcomeText: "Your rebuy will add chips for the next hand !" });
+                // setTimeout(() => {
+                //     this.setState({ welcomeText: "" });
+                // }, 5000)
 
 
                 this.setState(prevState => ({
@@ -4262,6 +4266,10 @@ export default class TableMain extends TableBase {
         // clearTimeout(this.breaktime)
         // this.setState({ showTimerBreak: false })
     }
+    chatHandler = (state) => {
+        console.log("chat is focused :  ", state)
+        this.setState({ chat_is_focused: state })
+    }
 
     render() {
 
@@ -4338,7 +4346,7 @@ export default class TableMain extends TableBase {
                                     }
                                     <InfoPanel chat={this.state.infoChat} info={this.state.tipInfo} doc={this.props.id}
                                         length={this.state.options.action.length}
-                                        options={this.state.options.action}
+                                        options={this.state.options.action} chatHandler={this.chatHandler.bind(this)}
                                         stats={this.state.tipStats} hideStats={this.state.showTipStats}
                                         network={this._tableNetwork} show={(this.state.showInfoPanel && this.props.stageProperties.deviceOrientation !== "portrait")} resizeScreen={this.resizeScreen.bind(this)}
                                         waitList={this.state.waitList} disableJW={this.state.disableJW} btns={this.state.btns} action={this.tableFooterHandler.bind(this)}></InfoPanel>
@@ -4435,7 +4443,7 @@ export default class TableMain extends TableBase {
                                         knock_Table={this.knock_Table} cid={this.props.id} ref={this.seatsRef} parentCallback={this.handleCallback.bind(this)}
                                         seatCount={this.state.seatCnt} dealer={this.state.dealerSeat} network={this._tableNetwork} seatProperties={this.state.seatProperties}
                                         // stageWidth={Screen.getDeviceType().width} stageHeight={Screen.getDeviceType().height}
-                                        stageProperties={this.props.stageProperties}
+                                        stageProperties={this.props.stageProperties} chatIsFocused={this.state.chat_is_focused}
                                         playerAvatarsList={this.props.playerAvatarsList}
                                         originSeat={this.player.id} addonData={this.state.addonData}
                                         tableOriantationLandscape={this.props.stageProperties.deviceOrientation === "portrait" ? false : true}
@@ -4449,6 +4457,12 @@ export default class TableMain extends TableBase {
                                     ></Seats>
                                 </Stage>
                             </div>
+                            {this.state.bbj ? (
+                                <div className="bbj-container-div" id={this.props.id}>
+                                    <strong> BAD BEAT JACKPOT </strong>
+                                    <span> {this.state.bbj} </span>
+                                </div>
+                            ) : null}
 
 
                             {(this.state.cDtimer.show && this.state.textvariable) && <CountDownTimer time={this.state.cDtimer.value} per={this.state.cDtimer.per}></CountDownTimer>}

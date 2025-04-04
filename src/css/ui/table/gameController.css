@@ -8,7 +8,7 @@
 }
 
 .gameController .buttonGroup button {
-  padding: 12px 0px 12px 0px;
+  padding: 10px 5px 10px 5px;
 }
 
 
@@ -1396,6 +1396,7 @@ button.select-btn .options-div {
   padding: 5px 8px;
   transition: all .5s;
   background: #454545;
+  z-index: 999;
 
   >button {
     padding: 5px;
@@ -1416,7 +1417,7 @@ button.select-btn .options-div button {
   cursor: pointer;
   background: black;
   margin: 1px 0px;
-  padding: 12px;
+  padding: 8px 12px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -1425,7 +1426,8 @@ button.select-btn .options-div button:last-child {
 }
 
 .showDropdown {
-  top: -285px;
+  /* top: -285px; */
+  top: -255px;
   opacity: 1;
   /* transform: perspective(20px) rotateX(0deg) translateY(-68px); */
 }

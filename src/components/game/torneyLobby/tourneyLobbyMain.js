@@ -1862,6 +1862,9 @@ export default class TourneyLobbyMain extends TourneyLobbyBase {
                             <b className="clr_river">{Math.trunc(this.date.getHours()).toString().padStart(2, '0')} : {Math.trunc(this.date.getMinutes()).toString().padStart(2, '0')}</b>
                         </div>
                         <div className="lobby_active_icon">
+                            <div className="m_r_5">
+                                <button type="button" className="btn_2" value="exchangeCurrency" onClick={(e) => UM.redirectUrlLinks(e)} style={{ width: "unset", backgroundPositionY: "unset" }}>Exchange Currency</button>
+                            </div>
                             {!this.state.loader ?
                                 <img src={img_8} className="pointer" alt="logo3" onClick={(e) => this.refreshTables(e)} />
                                 : <div className="loader_table_div">

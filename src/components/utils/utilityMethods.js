@@ -1,5 +1,6 @@
 import Config from "../../config";
 import Screen from "./screen";
+import gsap from "gsap";
 
 function GameName(type) {
     switch (type) {
@@ -157,6 +158,8 @@ function changeAmtLabel(labelValue) {
     }
 }
 
+const numberWithCommas_length9 = (x) => { if (x === null || x === undefined) { return "0"; } if (x.toString().length > 9) { return changeAmtLabel(x) } const number = parseFloat(x); if (isNaN(number)) return x; const hasDecimalPoint = x.toString().includes("."); const formattedNumber = number.toFixed(hasDecimalPoint ? 2 : 0); return formattedNumber.replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+
 var config = new Config();
 try {
     var sid = JSON.parse(sessionStorage.getItem(`${window.location.hostname}'_sid'`)).sid;
@@ -203,6 +206,25 @@ function dateFormater(date) {
     return setFormate;
 }
 
-const UM = { GameName, cardsLength, numberWithCommas, changeAmtLabel, roundToTwo, textFormat, redirectUrlLinks, dateFormater }
+
+const AnimationMiniTable = (data, tableId) => {
+    const element = document.getElementById(tableId);
+    if (element) {
+        gsap.killTweensOf(element);
+        gsap.set(element, { x: 0 });
+        if (data === "LEFT") {
+            gsap.from(`#${tableId}`, { x: -window.innerWidth / 2, duration: 0.25, ease: "linear" });
+        } else if (data === "RIGHT") {
+            gsap.from(`#${tableId}`, { x: window.innerWidth / 2, duration: 0.25, ease: "linear" });
+        } else {
+            console.log("Current Table");
+        }
+    } else {
+        console.log("Element not found");
+        return;
+    }
+}
+
+const UM = { GameName, cardsLength, numberWithCommas, changeAmtLabel, roundToTwo, textFormat, redirectUrlLinks, dateFormater, numberWithCommas_length9, AnimationMiniTable }
 
 export default UM;

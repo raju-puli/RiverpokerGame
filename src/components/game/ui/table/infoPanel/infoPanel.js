@@ -4,13 +4,13 @@ import icon_chat_close from '../../../../../assets/images/table/HeadIcons/icon_c
 import icon_chat_send from '../../../../../assets/images/table/HeadIcons/icon_chat_send.png';
 
 import { withTranslation } from 'react-i18next';
-// import { getShowChatBalloon, getShowDealerMessage, getShowPlayerChat } from "../../../../utils/global";
+import { getShowChatBalloon, getShowDealerMessage, getShowPlayerChat } from "../../../../utils/global";
 
 function InfoPanel(props) {
     const [chatHidden, setChatHidden] = useState(false);
-    // const [showPlayerChat, setShowPlayerChat] = useState(getShowPlayerChat());
-    // const [showDealerChat, setShowDealerChat] = useState(getShowDealerMessage());
-    // const [showChat, setShowChat] = useState(getShowChatBalloon());
+    const [showPlayerChat, setShowPlayerChat] = useState(getShowPlayerChat());
+    const [showDealerChat, setShowDealerChat] = useState(getShowDealerMessage());
+    const [showChat, setShowChat] = useState(getShowChatBalloon());
     const [chatMessages, setChatMessages] = useState([]);
 
     const checkConditions = (array) => {
@@ -37,14 +37,15 @@ function InfoPanel(props) {
         }
     }, [props.chat]);
 
-    // useEffect(() => {
-    //     const updateChatSettings = () => {
-    //         setShowChat(getShowChatBalloon());
-    //         setShowPlayerChat(getShowPlayerChat());
-    //         setShowDealerChat(getShowDealerMessage());
-    //     };
-    //     updateChatSettings();
-    // }, []);
+    useEffect(() => {
+        let content = document.getElementById(`chatContent${props.doc}`);
+        if (showChat !== getShowChatBalloon() || showPlayerChat !== getShowPlayerChat() || showDealerChat !== getShowDealerMessage()) {
+            content.innerHTML = ""
+            setShowChat(getShowChatBalloon())
+            setShowDealerChat(getShowDealerMessage())
+            setShowPlayerChat(getShowPlayerChat())
+        }
+    }, [getShowPlayerChat(), getShowChatBalloon(), getShowDealerMessage()])
 
     const closeChat = () => {
         props.action("hideTIP");
@@ -54,6 +55,16 @@ function InfoPanel(props) {
         setChatHidden((prev) => !prev);
         props.resizeScreen(!chatHidden);
     };
+
+    const [chatFocusedState, setChatFocusedState] = useState(false);
+    const chatIsFocused = (event) => {
+        setChatFocusedState(true);
+        props.chatHandler(true);
+    }
+    const chatIsNotFocused = (event) => {
+        setChatFocusedState(false);
+        props.chatHandler(false);
+    }
 
     return (
         <div style={{ visibility: isChatHidden ? "hidden" : "visible" }}>
@@ -68,16 +79,19 @@ function InfoPanel(props) {
                         style={{
                             display: chatHidden ? "flex" : "none",
                             background: "linear-gradient(rgb(96 94 97), rgb(55 55 55))",
+                            marginTop: (JSON.parse(sessionStorage.getItem("DeviceOrientation")).Orientation === "landscape" && chatFocusedState) ? "20px" : ""
                         }}
                     >
-                        <div className="col-2" onClick={toggleChat}>
-                            <img src={icon_chat_close} alt="Close Chat" />
+                        <div className="col-2 statsMenu" onClick={toggleChat} style={{ height: "50px" }}>
+                            <img src={icon_chat_close} alt="Close Chat" className="chat-image-cls" />
                         </div>
                         <input
                             className="TIPchatInput col-8"
                             type="text"
                             id={`tipChatMsgInput${props.doc}`}
                             style={{ textIndent: "10px" }}
+                            onFocus={chatIsFocused}
+                            onBlur={chatIsNotFocused}
                             onKeyDown={(event) => {
                                 if (event.key === 'Enter') {
                                     event.preventDefault();  // Prevent default action (e.g., form submission)
@@ -91,7 +105,7 @@ function InfoPanel(props) {
                             }}
                         />
                         <div
-                            className="col-2 TIPbtnSend"
+                            className="col-2 TIPbtnSend statsMenu"
                             onClick={(e) => {
                                 e.preventDefault();
                                 const inputField = document.getElementById(`tipChatMsgInput${props.doc}`);
@@ -104,7 +118,7 @@ function InfoPanel(props) {
                             }}
 
                         >
-                            <img src={icon_chat_send} alt="Send" />
+                            <img src={icon_chat_send} alt="Send" className="chat-image-cls" />
                         </div>
                     </div>
                 </div>
